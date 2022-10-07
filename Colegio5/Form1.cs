@@ -19,7 +19,7 @@ namespace Colegio5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label1.Text = "Hola";
+            lbl_topPanel.Text = "Hola";
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -32,7 +32,7 @@ namespace Colegio5
 
         }
 
-        private void abrirFormAlumnos(object formHijo)
+        public void abrirFormAlumnos(object formHijo)
         {
             if (this.panelContenedor.Controls.Count > 0)
                 this.panelContenedor.Controls.RemoveAt(0);
@@ -47,6 +47,59 @@ namespace Colegio5
         private void btn_alumnos_Click(object sender, EventArgs e)
         {
             abrirFormAlumnos(new Alumnos());
+            lbl_topPanel.Text = "Alumnos";
+            panelTop.BackColor = Color.FromArgb(112, 161, 255);
+
+
+        }
+
+       
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            abrirFormAlumnos(new AgregarDocentes());
+            lbl_topPanel.Text = "Docentes";
+            panelTop.BackColor = Color.FromArgb(255, 127, 80);
+        }
+
+        private void btn_alumnos_MouseEnter(object sender, EventArgs e)
+        {
+            btn_alumnos.BackColor = Color.FromArgb(112, 161, 255);
+        }
+
+        private void btn_alumnos_MouseLeave(object sender, EventArgs e)
+        {
+            btn_alumnos.BackColor = Color.FromArgb(42, 47, 87);
+        }
+
+        private void button5_MouseEnter(object sender, EventArgs e)
+        {
+            button5.BackColor = Color.FromArgb(255, 127, 80);
+        }
+
+        private void button5_MouseLeave(object sender, EventArgs e)
+        {
+            button5.BackColor = Color.FromArgb(42,47,87);
+        }
+
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.FromArgb(123, 237, 159);
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.FromArgb(42, 47, 87);
+        }
+
+        private void button4_MouseEnter(object sender, EventArgs e)
+        {
+            button4.BackColor = Color.FromArgb(255, 71, 87);
+        }
+
+        private void button4_MouseLeave(object sender, EventArgs e)
+        {
+            button4.BackColor = Color.FromArgb(42, 47, 87);
         }
 
         private void panelContenedor_Paint(object sender, PaintEventArgs e)

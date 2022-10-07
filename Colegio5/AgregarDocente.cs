@@ -8,13 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace Colegio5
 {
-    public partial class Alumnos : Form
+    public partial class AgregarDocente : Form
     {
-        public Alumnos()
+        public AgregarDocente()
         {
             InitializeComponent();
         }
@@ -22,9 +20,6 @@ namespace Colegio5
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            AlumnosAgregar f2 = new AlumnosAgregar();
-            f2.Show();
-            
         }
     }
 }

@@ -9,21 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-
 namespace Colegio5
 {
-    public partial class Alumnos : Form
+    public partial class AgregarDocentes : Form
     {
-        public Alumnos()
+        public AgregarDocentes()
         {
             InitializeComponent();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
-            AlumnosAgregar f2 = new AlumnosAgregar();
-            f2.Show();
+            AgregarDocente f1 = new AgregarDocente();
+            f1.Show();
+
             
         }
     }

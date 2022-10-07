@@ -21,5 +21,12 @@ namespace Colegio5
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            AgregarAdultoACargo f3 = new AgregarAdultoACargo();
+            f3.Show();
+        }
     }
 }
