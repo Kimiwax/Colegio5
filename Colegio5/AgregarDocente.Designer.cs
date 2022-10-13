@@ -53,9 +53,11 @@ namespace Colegio5
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.White;
             this.textBox3.Location = new System.Drawing.Point(278, 36);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(262, 20);
+            this.textBox3.Size = new System.Drawing.Size(262, 24);
             this.textBox3.TabIndex = 3;
             // 
             // label3
@@ -74,9 +76,11 @@ namespace Colegio5
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.White;
             this.textBox2.Location = new System.Drawing.Point(43, 36);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(220, 20);
+            this.textBox2.Size = new System.Drawing.Size(220, 24);
             this.textBox2.TabIndex = 2;
             // 
             // label4
@@ -143,18 +147,22 @@ namespace Colegio5
             // 
             this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox7.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.ForeColor = System.Drawing.Color.White;
             this.textBox7.Location = new System.Drawing.Point(43, 211);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(497, 20);
+            this.textBox7.Size = new System.Drawing.Size(497, 24);
             this.textBox7.TabIndex = 41;
             // 
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox6.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.ForeColor = System.Drawing.Color.White;
             this.textBox6.Location = new System.Drawing.Point(43, 332);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(497, 20);
+            this.textBox6.Size = new System.Drawing.Size(497, 24);
             this.textBox6.TabIndex = 40;
             // 
             // label6
@@ -185,9 +193,11 @@ namespace Colegio5
             // 
             this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox5.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.ForeColor = System.Drawing.Color.White;
             this.textBox5.Location = new System.Drawing.Point(43, 154);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(497, 20);
+            this.textBox5.Size = new System.Drawing.Size(497, 24);
             this.textBox5.TabIndex = 37;
             // 
             // label2
@@ -206,18 +216,22 @@ namespace Colegio5
             // 
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.Color.White;
             this.textBox4.Location = new System.Drawing.Point(43, 271);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(497, 20);
+            this.textBox4.Size = new System.Drawing.Size(497, 24);
             this.textBox4.TabIndex = 35;
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(43, 98);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(497, 20);
+            this.textBox1.Size = new System.Drawing.Size(497, 24);
             this.textBox1.TabIndex = 34;
             // 
             // label1

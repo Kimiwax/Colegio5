@@ -48,8 +48,11 @@ namespace Colegio5
         {
             abrirFormAlumnos(new Alumnos());
             lbl_topPanel.Text = "Alumnos";
-            panelTop.BackColor = Color.FromArgb(112, 161, 255);
-
+            panelTop.BackColor = Color.FromArgb(9, 132, 227);
+            panel2.Enabled = false;
+            panel2.Visible = false;
+            panel3.Enabled = false;
+            panel3.Visible = false;
 
         }
 
@@ -64,7 +67,7 @@ namespace Colegio5
 
         private void btn_alumnos_MouseEnter(object sender, EventArgs e)
         {
-            btn_alumnos.BackColor = Color.FromArgb(112, 161, 255);
+            btn_alumnos.BackColor = Color.FromArgb(9, 132, 227);
         }
 
         private void btn_alumnos_MouseLeave(object sender, EventArgs e)
@@ -105,6 +108,13 @@ namespace Colegio5
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            abrirFormAlumnos(new Grupos());
+            lbl_topPanel.Text = "Grupos";
+            panelTop.BackColor = Color.FromArgb(123, 237, 159);
         }
     }
 }
