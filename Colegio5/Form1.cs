@@ -116,5 +116,10 @@ namespace Colegio5
             lbl_topPanel.Text = "Grupos";
             panelTop.BackColor = Color.FromArgb(123, 237, 159);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
