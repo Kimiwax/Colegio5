@@ -118,20 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="apagar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\apagar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="grupo-de-chat (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\grupo-de-chat (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alumno (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\alumno (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="grupo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\grupo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="grupo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\grupo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancel (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\cancel (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="alumno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\alumno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,52 +127,88 @@
   <data name="cerrar-sesion (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\cerrar-sesion (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="alum" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\alum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alumnos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\alumnos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="grupo-de-chat (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\grupo-de-chat (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="profesor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\profesor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="preguntas-mas-frecuentes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\preguntas-mas-frecuentes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\gru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="prof" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\prof.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="grupo-de-chat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\grupo-de-chat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pre" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="grupo-de-chat (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\grupo-de-chat (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="grupo-de-chat (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\grupo-de-chat (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nina" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\nina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alumno (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\alumno (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cerrar-sesion (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\cerrar-sesion (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cerrar-sesion (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\cerrar-sesion (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sea-star" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\sea-star.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grupo-de-chat (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\grupo-de-chat (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="prof" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\prof.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="butterfly (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\butterfly (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grupo-de-chat (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\grupo-de-chat (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="preguntas-mas-frecuentes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\preguntas-mas-frecuentes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\nina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\gru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="apagar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\apagar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cerrar-sesion (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\cerrar-sesion (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alumno (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\alumno (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancel (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\cancel (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grupo-de-chat (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\grupo-de-chat (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="butterfly" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\butterfly.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alumnos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\alumnos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="profesor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\profesor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sea-star (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\sea-star (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grupo-de-chat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\grupo-de-chat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="apagar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\apagar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grupo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\grupo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alum" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\alum.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alumno (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\alumno (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grupo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\grupo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancel (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\cancel (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

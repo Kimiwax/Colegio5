@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClaseVariables;
 
 namespace Colegio5
 {
@@ -15,6 +16,16 @@ namespace Colegio5
         public Form1()
         {
             InitializeComponent();
+            Image img = Image.FromFile("sea-star.png");
+            Image img2 = Image.FromFile("butterfly.png");
+            if (Variables.user1)
+            {
+                pictureBox_UsuarioSel.Image = img;
+            }
+            else
+            {
+                pictureBox_UsuarioSel.Image = img2;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,11 +79,13 @@ namespace Colegio5
         private void btn_alumnos_MouseEnter(object sender, EventArgs e)
         {
             btn_alumnos.BackColor = Color.FromArgb(9, 132, 227);
+            
         }
 
         private void btn_alumnos_MouseLeave(object sender, EventArgs e)
         {
             btn_alumnos.BackColor = Color.FromArgb(42, 47, 87);
+           
         }
 
         private void button5_MouseEnter(object sender, EventArgs e)
@@ -115,6 +128,18 @@ namespace Colegio5
             abrirFormAlumnos(new Grupos());
             lbl_topPanel.Text = "Grupos";
             panelTop.BackColor = Color.FromArgb(123, 237, 159);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login login = new Login();
+            login.Show();
         }
     }
 }
