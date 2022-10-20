@@ -1,7 +1,7 @@
 ﻿
 namespace Colegio5
 {
-    partial class GruposSede
+    partial class AgregarGrupo
     {
         /// <summary>
         /// Required designer variable.

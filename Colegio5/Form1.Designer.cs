@@ -30,6 +30,12 @@ namespace Colegio5
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox_UsuarioSel = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btn_alumnos = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
             this.lbl_topPanel = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
@@ -45,19 +51,13 @@ namespace Colegio5
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox_UsuarioSel = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btn_alumnos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_UsuarioSel)).BeginInit();
             this.panelTop.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_UsuarioSel)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,6 +76,124 @@ namespace Colegio5
             this.panel1.Size = new System.Drawing.Size(77, 622);
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox_UsuarioSel
+            // 
+            this.pictureBox_UsuarioSel.Image = global::Colegio5.Properties.Resources.nina;
+            this.pictureBox_UsuarioSel.Location = new System.Drawing.Point(5, 20);
+            this.pictureBox_UsuarioSel.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox_UsuarioSel.Name = "pictureBox_UsuarioSel";
+            this.pictureBox_UsuarioSel.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox_UsuarioSel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_UsuarioSel.TabIndex = 6;
+            this.pictureBox_UsuarioSel.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::Colegio5.Properties.Resources.apagar__1_;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button4.Location = new System.Drawing.Point(0, 554);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(77, 68);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Salir";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
+            this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::Colegio5.Properties.Resources.pre;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button3.Location = new System.Drawing.Point(0, 407);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(77, 90);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Ayuda";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::Colegio5.Properties.Resources.gru;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(0, 324);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(77, 86);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Grupos";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
+            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
+            // 
+            // button5
+            // 
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = global::Colegio5.Properties.Resources.prof;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button5.Location = new System.Drawing.Point(0, 237);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(77, 91);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Docentes";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.MouseEnter += new System.EventHandler(this.button5_MouseEnter);
+            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
+            // 
+            // btn_alumnos
+            // 
+            this.btn_alumnos.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_alumnos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_alumnos.FlatAppearance.BorderSize = 0;
+            this.btn_alumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_alumnos.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_alumnos.ForeColor = System.Drawing.Color.White;
+            this.btn_alumnos.Image = global::Colegio5.Properties.Resources.alum;
+            this.btn_alumnos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_alumnos.Location = new System.Drawing.Point(0, 144);
+            this.btn_alumnos.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_alumnos.Name = "btn_alumnos";
+            this.btn_alumnos.Size = new System.Drawing.Size(77, 93);
+            this.btn_alumnos.TabIndex = 0;
+            this.btn_alumnos.Text = "Alumnos";
+            this.btn_alumnos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_alumnos.UseVisualStyleBackColor = true;
+            this.btn_alumnos.Click += new System.EventHandler(this.btn_alumnos_Click);
+            this.btn_alumnos.MouseEnter += new System.EventHandler(this.btn_alumnos_MouseEnter);
+            this.btn_alumnos.MouseLeave += new System.EventHandler(this.btn_alumnos_MouseLeave);
             // 
             // panelTop
             // 
@@ -265,119 +383,6 @@ namespace Colegio5
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // pictureBox_UsuarioSel
-            // 
-            this.pictureBox_UsuarioSel.Image = global::Colegio5.Properties.Resources.nina;
-            this.pictureBox_UsuarioSel.Location = new System.Drawing.Point(5, 20);
-            this.pictureBox_UsuarioSel.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox_UsuarioSel.Name = "pictureBox_UsuarioSel";
-            this.pictureBox_UsuarioSel.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox_UsuarioSel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_UsuarioSel.TabIndex = 6;
-            this.pictureBox_UsuarioSel.TabStop = false;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::Colegio5.Properties.Resources.apagar__1_;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(0, 554);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(77, 68);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Salir";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            this.button4.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
-            this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::Colegio5.Properties.Resources.pre;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(0, 367);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(77, 90);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Ayuda";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::Colegio5.Properties.Resources.gru;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(0, 284);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 86);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Grupos";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
-            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
-            // 
-            // button5
-            // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::Colegio5.Properties.Resources.prof;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(0, 197);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(77, 91);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Docentes";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            this.button5.MouseEnter += new System.EventHandler(this.button5_MouseEnter);
-            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
-            // 
-            // btn_alumnos
-            // 
-            this.btn_alumnos.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_alumnos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_alumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_alumnos.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_alumnos.ForeColor = System.Drawing.Color.White;
-            this.btn_alumnos.Image = global::Colegio5.Properties.Resources.alum;
-            this.btn_alumnos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_alumnos.Location = new System.Drawing.Point(0, 104);
-            this.btn_alumnos.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_alumnos.Name = "btn_alumnos";
-            this.btn_alumnos.Size = new System.Drawing.Size(77, 93);
-            this.btn_alumnos.TabIndex = 0;
-            this.btn_alumnos.Text = "Alumnos";
-            this.btn_alumnos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_alumnos.UseVisualStyleBackColor = true;
-            this.btn_alumnos.Click += new System.EventHandler(this.btn_alumnos_Click);
-            this.btn_alumnos.MouseEnter += new System.EventHandler(this.btn_alumnos_MouseEnter);
-            this.btn_alumnos.MouseLeave += new System.EventHandler(this.btn_alumnos_MouseLeave);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,6 +399,7 @@ namespace Colegio5
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_UsuarioSel)).EndInit();
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             this.panelContenedor.ResumeLayout(false);
@@ -402,7 +408,6 @@ namespace Colegio5
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_UsuarioSel)).EndInit();
             this.ResumeLayout(false);
 
         }

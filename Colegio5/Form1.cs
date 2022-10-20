@@ -57,6 +57,7 @@ namespace Colegio5
 
         private void btn_alumnos_Click(object sender, EventArgs e)
         {
+            
             abrirFormAlumnos(new Alumnos());
             lbl_topPanel.Text = "Alumnos";
             panelTop.BackColor = Color.FromArgb(9, 132, 227);
