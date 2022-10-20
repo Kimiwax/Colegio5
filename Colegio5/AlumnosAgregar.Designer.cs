@@ -75,6 +75,7 @@ namespace Colegio5
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
+            this.textBox2.ForeColor = System.Drawing.Color.White;
             this.textBox2.Location = new System.Drawing.Point(43, 36);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(220, 20);
@@ -83,6 +84,7 @@ namespace Colegio5
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
+            this.textBox3.ForeColor = System.Drawing.Color.White;
             this.textBox3.Location = new System.Drawing.Point(278, 36);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(262, 20);
@@ -220,6 +222,9 @@ namespace Colegio5
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.textBox10);
@@ -255,7 +260,7 @@ namespace Colegio5
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(220, 375);
             this.button2.Name = "button2";
@@ -268,6 +273,7 @@ namespace Colegio5
             // textBox10
             // 
             this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
+            this.textBox10.ForeColor = System.Drawing.Color.White;
             this.textBox10.Location = new System.Drawing.Point(278, 323);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(262, 20);
@@ -288,6 +294,7 @@ namespace Colegio5
             // textBox9
             // 
             this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
+            this.textBox9.ForeColor = System.Drawing.Color.White;
             this.textBox9.Location = new System.Drawing.Point(43, 334);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(220, 20);
@@ -320,6 +327,7 @@ namespace Colegio5
             // textBox8
             // 
             this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
+            this.textBox8.ForeColor = System.Drawing.Color.White;
             this.textBox8.Location = new System.Drawing.Point(43, 276);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(220, 20);
@@ -328,6 +336,7 @@ namespace Colegio5
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
+            this.textBox7.ForeColor = System.Drawing.Color.White;
             this.textBox7.Location = new System.Drawing.Point(278, 262);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(262, 20);
@@ -336,6 +345,7 @@ namespace Colegio5
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
+            this.textBox6.ForeColor = System.Drawing.Color.White;
             this.textBox6.Location = new System.Drawing.Point(278, 204);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(262, 20);
@@ -344,6 +354,7 @@ namespace Colegio5
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
+            this.textBox5.ForeColor = System.Drawing.Color.White;
             this.textBox5.Location = new System.Drawing.Point(278, 144);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(262, 20);
@@ -352,6 +363,7 @@ namespace Colegio5
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
+            this.textBox4.ForeColor = System.Drawing.Color.White;
             this.textBox4.Location = new System.Drawing.Point(278, 98);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(262, 20);
@@ -360,6 +372,7 @@ namespace Colegio5
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(116)))), ((int)(((byte)(143)))));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(43, 98);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(220, 20);
