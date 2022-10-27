@@ -29,22 +29,23 @@ namespace Colegio5
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_admin = new System.Windows.Forms.Label();
-            this.lbl_invitado = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbl_invitado = new System.Windows.Forms.Label();
+            this.lbl_admin = new System.Windows.Forms.Label();
+            this.pictureBox_Invitado = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Admin = new System.Windows.Forms.PictureBox();
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_ingresar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox_Usuario = new System.Windows.Forms.PictureBox();
-            this.pictureBox_Invitado = new System.Windows.Forms.PictureBox();
-            this.pictureBox_Admin = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Usuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Invitado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Admin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Usuario)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,17 +62,16 @@ namespace Colegio5
             this.panel1.Size = new System.Drawing.Size(190, 487);
             this.panel1.TabIndex = 0;
             // 
-            // lbl_admin
+            // label2
             // 
-            this.lbl_admin.AutoSize = true;
-            this.lbl_admin.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_admin.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_admin.ForeColor = System.Drawing.Color.White;
-            this.lbl_admin.Location = new System.Drawing.Point(36, 224);
-            this.lbl_admin.Name = "lbl_admin";
-            this.lbl_admin.Size = new System.Drawing.Size(123, 26);
-            this.lbl_admin.TabIndex = 3;
-            this.lbl_admin.Text = "Administrador";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 23);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Seleccione su usuario";
             // 
             // lbl_invitado
             // 
@@ -84,16 +84,43 @@ namespace Colegio5
             this.lbl_invitado.TabIndex = 4;
             this.lbl_invitado.Text = "Invitado";
             // 
-            // label2
+            // lbl_admin
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 23);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Seleccione su usuario";
+            this.lbl_admin.AutoSize = true;
+            this.lbl_admin.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_admin.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_admin.ForeColor = System.Drawing.Color.White;
+            this.lbl_admin.Location = new System.Drawing.Point(36, 224);
+            this.lbl_admin.Name = "lbl_admin";
+            this.lbl_admin.Size = new System.Drawing.Size(123, 26);
+            this.lbl_admin.TabIndex = 3;
+            this.lbl_admin.Text = "Administrador";
+            // 
+            // pictureBox_Invitado
+            // 
+            this.pictureBox_Invitado.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Invitado.Image")));
+            this.pictureBox_Invitado.Location = new System.Drawing.Point(0, 250);
+            this.pictureBox_Invitado.Name = "pictureBox_Invitado";
+            this.pictureBox_Invitado.Size = new System.Drawing.Size(190, 192);
+            this.pictureBox_Invitado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox_Invitado.TabIndex = 2;
+            this.pictureBox_Invitado.TabStop = false;
+            this.pictureBox_Invitado.Click += new System.EventHandler(this.pictureBox_Invitado_Click);
+            this.pictureBox_Invitado.MouseEnter += new System.EventHandler(this.pictureBox_Invitado_MouseEnter);
+            this.pictureBox_Invitado.MouseLeave += new System.EventHandler(this.pictureBox_Invitado_MouseLeave);
+            // 
+            // pictureBox_Admin
+            // 
+            this.pictureBox_Admin.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Admin.Image")));
+            this.pictureBox_Admin.Location = new System.Drawing.Point(0, 62);
+            this.pictureBox_Admin.Name = "pictureBox_Admin";
+            this.pictureBox_Admin.Size = new System.Drawing.Size(190, 190);
+            this.pictureBox_Admin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox_Admin.TabIndex = 1;
+            this.pictureBox_Admin.TabStop = false;
+            this.pictureBox_Admin.Click += new System.EventHandler(this.pictureBox_Admin_Click);
+            this.pictureBox_Admin.MouseEnter += new System.EventHandler(this.pictureBox_Admin_MouseEnter);
+            this.pictureBox_Admin.MouseLeave += new System.EventHandler(this.pictureBox_Admin_MouseLeave);
             // 
             // lbl_usuario
             // 
@@ -148,7 +175,6 @@ namespace Colegio5
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = global::Colegio5.Properties.Resources.cancel__1_;
             this.button1.Location = new System.Drawing.Point(750, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(47, 46);
@@ -164,32 +190,6 @@ namespace Colegio5
             this.pictureBox_Usuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_Usuario.TabIndex = 2;
             this.pictureBox_Usuario.TabStop = false;
-            // 
-            // pictureBox_Invitado
-            // 
-            this.pictureBox_Invitado.Image = global::Colegio5.Properties.Resources.butterfly__1_;
-            this.pictureBox_Invitado.Location = new System.Drawing.Point(0, 250);
-            this.pictureBox_Invitado.Name = "pictureBox_Invitado";
-            this.pictureBox_Invitado.Size = new System.Drawing.Size(190, 192);
-            this.pictureBox_Invitado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox_Invitado.TabIndex = 2;
-            this.pictureBox_Invitado.TabStop = false;
-            this.pictureBox_Invitado.Click += new System.EventHandler(this.pictureBox_Invitado_Click);
-            this.pictureBox_Invitado.MouseEnter += new System.EventHandler(this.pictureBox_Invitado_MouseEnter);
-            this.pictureBox_Invitado.MouseLeave += new System.EventHandler(this.pictureBox_Invitado_MouseLeave);
-            // 
-            // pictureBox_Admin
-            // 
-            this.pictureBox_Admin.Image = global::Colegio5.Properties.Resources.sea_star__1_;
-            this.pictureBox_Admin.Location = new System.Drawing.Point(0, 62);
-            this.pictureBox_Admin.Name = "pictureBox_Admin";
-            this.pictureBox_Admin.Size = new System.Drawing.Size(190, 190);
-            this.pictureBox_Admin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox_Admin.TabIndex = 1;
-            this.pictureBox_Admin.TabStop = false;
-            this.pictureBox_Admin.Click += new System.EventHandler(this.pictureBox_Admin_Click);
-            this.pictureBox_Admin.MouseEnter += new System.EventHandler(this.pictureBox_Admin_MouseEnter);
-            this.pictureBox_Admin.MouseLeave += new System.EventHandler(this.pictureBox_Admin_MouseLeave);
             // 
             // Login
             // 
@@ -212,9 +212,9 @@ namespace Colegio5
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Usuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Invitado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Admin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Usuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

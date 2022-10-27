@@ -11,13 +11,13 @@ using ClaseVariables;
 
 namespace Colegio5
 {
-    public partial class Form1 : Form
+    public partial class Inicio : Form
     {
-        public Form1()
+        public Inicio()
         {
             InitializeComponent();
-            Image img = Image.FromFile("sea-star.png");
-            Image img2 = Image.FromFile("butterfly.png");
+            Image img = Image.FromFile("user1Icono.png");
+            Image img2 = Image.FromFile("user2Icono.png");
             if (Variables.user1)
             {
                 pictureBox_UsuarioSel.Image = img;
@@ -40,7 +40,9 @@ namespace Colegio5
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            abrirFormAlumnos(new AgregarInstancias());
+            lbl_topPanel.Text = "Crear";
+            panelTop.BackColor = Color.FromArgb(254, 202, 87);
         }
 
         public void abrirFormAlumnos(object formHijo)
@@ -72,7 +74,7 @@ namespace Colegio5
 
         private void button5_Click(object sender, EventArgs e)
         {
-            abrirFormAlumnos(new AgregarDocentes());
+            abrirFormAlumnos(new Docentes());
             lbl_topPanel.Text = "Docentes";
             panelTop.BackColor = Color.FromArgb(255, 127, 80);
         }
@@ -141,6 +143,16 @@ namespace Colegio5
             this.Close();
             Login login = new Login();
             login.Show();
+        }
+
+        private void btn_agregar_MouseEnter(object sender, EventArgs e)
+        {
+            btn_agregar.BackColor = Color.FromArgb(254, 202, 87);
+        }
+
+        private void btn_agregar_MouseLeave(object sender, EventArgs e)
+        {
+            btn_agregar.BackColor = Color.FromArgb(42, 47, 87);
         }
     }
 }

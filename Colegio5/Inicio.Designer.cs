@@ -1,7 +1,7 @@
 ﻿
 namespace Colegio5
 {
-    partial class Form1
+    partial class Inicio
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,10 +29,11 @@ namespace Colegio5
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox_UsuarioSel = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_agregar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btn_alumnos = new System.Windows.Forms.Button();
@@ -65,7 +66,7 @@ namespace Colegio5
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.panel1.Controls.Add(this.pictureBox_UsuarioSel);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btn_agregar);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.btn_alumnos);
@@ -79,7 +80,7 @@ namespace Colegio5
             // 
             // pictureBox_UsuarioSel
             // 
-            this.pictureBox_UsuarioSel.Image = global::Colegio5.Properties.Resources.nina;
+            this.pictureBox_UsuarioSel.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_UsuarioSel.Image")));
             this.pictureBox_UsuarioSel.Location = new System.Drawing.Point(5, 20);
             this.pictureBox_UsuarioSel.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox_UsuarioSel.Name = "pictureBox_UsuarioSel";
@@ -95,7 +96,7 @@ namespace Colegio5
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::Colegio5.Properties.Resources.apagar__1_;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button4.Location = new System.Drawing.Point(0, 554);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
@@ -109,25 +110,27 @@ namespace Colegio5
             this.button4.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
             this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
             // 
-            // button3
+            // btn_agregar
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::Colegio5.Properties.Resources.pre;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(0, 407);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(77, 90);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Ayuda";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btn_agregar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_agregar.FlatAppearance.BorderSize = 0;
+            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar.ForeColor = System.Drawing.Color.White;
+            this.btn_agregar.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar.Image")));
+            this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_agregar.Location = new System.Drawing.Point(0, 406);
+            this.btn_agregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(77, 90);
+            this.btn_agregar.TabIndex = 8;
+            this.btn_agregar.Text = "Agregar";
+            this.btn_agregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.button3_Click);
+            this.btn_agregar.MouseEnter += new System.EventHandler(this.btn_agregar_MouseEnter);
+            this.btn_agregar.MouseLeave += new System.EventHandler(this.btn_agregar_MouseLeave);
             // 
             // button2
             // 
@@ -137,9 +140,9 @@ namespace Colegio5
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::Colegio5.Properties.Resources.gru;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(0, 324);
+            this.button2.Location = new System.Drawing.Point(0, 316);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(77, 86);
@@ -159,9 +162,9 @@ namespace Colegio5
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::Colegio5.Properties.Resources.prof;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(0, 237);
+            this.button5.Location = new System.Drawing.Point(0, 227);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(77, 91);
@@ -181,9 +184,9 @@ namespace Colegio5
             this.btn_alumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_alumnos.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_alumnos.ForeColor = System.Drawing.Color.White;
-            this.btn_alumnos.Image = global::Colegio5.Properties.Resources.alum;
+            this.btn_alumnos.Image = ((System.Drawing.Image)(resources.GetObject("btn_alumnos.Image")));
             this.btn_alumnos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_alumnos.Location = new System.Drawing.Point(0, 144);
+            this.btn_alumnos.Location = new System.Drawing.Point(0, 130);
             this.btn_alumnos.Margin = new System.Windows.Forms.Padding(2);
             this.btn_alumnos.Name = "btn_alumnos";
             this.btn_alumnos.Size = new System.Drawing.Size(77, 93);
@@ -375,7 +378,7 @@ namespace Colegio5
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = global::Colegio5.Properties.Resources.cancel__2_;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(784, -1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(35, 32);
@@ -418,7 +421,7 @@ namespace Colegio5
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_agregar;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox_UsuarioSel;
         private System.Windows.Forms.Panel panelTop;

@@ -10,5 +10,7 @@ namespace ClaseVariables
     {
         public static bool user1 = false;
         public static bool user2 = false;
+        public static string nombre = " ";
+        public static string apellido = " ";
     }
 }

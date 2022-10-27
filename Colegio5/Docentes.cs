@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Colegio5
 {
-    public partial class AgregarDocentes : Form
+    public partial class Docentes : Form
     {
-        public AgregarDocentes()
+        public Docentes()
         {
             InitializeComponent();
             dataGridView1.Rows.Add("20-39101756-5", "Liliana", "Basile", "-", "Guernica", "Sta Ana 154", 1148184287);
@@ -23,7 +23,7 @@ namespace Colegio5
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AgregarDocente f1 = new AgregarDocente();
+            DocenteAgregar f1 = new DocenteAgregar();
             f1.Show();
 
             

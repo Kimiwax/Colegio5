@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Colegio5
 {
-    public partial class AgregarDocente : Form
+    public partial class GruposBuscar : Form
     {
-        public AgregarDocente()
+        public GruposBuscar()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

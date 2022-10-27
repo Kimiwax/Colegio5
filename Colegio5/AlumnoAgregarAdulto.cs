@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Colegio5
 {
-    public partial class AgregarGrupo : Form
+    public partial class AlumnoAgregarAdulto : Form
     {
-        public AgregarGrupo()
+        public AlumnoAgregarAdulto()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

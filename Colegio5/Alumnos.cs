@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClaseVariables;
 
 
 
@@ -33,6 +34,22 @@ namespace Colegio5
         private void Alumnos_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AlumnoModificar f3 = new AlumnoModificar();
+            f3.Show();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Variables.nombre = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            Variables.apellido = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            AlumnoModificar f3 = new AlumnoModificar();
+            f3.Show();
+
+            
         }
     }
 }

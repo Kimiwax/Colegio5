@@ -46,23 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgregarAdultoACargo.cs">
+    <Compile Include="AlumnoAgregarAdulto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarAdultoACargo.Designer.cs">
-      <DependentUpon>AgregarAdultoACargo.cs</DependentUpon>
+    <Compile Include="AlumnoAgregarAdulto.Designer.cs">
+      <DependentUpon>AlumnoAgregarAdulto.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarDocente.cs">
+    <Compile Include="DocenteAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarDocente.Designer.cs">
-      <DependentUpon>AgregarDocente.cs</DependentUpon>
+    <Compile Include="DocenteAgregar.Designer.cs">
+      <DependentUpon>DocenteAgregar.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarDocentes.cs">
+    <Compile Include="Docentes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarDocentes.Designer.cs">
-      <DependentUpon>AgregarDocentes.cs</DependentUpon>
+    <Compile Include="Docentes.Designer.cs">
+      <DependentUpon>Docentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarInstancias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarInstancias.Designer.cs">
+      <DependentUpon>AgregarInstancias.cs</DependentUpon>
     </Compile>
     <Compile Include="Alumnos.cs">
       <SubType>Form</SubType>
@@ -76,23 +82,29 @@
     <Compile Include="AlumnosAgregar.Designer.cs">
       <DependentUpon>AlumnosAgregar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Grupos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Grupos.Designer.cs">
       <DependentUpon>Grupos.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarGrupo.cs">
+    <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarGrupo.Designer.cs">
-      <DependentUpon>AgregarGrupo.cs</DependentUpon>
+    <Compile Include="Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrupoAgregar.Designer.cs">
+      <DependentUpon>GrupoAgregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GruposBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GruposBuscar.Designer.cs">
+      <DependentUpon>GruposBuscar.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -100,18 +112,37 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlumnoModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlumnoModificar.Designer.cs">
+      <DependentUpon>AlumnoModificar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Va.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Variables.cs" />
-    <EmbeddedResource Include="AgregarAdultoACargo.resx">
-      <DependentUpon>AgregarAdultoACargo.cs</DependentUpon>
+    <Compile Include="ShowDialogGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowDialogGrupos.Designer.cs">
+      <DependentUpon>ShowDialogGrupos.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AlumnoAgregarAdulto.resx">
+      <DependentUpon>AlumnoAgregarAdulto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgregarDocente.resx">
-      <DependentUpon>AgregarDocente.cs</DependentUpon>
+    <EmbeddedResource Include="DocenteAgregar.resx">
+      <DependentUpon>DocenteAgregar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgregarDocentes.resx">
-      <DependentUpon>AgregarDocentes.cs</DependentUpon>
+    <EmbeddedResource Include="Docentes.resx">
+      <DependentUpon>Docentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarInstancias.resx">
+      <DependentUpon>AgregarInstancias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Alumnos.resx">
       <DependentUpon>Alumnos.cs</DependentUpon>
@@ -119,28 +150,32 @@
     <EmbeddedResource Include="AlumnosAgregar.resx">
       <DependentUpon>AlumnosAgregar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Grupos.resx">
       <DependentUpon>Grupos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgregarGrupo.resx">
-      <DependentUpon>AgregarGrupo.cs</DependentUpon>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrupoAgregar.resx">
+      <DependentUpon>GrupoAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GruposBuscar.resx">
+      <DependentUpon>GruposBuscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AlumnoModificar.resx">
+      <DependentUpon>AlumnoModificar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="ShowDialogGrupos.resx">
+      <DependentUpon>ShowDialogGrupos.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\DataSources\AgregarAdultoACargo.datasource" />
     <None Include="Properties\DataSources\AgregarDocente.datasource" />
     <None Include="Properties\DataSources\AgregarDocentes.datasource" />
@@ -165,97 +200,58 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="alumnos.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="alumno.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="alumno %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="alumno %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="profesor.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="grupo-de-chat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="grupo-de-chat %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="grupo-de-chat %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="grupo-de-chat %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="grupo-de-chat %284%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="preguntas-mas-frecuentes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cerrar-sesion %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cerrar-sesion %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cerrar-sesion %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="nina.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="grupo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="grupo %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="alum.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="prof.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="gru.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="pre.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="apagar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="apagar %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="sea-star.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="butterfly.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="sea-star %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="butterfly %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cancel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cancel %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="bin\Debug\cancel %282%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\cancel %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\to-do-list %282%29.png" />
+    <None Include="bin\Debug\to-do-list %281%29.png" />
+    <None Include="bin\Debug\to-do-list.png" />
+    <None Include="Recursos\user2Icono.png" />
+    <None Include="Recursos\user1Icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\alumnosIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\grupoIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\addIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\cerrarSesionIcono.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

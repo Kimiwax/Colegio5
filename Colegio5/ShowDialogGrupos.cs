@@ -10,23 +10,21 @@ using System.Windows.Forms;
 
 namespace Colegio5
 {
-    public partial class AlumnosAgregar : Form
+    public partial class ShowDialogGrupos : Form
     {
-        public AlumnosAgregar()
+        public ShowDialogGrupos()
         {
             InitializeComponent();
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void btn_aceptar_Click(object sender, EventArgs e)
         {
-
+            this.DialogResult = DialogResult.OK;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_cancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
-            AlumnoAgregarAdulto f3 = new AlumnoAgregarAdulto();
-            f3.Show();
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }
