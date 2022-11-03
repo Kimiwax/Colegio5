@@ -19,6 +19,8 @@ namespace Colegio5
             InitializeComponent();
         }
 
+        int valorDeCaracterizacion;
+
         private void label9_Click(object sender, EventArgs e)
         {
 
@@ -26,6 +28,15 @@ namespace Colegio5
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            if (Convert.ToString(cmb_caracterizacionA.SelectedValue) == "TEL - Trastorno Especifíco Del Desarollo")
+            {
+                valorDeCaracterizacion = 5;
+            }
+            else if (Convert.ToString(cmb_caracterizacionA.SelectedValue) == "SH - Sordos Hipoacusicos")
+            {
+                valorDeCaracterizacion = 2;
+            }
             Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
             Variables.ConexionConBD.Open();
 
@@ -35,7 +46,7 @@ namespace Colegio5
             string insertAlumno = "INSERT INTO Alumno (DNIAlumno, ObraSocial, CUD) Values ('" + txt_dniA.Text + "','" + txt_obrasocialA.Text + "','" + cmb_pensionA.Text + "');";
             string insertCaracterizacion = "INSERT INTO Caracterizacion (Especificacion) Values ('" + cmb_caracterizacionA.Text + "');";
             string insertLocalidad = "INSERT INTO Localidad (NomLoca" +
-                "lidad) Values ('" + txt_localidadA.Text + "');";
+                "lidad) Values ('" + /*txt_localidadA.Text*/ /*+*/ "');";
 
             Variables.Orden = new OleDbCommand(insertPersona, Variables.ConexionConBD);
             Variables.Orden.ExecuteNonQuery();
