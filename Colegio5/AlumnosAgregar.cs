@@ -29,14 +29,31 @@ namespace Colegio5
         private void button2_Click(object sender, EventArgs e)
         {
 
-            if (Convert.ToString(cmb_caracterizacionA.SelectedValue) == "TEL - Trastorno Especifíco Del Desarollo")
+            if (cmb_caracterizacionA.SelectedItem.ToString() == "TEL - Trastorno Especifíco Del Desarollo")
             {
                 valorDeCaracterizacion = 5;
             }
-            else if (Convert.ToString(cmb_caracterizacionA.SelectedValue) == "SH - Sordos Hipoacusicos")
+            else if (cmb_caracterizacionA.SelectedItem.ToString() == "SH - Sordos Hipoacusicos")
             {
                 valorDeCaracterizacion = 2;
             }
+            else if (cmb_caracterizacionA.SelectedItem.ToString() == "DM - Discapacidad Neuromotora")
+            {
+                valorDeCaracterizacion = 1;
+            }
+            else if (cmb_caracterizacionA.SelectedItem.ToString() == "DV - Ciegos y Disminuidos Visuales")
+            {
+                valorDeCaracterizacion = 3;
+            }
+            else if (cmb_caracterizacionA.SelectedItem.ToString() == "DI - Discapacidad Intelectual")
+            {
+                valorDeCaracterizacion = 4;
+            }
+            else if (cmb_caracterizacionA.SelectedItem.ToString() == "TES - Trastornos Emocionales Severos")
+            {
+                valorDeCaracterizacion = 6;
+            }
+
             Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
             Variables.ConexionConBD.Open();
 
@@ -44,7 +61,7 @@ namespace Colegio5
 
             string insertPersona = "INSERT INTO Persona (DNI, Nombre, Apellido, FechaNac, Sexo, Direccion, CodigoPostal) Values ('" + txt_dniA.Text + "', '" + txt_nombreA.Text + "','" + txt_apellidoA.Text + "','" + pepe + "','" + cmb_sexoA.Text + "','" + txt_domicilioA.Text + "'," + 1865 + ");" ;
             string insertAlumno = "INSERT INTO Alumno (DNIAlumno, ObraSocial, CUD) Values ('" + txt_dniA.Text + "','" + txt_obrasocialA.Text + "','" + cmb_pensionA.Text + "');";
-            string insertCaracterizacion = "INSERT INTO Caracterizacion (Especificacion) Values ('" + cmb_caracterizacionA.Text + "');";
+            string insertCaracterizacion = "INSERT INTO Caracterizacion (Especificacion) Values ('" + valorDeCaracterizacion + "');";
             string insertLocalidad = "INSERT INTO Localidad (NomLoca" +
                 "lidad) Values ('" + /*txt_localidadA.Text*/ /*+*/ "');";
 
