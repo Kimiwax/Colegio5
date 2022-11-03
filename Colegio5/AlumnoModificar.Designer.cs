@@ -63,20 +63,24 @@ namespace Colegio5
             this.button1 = new System.Windows.Forms.Button();
             this.txt_informe = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.tP_algo = new System.Windows.Forms.TabPage();
+            this.tP_VerAlumno = new System.Windows.Forms.TabPage();
             this.tP_darDeBaja = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tP_modAlumno.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tP_agre.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.tP_darDeBaja.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Controls.Add(this.tP_VerAlumno);
             this.tabControl1.Controls.Add(this.tP_modAlumno);
             this.tabControl1.Controls.Add(this.tP_agre);
-            this.tabControl1.Controls.Add(this.tP_algo);
             this.tabControl1.Controls.Add(this.tP_darDeBaja);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -479,19 +483,22 @@ namespace Colegio5
             this.label22.TabIndex = 10;
             this.label22.Text = "Nombre";
             // 
-            // tP_algo
+            // tP_VerAlumno
             // 
-            this.tP_algo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
-            this.tP_algo.Location = new System.Drawing.Point(4, 32);
-            this.tP_algo.Name = "tP_algo";
-            this.tP_algo.Padding = new System.Windows.Forms.Padding(3);
-            this.tP_algo.Size = new System.Drawing.Size(792, 458);
-            this.tP_algo.TabIndex = 2;
-            this.tP_algo.Text = "Algo";
+            this.tP_VerAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.tP_VerAlumno.Location = new System.Drawing.Point(4, 32);
+            this.tP_VerAlumno.Name = "tP_VerAlumno";
+            this.tP_VerAlumno.Padding = new System.Windows.Forms.Padding(3);
+            this.tP_VerAlumno.Size = new System.Drawing.Size(792, 458);
+            this.tP_VerAlumno.TabIndex = 2;
+            this.tP_VerAlumno.Text = "Datos Del Alumno";
             // 
             // tP_darDeBaja
             // 
             this.tP_darDeBaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.tP_darDeBaja.Controls.Add(this.label15);
+            this.tP_darDeBaja.Controls.Add(this.label14);
+            this.tP_darDeBaja.Controls.Add(this.label1);
             this.tP_darDeBaja.Location = new System.Drawing.Point(4, 32);
             this.tP_darDeBaja.Name = "tP_darDeBaja";
             this.tP_darDeBaja.Padding = new System.Windows.Forms.Padding(3);
@@ -499,7 +506,46 @@ namespace Colegio5
             this.tP_darDeBaja.TabIndex = 3;
             this.tP_darDeBaja.Text = "Dar de Baja";
             // 
-            // ModAlumno
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(18, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(401, 34);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Esta a punto de deshabilitar al alumno:";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.label14.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(444, 38);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(223, 34);
+            this.label14.TabIndex = 35;
+            this.label14.Text = "Nombre Ejemplo, dni:";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.label15.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(18, 122);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(752, 73);
+            this.label15.TabIndex = 36;
+            this.label15.Text = "Al hacer esto no podra efectuar cambios sobre el alumno hasta que el mismo vuelva" +
+    " a ser habilitado desde esta misma ventana.";
+            // 
+            // AlumnoModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -507,7 +553,7 @@ namespace Colegio5
             this.ClientSize = new System.Drawing.Size(800, 494);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ModAlumno";
+            this.Name = "AlumnoModificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModAlumno";
             this.tabControl1.ResumeLayout(false);
@@ -517,6 +563,8 @@ namespace Colegio5
             this.tP_agre.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.tP_darDeBaja.ResumeLayout(false);
+            this.tP_darDeBaja.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -526,7 +574,7 @@ namespace Colegio5
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tP_modAlumno;
         private System.Windows.Forms.TabPage tP_agre;
-        private System.Windows.Forms.TabPage tP_algo;
+        private System.Windows.Forms.TabPage tP_VerAlumno;
         private System.Windows.Forms.TabPage tP_darDeBaja;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
@@ -559,5 +607,8 @@ namespace Colegio5
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txt_informe;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label1;
     }
 }

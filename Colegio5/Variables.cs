@@ -17,11 +17,16 @@ namespace ClaseVariables
 
 
 
-
+        
 
         public static bool user1 = false;
         public static bool user2 = false;
         public static string nombre = " ";
         public static string apellido = " ";
+    }
+    public class VariablesNoEstaticas
+    {
+        public string contraseñaUser1 = "5012022";
+        public string contraseñaUser2 = "2022501";
     }
 }
