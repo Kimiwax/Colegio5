@@ -35,9 +35,11 @@ namespace Colegio5
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txt_LegajoA = new System.Windows.Forms.TextBox();
             this.cmb_sedeinclusionA = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.cmb_localidadA = new System.Windows.Forms.ComboBox();
+            this.cmb_localidadAlumno = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtp_fechaIngresoA = new System.Windows.Forms.DateTimePicker();
             this.cmb_pensionA = new System.Windows.Forms.ComboBox();
@@ -125,9 +127,11 @@ namespace Colegio5
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.txt_LegajoA);
             this.panel1.Controls.Add(this.cmb_sedeinclusionA);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.cmb_localidadA);
+            this.panel1.Controls.Add(this.cmb_localidadAlumno);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dtp_fechaIngresoA);
             this.panel1.Controls.Add(this.cmb_pensionA);
@@ -156,6 +160,29 @@ namespace Colegio5
             this.panel1.TabIndex = 23;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.label13.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(39, 411);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(75, 28);
+            this.label13.TabIndex = 61;
+            this.label13.Text = "LEGAJO";
+            // 
+            // txt_LegajoA
+            // 
+            this.txt_LegajoA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.txt_LegajoA.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_LegajoA.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_LegajoA.ForeColor = System.Drawing.Color.White;
+            this.txt_LegajoA.Location = new System.Drawing.Point(42, 442);
+            this.txt_LegajoA.Name = "txt_LegajoA";
+            this.txt_LegajoA.Size = new System.Drawing.Size(283, 23);
+            this.txt_LegajoA.TabIndex = 60;
+            // 
             // cmb_sedeinclusionA
             // 
             this.cmb_sedeinclusionA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
@@ -183,14 +210,14 @@ namespace Colegio5
             this.label12.TabIndex = 58;
             this.label12.Text = "Tipo de Serv";
             // 
-            // cmb_localidadA
+            // cmb_localidadAlumno
             // 
-            this.cmb_localidadA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.cmb_localidadA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmb_localidadA.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_localidadA.ForeColor = System.Drawing.Color.White;
-            this.cmb_localidadA.FormattingEnabled = true;
-            this.cmb_localidadA.Items.AddRange(new object[] {
+            this.cmb_localidadAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.cmb_localidadAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_localidadAlumno.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_localidadAlumno.ForeColor = System.Drawing.Color.White;
+            this.cmb_localidadAlumno.FormattingEnabled = true;
+            this.cmb_localidadAlumno.Items.AddRange(new object[] {
             "Alejandro Korn",
             "Longchamps",
             "Burzaco",
@@ -198,10 +225,11 @@ namespace Colegio5
             "Guernica",
             "Glew",
             "San Vicente"});
-            this.cmb_localidadA.Location = new System.Drawing.Point(387, 163);
-            this.cmb_localidadA.Name = "cmb_localidadA";
-            this.cmb_localidadA.Size = new System.Drawing.Size(283, 34);
-            this.cmb_localidadA.TabIndex = 57;
+            this.cmb_localidadAlumno.Location = new System.Drawing.Point(387, 163);
+            this.cmb_localidadAlumno.Name = "cmb_localidadAlumno";
+            this.cmb_localidadAlumno.Size = new System.Drawing.Size(283, 34);
+            this.cmb_localidadAlumno.TabIndex = 57;
+            this.cmb_localidadAlumno.SelectedIndexChanged += new System.EventHandler(this.selecciona_localidad);
             // 
             // label2
             // 
@@ -349,6 +377,7 @@ namespace Colegio5
             this.cmb_caracterizacionA.Name = "cmb_caracterizacionA";
             this.cmb_caracterizacionA.Size = new System.Drawing.Size(283, 34);
             this.cmb_caracterizacionA.TabIndex = 37;
+            this.cmb_caracterizacionA.SelectedIndexChanged += new System.EventHandler(this.Selecciona_Caracterizacion);
             // 
             // label14
             // 
@@ -405,6 +434,7 @@ namespace Colegio5
             this.txt_dniA.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_dniA.ForeColor = System.Drawing.Color.White;
             this.txt_dniA.Location = new System.Drawing.Point(42, 298);
+            this.txt_dniA.MaxLength = 8;
             this.txt_dniA.Name = "txt_dniA";
             this.txt_dniA.Size = new System.Drawing.Size(283, 23);
             this.txt_dniA.TabIndex = 23;
@@ -433,6 +463,7 @@ namespace Colegio5
             this.Name = "AlumnosAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AlumnosAgregar";
+            this.Load += new System.EventHandler(this.AlumnosAgregar_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -464,10 +495,12 @@ namespace Colegio5
         private System.Windows.Forms.DateTimePicker dtp_fechadenacA;
         private System.Windows.Forms.ComboBox cmb_sexoA;
         private System.Windows.Forms.ComboBox cmb_pensionA;
-        private System.Windows.Forms.ComboBox cmb_localidadA;
+        private System.Windows.Forms.ComboBox cmb_localidadAlumno;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtp_fechaIngresoA;
         private System.Windows.Forms.ComboBox cmb_sedeinclusionA;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txt_LegajoA;
     }
 }

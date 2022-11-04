@@ -15,9 +15,10 @@ namespace ClaseVariables
         public static OleDbDataReader Lector;
 
 
+        public static string selecLocalidad = "";
+        public static string selecCaracterizacion = "";
 
 
-        
 
         public static bool user1 = false;
         public static bool user2 = false;

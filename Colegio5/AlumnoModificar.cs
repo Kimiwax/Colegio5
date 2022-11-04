@@ -59,5 +59,10 @@ namespace Colegio5
         {
             this.Close();
         }
+
+        private void tP_VerAlumno_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

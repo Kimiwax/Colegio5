@@ -19,8 +19,48 @@ namespace Colegio5
             InitializeComponent();
         }
 
-        int valorDeCaracterizacion;
+        int valorSedInc;
+        private void AlumnosAgregar_Load(object sender, EventArgs e)
+        {
+            
+        }
+        public static OleDbDataReader LecturaDB(string consulta)
+        {
+            Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
+            Variables.ConexionConBD.Open();
 
+            Variables.Orden = new OleDbCommand(consulta, Variables.ConexionConBD);// orden = a la consulta de la base de datos de la conexion
+            Variables.Lector = Variables.Orden.ExecuteReader();//Para select solamente, todo resultado de leer una BD devuelve una estructura
+            return Variables.Lector;
+
+            Variables.ConexionConBD.Close();
+        }
+
+        private void carga_cmbLocalidad()
+        {
+            string consulta3 = "Select CP, NomLocalidad from Localidad;";
+            Variables.Lector = LecturaDB(consulta3);
+            DataTable dsCombo = new DataTable();//Creo el objeto de tipo datatable para que reciba los registros del lector
+            dsCombo.Load(Variables.Lector);
+            cmb_localidadAlumno.DataSource = dsCombo;
+            cmb_localidadAlumno.DisplayMember = "NomLocalidad";//Muestro el nombre de localidad al usuario
+            cmb_localidadAlumno.ValueMember = "CP";//Tomo el valor de codigo postal de la localidad
+            Variables.Lector.Close();
+        }
+
+        
+
+        private void carga_cmbCaracterizacion()
+        {
+            string consulta2 = "Select CodCaracterizacion, Especificacion from Caracterizacion;";
+            Variables.Lector = LecturaDB(consulta2);
+            DataTable dsCombo2 = new DataTable();//Creo el objeto de tipo datatable para que reciba los registros del lector
+            dsCombo2.Load(Variables.Lector);
+            cmb_caracterizacionA.DataSource = dsCombo2;
+            cmb_caracterizacionA.DisplayMember = "Especificacion";//Muestro el nombre de localidad al usuario
+            cmb_caracterizacionA.ValueMember = "CodCaracterizacion";//Tomo el valor de codigo postal de la localidad
+            Variables.Lector.Close();
+        }
         private void label9_Click(object sender, EventArgs e)
         {
 
@@ -28,42 +68,21 @@ namespace Colegio5
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            if (cmb_caracterizacionA.SelectedItem.ToString() == "TEL - Trastorno Especifíco Del Desarollo")
-            {
-                valorDeCaracterizacion = 5;
-            }
-            else if (cmb_caracterizacionA.SelectedItem.ToString() == "SH - Sordos Hipoacusicos")
-            {
-                valorDeCaracterizacion = 2;
-            }
-            else if (cmb_caracterizacionA.SelectedItem.ToString() == "DM - Discapacidad Neuromotora")
-            {
-                valorDeCaracterizacion = 1;
-            }
-            else if (cmb_caracterizacionA.SelectedItem.ToString() == "DV - Ciegos y Disminuidos Visuales")
-            {
-                valorDeCaracterizacion = 3;
-            }
-            else if (cmb_caracterizacionA.SelectedItem.ToString() == "DI - Discapacidad Intelectual")
-            {
-                valorDeCaracterizacion = 4;
-            }
-            else if (cmb_caracterizacionA.SelectedItem.ToString() == "TES - Trastornos Emocionales Severos")
-            {
-                valorDeCaracterizacion = 6;
-            }
+            if (cmb_sedeinclusionA.SelectedItem.ToString() == "Sede")
+            { valorSedInc = 1; }
+            else
+            { valorSedInc = 2; }
 
             Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
             Variables.ConexionConBD.Open();
 
-            string pepe = dtp_fechadenacA.Value.ToString("dd/MM/yyyy");
+            string FechaNacimientoA = dtp_fechadenacA.Value.ToString("dd/MM/yyyy");
+            string FechaingresoA = dtp_fechaIngresoA.Value.ToString("dd/MM/yyyy");
 
-            string insertPersona = "INSERT INTO Persona (DNI, Nombre, Apellido, FechaNac, Sexo, Direccion, CodigoPostal) Values ('" + txt_dniA.Text + "', '" + txt_nombreA.Text + "','" + txt_apellidoA.Text + "','" + pepe + "','" + cmb_sexoA.Text + "','" + txt_domicilioA.Text + "'," + 1865 + ");" ;
-            string insertAlumno = "INSERT INTO Alumno (DNIAlumno, ObraSocial, CUD) Values ('" + txt_dniA.Text + "','" + txt_obrasocialA.Text + "','" + cmb_pensionA.Text + "');";
-            string insertCaracterizacion = "INSERT INTO Caracterizacion (Especificacion) Values ('" + valorDeCaracterizacion + "');";
-            string insertLocalidad = "INSERT INTO Localidad (NomLoca" +
-                "lidad) Values ('" + /*txt_localidadA.Text*/ /*+*/ "');";
+            string insertPersona = "INSERT INTO Persona (DNI, Nombre, Apellido, FechaNac, Sexo, Direccion, CodigoPostal) Values (" + txt_dniA.Text + ", '" + txt_nombreA.Text + "','" + txt_apellidoA.Text + "','" + FechaNacimientoA + "','" + cmb_sexoA.Text + "','" + txt_domicilioA.Text + "'," + Variables.selecLocalidad + ");";
+            string insertAlumno = "INSERT INTO Alumno (DNIAlumno, ObraSocial, CUD, FechaIng, CodigoSedIncDom, Legajo) Values (" + txt_dniA.Text + ",'" + txt_obrasocialA.Text + "','" + cmb_pensionA.Text + "','" + FechaingresoA + "'," + valorSedInc + "," + txt_LegajoA.Text + ");";
+            string insertAlumnoCaracterizacion = "INSERT INTO AlumnoCaracterizaciones (dniAlumno, CodigoCaracterizaciones) Values (" + txt_dniA.Text + ", " + Variables.selecCaracterizacion + ");";
+
 
             Variables.Orden = new OleDbCommand(insertPersona, Variables.ConexionConBD);
             Variables.Orden.ExecuteNonQuery();
@@ -71,17 +90,13 @@ namespace Colegio5
             Variables.Orden = new OleDbCommand(insertAlumno, Variables.ConexionConBD);
             Variables.Orden.ExecuteNonQuery();
 
-            Variables.Orden = new OleDbCommand(insertCaracterizacion, Variables.ConexionConBD);
-            Variables.Orden.ExecuteNonQuery();
-
-            Variables.Orden = new OleDbCommand(insertLocalidad, Variables.ConexionConBD);
+            Variables.Orden = new OleDbCommand(insertAlumnoCaracterizacion, Variables.ConexionConBD);
             Variables.Orden.ExecuteNonQuery();
 
             Variables.ConexionConBD.Close();
 
-
-            //AlumnoAgregarAdulto f3 = new AlumnoAgregarAdulto();
-            //f3.Show();
+            AlumnoAgregarAdulto f3 = new AlumnoAgregarAdulto();
+            f3.ShowDialog();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -92,6 +107,22 @@ namespace Colegio5
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void selecciona_localidad(object sender, EventArgs e)
+        {
+            Variables.selecLocalidad = Convert.ToString(cmb_localidadAlumno.SelectedValue);
+        }
+
+        private void AlumnosAgregar_Load_1(object sender, EventArgs e)
+        {
+            carga_cmbLocalidad();
+            carga_cmbCaracterizacion();
+        }
+
+        private void Selecciona_Caracterizacion(object sender, EventArgs e)
+        {
+            Variables.selecCaracterizacion = Convert.ToString(cmb_caracterizacionA.SelectedValue);
         }
     }
 }
