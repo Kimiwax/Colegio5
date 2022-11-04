@@ -29,6 +29,7 @@ namespace Colegio5
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlumnoAgregarAdulto));
             this.btn_finalizarAdul = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -58,6 +59,7 @@ namespace Colegio5
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_cerrarVentana = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -435,12 +437,26 @@ namespace Colegio5
             this.label2.TabIndex = 9;
             this.label2.Text = "Email";
             // 
+            // btn_cerrarVentana
+            // 
+            this.btn_cerrarVentana.FlatAppearance.BorderSize = 0;
+            this.btn_cerrarVentana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrarVentana.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_cerrarVentana.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrarVentana.Image")));
+            this.btn_cerrarVentana.Location = new System.Drawing.Point(887, 4);
+            this.btn_cerrarVentana.Name = "btn_cerrarVentana";
+            this.btn_cerrarVentana.Size = new System.Drawing.Size(35, 32);
+            this.btn_cerrarVentana.TabIndex = 35;
+            this.btn_cerrarVentana.UseVisualStyleBackColor = true;
+            this.btn_cerrarVentana.Click += new System.EventHandler(this.btn_cerrarVentana_Click);
+            // 
             // AlumnoAgregarAdulto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
             this.ClientSize = new System.Drawing.Size(934, 605);
+            this.Controls.Add(this.btn_cerrarVentana);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -484,5 +500,6 @@ namespace Colegio5
         private System.Windows.Forms.TextBox txt_telefono2Adul;
         private System.Windows.Forms.ComboBox cmb_permanenteAdul;
         private System.Windows.Forms.ComboBox cmb_sexoAdul;
+        private System.Windows.Forms.Button btn_cerrarVentana;
     }
 }

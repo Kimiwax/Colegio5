@@ -58,6 +58,9 @@ namespace Colegio5
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.panel1.Controls.Add(this.dgv_alumnos);
             this.panel1.Controls.Add(this.panel3);
@@ -84,7 +87,7 @@ namespace Colegio5
             this.dgv_alumnos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgv_alumnos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(104)))), ((int)(((byte)(129)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -124,7 +127,8 @@ namespace Colegio5
             this.dgv_alumnos.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_alumnos.Size = new System.Drawing.Size(698, 355);
             this.dgv_alumnos.TabIndex = 4;
-            this.dgv_alumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+           
+            this.dgv_alumnos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_alumnos_CellDoubleClick);
             // 
             // Dni
             // 
@@ -176,11 +180,11 @@ namespace Colegio5
             this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_buscar.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_buscar.ForeColor = System.Drawing.Color.White;
-            this.btn_buscar.Location = new System.Drawing.Point(606, 17);
+            this.btn_buscar.Location = new System.Drawing.Point(590, 17);
             this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(130, 37);
+            this.btn_buscar.Size = new System.Drawing.Size(171, 37);
             this.btn_buscar.TabIndex = 4;
-            this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.Text = "BUSCAR";
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
@@ -202,20 +206,20 @@ namespace Colegio5
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(33, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 28);
+            this.label2.Size = new System.Drawing.Size(147, 28);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Dni Del Alumno";
+            this.label2.Text = "DNI DEL ALUMNO";
             // 
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(609, 5);
+            this.button2.Location = new System.Drawing.Point(639, 8);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 47);
+            this.button2.Size = new System.Drawing.Size(118, 42);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Agregar";
+            this.button2.Text = "AGREGAR";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -224,11 +228,11 @@ namespace Colegio5
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(43, 10);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 37);
+            this.label1.Size = new System.Drawing.Size(212, 37);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Lista de alumnos";
+            this.label1.Text = "LISTA DE ALUMNOS";
             // 
             // panel2
             // 
@@ -254,7 +258,6 @@ namespace Colegio5
             this.Name = "Alumnos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alumnos";
-            this.Load += new System.EventHandler(this.Alumnos_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_alumnos)).EndInit();
             this.panel3.ResumeLayout(false);

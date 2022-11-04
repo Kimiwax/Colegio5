@@ -84,6 +84,9 @@ namespace Colegio5
             this.Close();
         }
 
-        
+        private void btn_cerrarVentana_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

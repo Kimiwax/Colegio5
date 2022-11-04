@@ -36,16 +36,19 @@ namespace Colegio5
             dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
         }
 
-        private void btn_crearGrupo_Click(object sender, EventArgs e)
+        
+        private void btn_crearGrupo_Click_1(object sender, EventArgs e)
         {
             Form okcan = new ShowDialogGrupos();
+
             DialogResult Result = okcan.ShowDialog();
 
-            if (Result == DialogResult.OK) {
+            if (Result == DialogResult.OK)
+            {
                 MessageBox.Show("Se creo correctamente el grupo", "Aviso");
             }
             else { }
-                //btn_crearGrupo.Text = "Cancel";
+            //btn_crearGrupo.Text = "Cancel";
         }
     }
 }

@@ -47,6 +47,7 @@ namespace Colegio5
 
         public void abrirFormAlumnos(object formHijo)
         {
+
             if (this.panelContenedor.Controls.Count > 0)
                 this.panelContenedor.Controls.RemoveAt(0);
             Form fh = formHijo as Form;
@@ -55,11 +56,12 @@ namespace Colegio5
             this.panelContenedor.Controls.Add(fh);
             this.panelContenedor.Tag = fh;
             fh.Show();
+            
         }
 
         private void btn_alumnos_Click(object sender, EventArgs e)
         {
-            
+            panelContenedor.Controls.Clear();
             abrirFormAlumnos(new Alumnos());
             lbl_topPanel.Text = "Alumnos";
             panelTop.BackColor = Color.FromArgb(9, 132, 227);
@@ -74,9 +76,14 @@ namespace Colegio5
 
         private void button5_Click(object sender, EventArgs e)
         {
+            panelContenedor.Controls.Clear();
             abrirFormAlumnos(new Docentes());
             lbl_topPanel.Text = "Docentes";
             panelTop.BackColor = Color.FromArgb(255, 127, 80);
+            panel2.Enabled = false;
+            panel2.Visible = false;
+            panel3.Enabled = false;
+            panel3.Visible = false;
         }
 
         private void btn_alumnos_MouseEnter(object sender, EventArgs e)
@@ -128,6 +135,7 @@ namespace Colegio5
 
         private void button2_Click(object sender, EventArgs e)
         {
+            panelContenedor.Controls.Clear();
             abrirFormAlumnos(new Grupos());
             lbl_topPanel.Text = "Grupos";
             panelTop.BackColor = Color.FromArgb(123, 237, 159);
@@ -153,6 +161,11 @@ namespace Colegio5
         private void btn_agregar_MouseLeave(object sender, EventArgs e)
         {
             btn_agregar.BackColor = Color.FromArgb(42, 47, 87);
+        }
+
+        private void btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

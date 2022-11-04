@@ -253,5 +253,8 @@
   <ItemGroup>
     <None Include="bin\Debug\cerrarSesionIcono.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\cerrarVentanaIcono.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

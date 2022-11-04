@@ -17,6 +17,7 @@ namespace Colegio5
         public AlumnosAgregar()
         {
             InitializeComponent();
+            
         }
 
         int valorSedInc;
@@ -53,43 +54,145 @@ namespace Colegio5
             Variables.Lector = LecturaDB(consulta2);
             DataTable dsCombo2 = new DataTable();//Creo el objeto de tipo datatable para que reciba los registros del lector
             dsCombo2.Load(Variables.Lector);
-            cmb_caracterizacionA.DataSource = dsCombo2;
-            cmb_caracterizacionA.DisplayMember = "Especificacion";//Muestro el nombre de localidad al usuario
-            cmb_caracterizacionA.ValueMember = "CodCaracterizacion";//Tomo el valor de codigo postal de la localidad
+            cmb_caracterizacionNA.DataSource = dsCombo2;
+            cmb_caracterizacionNA.DisplayMember = "Especificacion";//Muestro el nombre de localidad al usuario
+            cmb_caracterizacionNA.ValueMember = "CodCaracterizacion";//Tomo el valor de codigo postal de la localidad
             Variables.Lector.Close();
         }
+        
+        private void VerificarFechaDeNac()
+        {
+            int dias = DateTime.Now.Subtract(dtp_fechadenacA.Value.Date).Days;
 
+            if(dias < 5)
+            {
+                ClaseVariables.Variables.fechaDeNacIncorrecta = true;
+            }
+        }
+
+        private bool IsValidate()
+        {
+            bool noError = true;
+            //VerificarFechaDeNac();
+            if (string.IsNullOrEmpty(txt_nombreA.Text))
+            {   
+                errorIcono.SetError(txt_nombreA, "Ingrese NOMBRE del alumno ");
+                noError = false;
+            }
+            else if (string.IsNullOrEmpty(txt_apellidoA.Text))
+            {
+                errorIcono.Clear();
+                errorIcono.SetError(txt_apellidoA, "Ingrese APELLIDO del alumno ");
+                noError = false;
+            }
+            else if (DateTime.Now.Subtract(dtp_fechadenacA.Value.Date).Days < 10)
+            {
+                errorIcono.Clear();
+                errorIcono.SetError(dtp_fechadenacA, "Ingrese una fecha correcta ");
+                noError = false;
+            }
+            else if(cmb_sexoA.SelectedIndex == -1)
+            {
+                errorIcono.Clear();
+                errorIcono.SetError(cmb_sexoA, "Seleccione SEXO del alumno ");
+                noError = false;
+            }
+            else if (string.IsNullOrEmpty(txt_dniA.Text))
+            {
+                errorIcono.Clear();
+                errorIcono.SetError(txt_dniA, "Ingrese DNI del alumno ");
+                noError = false;
+            }
+            else if (cmb_caracterizacionNA.SelectedIndex == -1)
+            {
+                errorIcono.Clear();
+                errorIcono.SetError(cmb_caracterizacionNA, "Seleccione CARACTERIZACIÓN del alumno ");
+                noError = false;
+            }
+            else if (string.IsNullOrEmpty(txt_LegajoA.Text))
+            {
+                errorIcono.Clear();
+                errorIcono.SetError(txt_LegajoA, "Ingrese LEGAJO del alumno ");
+                noError = false;
+            }
+            else if (string.IsNullOrEmpty(txt_obrasocialA.Text))
+            {
+                errorIcono.Clear();
+                errorIcono.SetError(txt_obrasocialA, "Ingrese OBRA SOCIAL del alumno ");
+                noError = false;
+            }
+            else if (string.IsNullOrEmpty(txt_pensionA.Text))
+            {
+                errorIcono.Clear();
+                errorIcono.SetError(txt_pensionA, "Ingrese PENSIÓN del alumno ");
+                noError = false;
+            }
+            else if (cmb_cudA.SelectedIndex == -1)
+            {
+                errorIcono.Clear();
+                errorIcono.SetError(cmb_cudA, "Seleccione si el alumno tiene CUD ");
+                noError = false;
+            }
+            else if (cmb_localidadAlumno.SelectedIndex == -1)
+            {
+                errorIcono.Clear();
+                errorIcono.SetError(cmb_localidadAlumno, "Ingrese LOCALIDAD del alumno ");
+                noError = false;
+            }
+            else if (string.IsNullOrEmpty(txt_domicilioA.Text))
+            {
+                errorIcono.Clear();
+                errorIcono.SetError(txt_domicilioA, "Ingrese DOMICILIO del alumno ");
+                noError = false;
+            }
+            else if (cmb_sedeinclusionA.SelectedIndex == -1)
+            {
+                errorIcono.Clear();
+                errorIcono.SetError(cmb_sedeinclusionA, "Seleccione tipo de Serv del alumno ");
+                noError = false;
+            }
+            return noError;
+        }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (cmb_sedeinclusionA.SelectedItem.ToString() == "Sede")
-            { valorSedInc = 1; }
-            else
-            { valorSedInc = 2; }
+            
+            if (IsValidate())
+            {
+                errorIcono.Clear();
+                if (cmb_sedeinclusionA.SelectedItem.ToString() == "Sede")
+                { valorSedInc = 1; }
+                else
+                { valorSedInc = 2; }
 
-            Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
-            Variables.ConexionConBD.Open();
+                Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
+                Variables.ConexionConBD.Open();
 
-            string FechaNacimientoA = dtp_fechadenacA.Value.ToString("dd/MM/yyyy");
-            string FechaingresoA = dtp_fechaIngresoA.Value.ToString("dd/MM/yyyy");
+                string FechaNacimientoA = dtp_fechadenacA.Value.ToString("dd/MM/yyyy");
+                string FechaingresoA = dtp_fechaIngresoA.Value.ToString("dd/MM/yyyy");
 
-            string insertPersona = "INSERT INTO Persona (DNI, Nombre, Apellido, FechaNac, Sexo, Direccion, CodigoPostal) Values (" + txt_dniA.Text + ", '" + txt_nombreA.Text + "','" + txt_apellidoA.Text + "','" + FechaNacimientoA + "','" + cmb_sexoA.Text + "','" + txt_domicilioA.Text + "'," + Variables.selecLocalidad + ");";
-            string insertAlumno = "INSERT INTO Alumno (DNIAlumno, ObraSocial, CUD, FechaIng, CodigoSedIncDom, Legajo) Values (" + txt_dniA.Text + ",'" + txt_obrasocialA.Text + "','" + cmb_pensionA.Text + "','" + FechaingresoA + "'," + valorSedInc + "," + txt_LegajoA.Text + ");";
-            string insertAlumnoCaracterizacion = "INSERT INTO AlumnoCaracterizaciones (dniAlumno, CodigoCaracterizaciones) Values (" + txt_dniA.Text + ", " + Variables.selecCaracterizacion + ");";
+                string insertPersona = "INSERT INTO Persona (DNI, Nombre, Apellido, FechaNac, Sexo, Direccion, CodigoPostal) Values (" + txt_dniA.Text + ", '" + txt_nombreA.Text + "','" + txt_apellidoA.Text + "','" + FechaNacimientoA + "','" + cmb_sexoA.Text + "','" + txt_domicilioA.Text + "'," + Variables.selecLocalidad + ");";
+                string insertAlumno = "INSERT INTO Alumno (DNIAlumno, ObraSocial, CUD, FechaIng, CodigoSedIncDom, Legajo) Values (" + txt_dniA.Text + ",'" + txt_obrasocialA.Text + "','" + txt_pensionA.Text + "','" + FechaingresoA + "'," + valorSedInc + "," + txt_LegajoA.Text + ");";
+                string insertAlumnoCaracterizacion = "INSERT INTO AlumnoCaracterizaciones (dniAlumno, CodigoCaracterizaciones) Values (" + txt_dniA.Text + ", " + Variables.selecCaracterizacion + ");";
 
 
-            Variables.Orden = new OleDbCommand(insertPersona, Variables.ConexionConBD);
-            Variables.Orden.ExecuteNonQuery();
+                Variables.Orden = new OleDbCommand(insertPersona, Variables.ConexionConBD);
+                Variables.Orden.ExecuteNonQuery();
 
-            Variables.Orden = new OleDbCommand(insertAlumno, Variables.ConexionConBD);
-            Variables.Orden.ExecuteNonQuery();
+                Variables.Orden = new OleDbCommand(insertAlumno, Variables.ConexionConBD);
+                Variables.Orden.ExecuteNonQuery();
 
-            Variables.Orden = new OleDbCommand(insertAlumnoCaracterizacion, Variables.ConexionConBD);
-            Variables.Orden.ExecuteNonQuery();
+                Variables.Orden = new OleDbCommand(insertAlumnoCaracterizacion, Variables.ConexionConBD);
+                Variables.Orden.ExecuteNonQuery();
 
-            Variables.ConexionConBD.Close();
+                Variables.ConexionConBD.Close();
 
-            AlumnoAgregarAdulto f3 = new AlumnoAgregarAdulto();
-            f3.ShowDialog();
+                AlumnoAgregarAdulto f3 = new AlumnoAgregarAdulto();
+                f3.ShowDialog();
+                MessageBox.Show("Todos los datos del alumno fueron ingresados");
+            }
+
+
+               
         }
 
         private void selecciona_localidad(object sender, EventArgs e)
@@ -101,11 +204,19 @@ namespace Colegio5
         {
             carga_cmbLocalidad();
             carga_cmbCaracterizacion();
+           
         }
 
         private void Selecciona_Caracterizacion(object sender, EventArgs e)
         {
-            Variables.selecCaracterizacion = Convert.ToString(cmb_caracterizacionA.SelectedValue);
+            Variables.selecCaracterizacion = Convert.ToString(cmb_caracterizacionNA.SelectedValue);
         }
+
+        private void btn_cerrarVentana1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
     }
 }

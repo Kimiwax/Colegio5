@@ -52,6 +52,7 @@ namespace Colegio5
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.btn_minimizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_UsuarioSel)).BeginInit();
             this.panelTop.SuspendLayout();
@@ -63,6 +64,8 @@ namespace Colegio5
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.panel1.Controls.Add(this.pictureBox_UsuarioSel);
             this.panel1.Controls.Add(this.button4);
@@ -70,7 +73,6 @@ namespace Colegio5
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.btn_alumnos);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
@@ -91,6 +93,7 @@ namespace Colegio5
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -112,7 +115,7 @@ namespace Colegio5
             // 
             // btn_agregar
             // 
-            this.btn_agregar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btn_agregar.FlatAppearance.BorderSize = 0;
             this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -134,7 +137,7 @@ namespace Colegio5
             // 
             // button2
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -156,7 +159,7 @@ namespace Colegio5
             // 
             // button5
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -178,7 +181,7 @@ namespace Colegio5
             // 
             // btn_alumnos
             // 
-            this.btn_alumnos.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_alumnos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_alumnos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btn_alumnos.FlatAppearance.BorderSize = 0;
             this.btn_alumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -203,10 +206,10 @@ namespace Colegio5
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(49)))), ((int)(((byte)(241)))));
             this.panelTop.Controls.Add(this.lbl_topPanel);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(77, 34);
+            this.panelTop.Location = new System.Drawing.Point(0, 34);
             this.panelTop.Margin = new System.Windows.Forms.Padding(2);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(819, 36);
+            this.panelTop.Size = new System.Drawing.Size(896, 36);
             this.panelTop.TabIndex = 6;
             // 
             // lbl_topPanel
@@ -215,7 +218,7 @@ namespace Colegio5
             this.lbl_topPanel.AutoSize = true;
             this.lbl_topPanel.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_topPanel.ForeColor = System.Drawing.Color.White;
-            this.lbl_topPanel.Location = new System.Drawing.Point(367, 0);
+            this.lbl_topPanel.Location = new System.Drawing.Point(406, 0);
             this.lbl_topPanel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_topPanel.Name = "lbl_topPanel";
             this.lbl_topPanel.Size = new System.Drawing.Size(75, 37);
@@ -224,7 +227,9 @@ namespace Colegio5
             // 
             // panelContenedor
             // 
-            this.panelContenedor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContenedor.Controls.Add(this.panel2);
             this.panelContenedor.Controls.Add(this.panel3);
             this.panelContenedor.Location = new System.Drawing.Point(77, 68);
@@ -236,6 +241,7 @@ namespace Colegio5
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
@@ -300,6 +306,7 @@ namespace Colegio5
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
@@ -365,26 +372,44 @@ namespace Colegio5
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.panel4.Controls.Add(this.btn_minimizar);
             this.panel4.Controls.Add(this.button1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(77, 0);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(819, 34);
+            this.panel4.Size = new System.Drawing.Size(896, 34);
             this.panel4.TabIndex = 11;
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(784, -1);
+            this.button1.Location = new System.Drawing.Point(861, -1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(35, 32);
             this.button1.TabIndex = 11;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btn_minimizar
+            // 
+            this.btn_minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_minimizar.FlatAppearance.BorderSize = 0;
+            this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_minimizar.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
+            this.btn_minimizar.Location = new System.Drawing.Point(822, 2);
+            this.btn_minimizar.Name = "btn_minimizar";
+            this.btn_minimizar.Size = new System.Drawing.Size(33, 29);
+            this.btn_minimizar.TabIndex = 12;
+            this.btn_minimizar.UseVisualStyleBackColor = true;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
             // 
             // Inicio
             // 
@@ -392,10 +417,10 @@ namespace Colegio5
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
             this.ClientSize = new System.Drawing.Size(896, 622);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelContenedor);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Inicio";
@@ -439,6 +464,7 @@ namespace Colegio5
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btn_minimizar;
     }
 }
 

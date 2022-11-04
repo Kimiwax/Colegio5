@@ -35,26 +35,7 @@ namespace Colegio5
           
         }
 
-        private void Alumnos_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            AlumnoModificar f3 = new AlumnoModificar();
-            f3.Show();
-        }
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Variables.nombre = dgv_alumnos.Rows[e.RowIndex].Cells[1].Value.ToString();
-            Variables.apellido = dgv_alumnos.Rows[e.RowIndex].Cells[2].Value.ToString();
-            AlumnoModificar f3 = new AlumnoModificar();
-            f3.Show();
-
-            
-        }
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
@@ -103,6 +84,14 @@ namespace Colegio5
 
 
 
+        }
+
+        private void dgv_alumnos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Variables.nombre = dgv_alumnos.Rows[e.RowIndex].Cells[1].Value.ToString();
+            Variables.apellido = dgv_alumnos.Rows[e.RowIndex].Cells[2].Value.ToString();
+            AlumnoModificar f3 = new AlumnoModificar();
+            f3.Show();
         }
     }
 }

@@ -140,7 +140,7 @@ namespace Colegio5
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(398, 276);
+            this.label5.Location = new System.Drawing.Point(394, 277);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(180, 26);
             this.label5.TabIndex = 5;
@@ -152,7 +152,7 @@ namespace Colegio5
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(381, 305);
+            this.textBox1.Location = new System.Drawing.Point(381, 315);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(214, 30);
             this.textBox1.TabIndex = 6;
@@ -162,11 +162,11 @@ namespace Colegio5
             this.btn_ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ingresar.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ingresar.ForeColor = System.Drawing.Color.White;
-            this.btn_ingresar.Location = new System.Drawing.Point(427, 353);
+            this.btn_ingresar.Location = new System.Drawing.Point(427, 362);
             this.btn_ingresar.Name = "btn_ingresar";
             this.btn_ingresar.Size = new System.Drawing.Size(118, 47);
             this.btn_ingresar.TabIndex = 7;
-            this.btn_ingresar.Text = "Ingresar";
+            this.btn_ingresar.Text = "INGRESAR";
             this.btn_ingresar.UseVisualStyleBackColor = true;
             this.btn_ingresar.Click += new System.EventHandler(this.btn_ingresar_Click);
             // 
@@ -176,6 +176,7 @@ namespace Colegio5
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Image = global::Colegio5.Properties.Resources.cerrarVentanaIcono;
             this.button1.Location = new System.Drawing.Point(750, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(47, 46);

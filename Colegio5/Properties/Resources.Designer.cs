@@ -103,6 +103,16 @@ namespace Colegio5.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cerrarVentanaIcono {
+            get {
+                object obj = ResourceManager.GetObject("cerrarVentanaIcono", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap grupoIcono {
             get {
                 object obj = ResourceManager.GetObject("grupoIcono", resourceCulture);
