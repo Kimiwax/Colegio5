@@ -28,9 +28,14 @@ namespace Colegio5
 
         public static OleDbDataReader LecturaDB(string consulta)
         {
+            Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
+            Variables.ConexionConBD.Open();
+
             Variables.Orden = new OleDbCommand(consulta, Variables.ConexionConBD);// orden = a la consulta de la base de datos de la conexion
             Variables.Lector = Variables.Orden.ExecuteReader();//Para select solamente, todo resultado de leer una BD devuelve una estructura
             return Variables.Lector;
+
+            Variables.ConexionConBD.Close();
         }
         private void carga_cmbLocalidad()
         {

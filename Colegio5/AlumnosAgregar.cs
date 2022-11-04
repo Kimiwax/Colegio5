@@ -20,10 +20,7 @@ namespace Colegio5
         }
 
         int valorSedInc;
-        private void AlumnosAgregar_Load(object sender, EventArgs e)
-        {
-            
-        }
+
         public static OleDbDataReader LecturaDB(string consulta)
         {
             Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
@@ -61,10 +58,6 @@ namespace Colegio5
             cmb_caracterizacionA.ValueMember = "CodCaracterizacion";//Tomo el valor de codigo postal de la localidad
             Variables.Lector.Close();
         }
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -97,16 +90,6 @@ namespace Colegio5
 
             AlumnoAgregarAdulto f3 = new AlumnoAgregarAdulto();
             f3.ShowDialog();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void selecciona_localidad(object sender, EventArgs e)

@@ -158,7 +158,7 @@ namespace Colegio5
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(715, 527);
             this.panel1.TabIndex = 23;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            
             // 
             // label13
             // 
@@ -279,7 +279,7 @@ namespace Colegio5
             this.cmb_sexoA.Name = "cmb_sexoA";
             this.cmb_sexoA.Size = new System.Drawing.Size(283, 34);
             this.cmb_sexoA.TabIndex = 53;
-            this.cmb_sexoA.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            
             // 
             // dtp_fechadenacA
             // 
