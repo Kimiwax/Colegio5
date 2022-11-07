@@ -38,7 +38,7 @@ namespace Colegio5
             this.pictureBox_Admin = new System.Windows.Forms.PictureBox();
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_contraseña = new System.Windows.Forms.TextBox();
             this.btn_ingresar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox_Usuario = new System.Windows.Forms.PictureBox();
@@ -146,16 +146,20 @@ namespace Colegio5
             this.label5.TabIndex = 5;
             this.label5.Text = "Ingrese su contraseña";
             // 
-            // textBox1
+            // txt_contraseña
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(381, 315);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 30);
-            this.textBox1.TabIndex = 6;
+            this.txt_contraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.txt_contraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_contraseña.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_contraseña.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_contraseña.Location = new System.Drawing.Point(381, 315);
+            this.txt_contraseña.Name = "txt_contraseña";
+            this.txt_contraseña.Size = new System.Drawing.Size(214, 30);
+            this.txt_contraseña.TabIndex = 6;
+            this.txt_contraseña.Text = "INGRESE SU CONTRASEÑA";
+            this.txt_contraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_contraseña.Enter += new System.EventHandler(this.txt_contraseña_Enter);
+            this.txt_contraseña.Leave += new System.EventHandler(this.txt_contraseña_Leave);
             // 
             // btn_ingresar
             // 
@@ -202,7 +206,7 @@ namespace Colegio5
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_usuario);
             this.Controls.Add(this.btn_ingresar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_contraseña);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox_Usuario);
             this.Controls.Add(this.panel1);
@@ -233,7 +237,7 @@ namespace Colegio5
         private System.Windows.Forms.PictureBox pictureBox_Usuario;
         private System.Windows.Forms.Label lbl_usuario;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_contraseña;
         private System.Windows.Forms.Button btn_ingresar;
         private System.Windows.Forms.Button button1;
     }

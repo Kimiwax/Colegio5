@@ -89,5 +89,22 @@ namespace Colegio5
 
             base.WndProc(ref m);
         }
+
+        private void txt_contraseña_Enter(object sender, EventArgs e)
+        {
+            if(txt_contraseña.Text == "INGRESE SU CONTRASEÑA")
+            {
+                txt_contraseña.Text = "";
+                txt_contraseña.ForeColor = Color.LightGray;
+            } 
+        }
+
+        private void txt_contraseña_Leave(object sender, EventArgs e)
+        {
+            if(txt_contraseña.Text == ""){
+                txt_contraseña.Text = "INGRESE SU CONTRASEÑA";
+                txt_contraseña.ForeColor = Color.DimGray;
+            }
+        }
     }
 }

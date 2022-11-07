@@ -33,5 +33,10 @@ namespace Colegio5
         {
             abrirFormHijo(new GrupoAgregar());
         }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            abrirFormHijo(new GruposBuscar());
+        }
     }
 }

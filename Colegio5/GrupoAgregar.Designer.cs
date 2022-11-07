@@ -29,12 +29,12 @@ namespace Colegio5
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -57,6 +57,10 @@ namespace Colegio5
             this.label10 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -70,10 +74,8 @@ namespace Colegio5
             this.lstBox_Docente = new System.Windows.Forms.ListBox();
             this.lstBox_Alumnos = new System.Windows.Forms.ListBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_nombreA = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -89,7 +91,7 @@ namespace Colegio5
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(12, 6);
+            this.panel3.Location = new System.Drawing.Point(12, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(426, 68);
             this.panel3.TabIndex = 4;
@@ -139,7 +141,7 @@ namespace Colegio5
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(475, 6);
+            this.panel1.Location = new System.Drawing.Point(444, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(231, 145);
             this.panel1.TabIndex = 5;
@@ -162,7 +164,7 @@ namespace Colegio5
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(205)))), ((int)(((byte)(218)))));
-            this.label8.Location = new System.Drawing.Point(3, 105);
+            this.label8.Location = new System.Drawing.Point(3, 86);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(163, 19);
             this.label8.TabIndex = 10;
@@ -198,7 +200,7 @@ namespace Colegio5
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(166)))), ((int)(((byte)(131)))));
-            this.label7.Location = new System.Drawing.Point(3, 86);
+            this.label7.Location = new System.Drawing.Point(3, 25);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(187, 19);
             this.label7.TabIndex = 9;
@@ -210,7 +212,7 @@ namespace Colegio5
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(179)))));
-            this.label3.Location = new System.Drawing.Point(3, 29);
+            this.label3.Location = new System.Drawing.Point(2, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(226, 19);
             this.label3.TabIndex = 6;
@@ -234,11 +236,11 @@ namespace Colegio5
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(165)))), ((int)(((byte)(194)))));
-            this.label5.Location = new System.Drawing.Point(2, 48);
+            this.label5.Location = new System.Drawing.Point(5, 48);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(22, 19);
+            this.label5.Size = new System.Drawing.Size(15, 19);
             this.label5.TabIndex = 8;
-            this.label5.Text = "02";
+            this.label5.Text = "2";
             // 
             // panel2
             // 
@@ -251,7 +253,7 @@ namespace Colegio5
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Location = new System.Drawing.Point(712, 6);
+            this.panel2.Location = new System.Drawing.Point(681, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(27, 145);
             this.panel2.TabIndex = 11;
@@ -262,23 +264,23 @@ namespace Colegio5
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(101)))));
-            this.label21.Location = new System.Drawing.Point(2, 124);
+            this.label21.Location = new System.Drawing.Point(4, 124);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(23, 19);
+            this.label21.Size = new System.Drawing.Size(16, 19);
             this.label21.TabIndex = 14;
-            this.label21.Text = "06";
+            this.label21.Text = "6";
             // 
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(205)))), ((int)(((byte)(218)))));
-            this.label13.Location = new System.Drawing.Point(2, 105);
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(179)))));
+            this.label13.Location = new System.Drawing.Point(4, 105);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(23, 19);
+            this.label13.Size = new System.Drawing.Size(16, 19);
             this.label13.TabIndex = 12;
-            this.label13.Text = "05";
+            this.label13.Text = "5";
             // 
             // label12
             // 
@@ -297,24 +299,24 @@ namespace Colegio5
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(166)))), ((int)(((byte)(131)))));
-            this.label11.Location = new System.Drawing.Point(2, 86);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(205)))), ((int)(((byte)(218)))));
+            this.label11.Location = new System.Drawing.Point(4, 86);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(23, 19);
+            this.label11.Size = new System.Drawing.Size(16, 19);
             this.label11.TabIndex = 11;
-            this.label11.Text = "04";
+            this.label11.Text = "4";
             // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(122)))), ((int)(((byte)(179)))));
-            this.label9.Location = new System.Drawing.Point(2, 27);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(166)))), ((int)(((byte)(131)))));
+            this.label9.Location = new System.Drawing.Point(6, 27);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(20, 19);
+            this.label9.Size = new System.Drawing.Size(13, 19);
             this.label9.TabIndex = 9;
-            this.label9.Text = "01";
+            this.label9.Text = "1";
             // 
             // label10
             // 
@@ -322,20 +324,20 @@ namespace Colegio5
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(242)))), ((int)(((byte)(202)))));
-            this.label10.Location = new System.Drawing.Point(2, 67);
+            this.label10.Location = new System.Drawing.Point(5, 67);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(23, 19);
+            this.label10.Size = new System.Drawing.Size(16, 19);
             this.label10.TabIndex = 10;
-            this.label10.Text = "03";
+            this.label10.Text = "3";
             // 
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.panel4.Controls.Add(this.dataGridView1);
-            this.panel4.Location = new System.Drawing.Point(12, 92);
+            this.panel4.Location = new System.Drawing.Point(12, 86);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(426, 405);
+            this.panel4.Size = new System.Drawing.Size(426, 529);
             this.panel4.TabIndex = 12;
             // 
             // dataGridView1
@@ -344,245 +346,61 @@ namespace Colegio5
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(104)))), ((int)(((byte)(129)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(104)))), ((int)(((byte)(129)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DNI,
             this.Column2,
             this.Column3,
             this.Tipo});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView1.Size = new System.Drawing.Size(401, 366);
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridView1.Size = new System.Drawing.Size(401, 500);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // panel5
-            // 
-            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
-            this.panel5.Controls.Add(this.comboBox3);
-            this.panel5.Controls.Add(this.comboBox2);
-            this.panel5.Controls.Add(this.label19);
-            this.panel5.Controls.Add(this.label18);
-            this.panel5.Controls.Add(this.btn_crearGrupo);
-            this.panel5.Controls.Add(this.comboBox1);
-            this.panel5.Controls.Add(this.label17);
-            this.panel5.Controls.Add(this.label16);
-            this.panel5.Controls.Add(this.label15);
-            this.panel5.Controls.Add(this.lstBox_Docente);
-            this.panel5.Controls.Add(this.lstBox_Alumnos);
-            this.panel5.Controls.Add(this.label14);
-            this.panel5.Location = new System.Drawing.Point(444, 162);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(344, 335);
-            this.panel5.TabIndex = 13;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Poppins", 7F);
-            this.comboBox3.ForeColor = System.Drawing.Color.White;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.ItemHeight = 16;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Inicial",
-            "Primario",
-            "Secundario"});
-            this.comboBox3.Location = new System.Drawing.Point(142, 188);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(108, 24);
-            this.comboBox3.TabIndex = 29;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Poppins", 7F);
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.ItemHeight = 16;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Inicial",
-            "Primario",
-            "Secundario"});
-            this.comboBox2.Location = new System.Drawing.Point(142, 135);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(108, 24);
-            this.comboBox2.TabIndex = 28;
-            // 
-            // label19
-            // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(169, 162);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(44, 23);
-            this.label19.TabIndex = 27;
-            this.label19.Text = "Ciclo";
-            // 
-            // label18
-            // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(169, 109);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(44, 23);
-            this.label18.TabIndex = 26;
-            this.label18.Text = "Nivel";
-            // 
-            // btn_crearGrupo
-            // 
-            this.btn_crearGrupo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_crearGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_crearGrupo.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_crearGrupo.ForeColor = System.Drawing.Color.White;
-            this.btn_crearGrupo.Location = new System.Drawing.Point(150, 282);
-            this.btn_crearGrupo.Name = "btn_crearGrupo";
-            this.btn_crearGrupo.Size = new System.Drawing.Size(145, 37);
-            this.btn_crearGrupo.TabIndex = 25;
-            this.btn_crearGrupo.Text = "CREAR GRUPO";
-            this.btn_crearGrupo.UseVisualStyleBackColor = true;
-            this.btn_crearGrupo.Click += new System.EventHandler(this.btn_crearGrupo_Click_1);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Poppins", 7F);
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Mañana",
-            "Tarde"});
-            this.comboBox1.Location = new System.Drawing.Point(142, 241);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(108, 24);
-            this.comboBox1.TabIndex = 24;
-            // 
-            // label17
-            // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(163, 215);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(50, 23);
-            this.label17.TabIndex = 23;
-            this.label17.Text = "Turno";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(163, 46);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(65, 23);
-            this.label16.TabIndex = 22;
-            this.label16.Text = "Docente";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(34, 46);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(71, 23);
-            this.label15.TabIndex = 21;
-            this.label15.Text = "Alumnos";
-            // 
-            // lstBox_Docente
-            // 
-            this.lstBox_Docente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
-            this.lstBox_Docente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lstBox_Docente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lstBox_Docente.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstBox_Docente.ForeColor = System.Drawing.Color.White;
-            this.lstBox_Docente.FormattingEnabled = true;
-            this.lstBox_Docente.ItemHeight = 19;
-            this.lstBox_Docente.Location = new System.Drawing.Point(142, 72);
-            this.lstBox_Docente.Name = "lstBox_Docente";
-            this.lstBox_Docente.Size = new System.Drawing.Size(108, 38);
-            this.lstBox_Docente.TabIndex = 20;
-            // 
-            // lstBox_Alumnos
-            // 
-            this.lstBox_Alumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
-            this.lstBox_Alumnos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lstBox_Alumnos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lstBox_Alumnos.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstBox_Alumnos.ForeColor = System.Drawing.Color.White;
-            this.lstBox_Alumnos.FormattingEnabled = true;
-            this.lstBox_Alumnos.ItemHeight = 19;
-            this.lstBox_Alumnos.Location = new System.Drawing.Point(17, 72);
-            this.lstBox_Alumnos.Name = "lstBox_Alumnos";
-            this.lstBox_Alumnos.Size = new System.Drawing.Size(108, 247);
-            this.lstBox_Alumnos.TabIndex = 19;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(115, 4);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(112, 28);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "Crear grupo";
-            // 
             // DNI
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DNI.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DNI.DefaultCellStyle = dataGridViewCellStyle9;
             this.DNI.HeaderText = "DNI";
             this.DNI.Name = "DNI";
             this.DNI.ReadOnly = true;
@@ -605,12 +423,221 @@ namespace Colegio5
             this.Tipo.Name = "Tipo";
             this.Tipo.ReadOnly = true;
             // 
+            // panel5
+            // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.panel5.Controls.Add(this.label22);
+            this.panel5.Controls.Add(this.txt_nombreA);
+            this.panel5.Controls.Add(this.comboBox3);
+            this.panel5.Controls.Add(this.comboBox2);
+            this.panel5.Controls.Add(this.label19);
+            this.panel5.Controls.Add(this.label18);
+            this.panel5.Controls.Add(this.btn_crearGrupo);
+            this.panel5.Controls.Add(this.comboBox1);
+            this.panel5.Controls.Add(this.label17);
+            this.panel5.Controls.Add(this.label16);
+            this.panel5.Controls.Add(this.label15);
+            this.panel5.Controls.Add(this.lstBox_Docente);
+            this.panel5.Controls.Add(this.lstBox_Alumnos);
+            this.panel5.Controls.Add(this.label14);
+            this.panel5.Location = new System.Drawing.Point(444, 172);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(494, 443);
+            this.panel5.TabIndex = 13;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox3.Font = new System.Drawing.Font("Poppins", 7F);
+            this.comboBox3.ForeColor = System.Drawing.Color.White;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.ItemHeight = 16;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Inicial",
+            "Primario",
+            "Secundario"});
+            this.comboBox3.Location = new System.Drawing.Point(277, 129);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(108, 24);
+            this.comboBox3.TabIndex = 29;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Poppins", 7F);
+            this.comboBox2.ForeColor = System.Drawing.Color.White;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.ItemHeight = 16;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Inicial",
+            "Primario",
+            "Secundario"});
+            this.comboBox2.Location = new System.Drawing.Point(277, 72);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(108, 24);
+            this.comboBox2.TabIndex = 28;
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(306, 103);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(44, 23);
+            this.label19.TabIndex = 27;
+            this.label19.Text = "Ciclo";
+            // 
+            // label18
+            // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(306, 46);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(44, 23);
+            this.label18.TabIndex = 26;
+            this.label18.Text = "Nivel";
+            // 
+            // btn_crearGrupo
+            // 
+            this.btn_crearGrupo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_crearGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_crearGrupo.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_crearGrupo.ForeColor = System.Drawing.Color.White;
+            this.btn_crearGrupo.Location = new System.Drawing.Point(189, 368);
+            this.btn_crearGrupo.Name = "btn_crearGrupo";
+            this.btn_crearGrupo.Size = new System.Drawing.Size(145, 37);
+            this.btn_crearGrupo.TabIndex = 25;
+            this.btn_crearGrupo.Text = "CREAR GRUPO";
+            this.btn_crearGrupo.UseVisualStyleBackColor = true;
+            this.btn_crearGrupo.Click += new System.EventHandler(this.btn_crearGrupo_Click_1);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Poppins", 7F);
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Mañana",
+            "Tarde"});
+            this.comboBox1.Location = new System.Drawing.Point(277, 191);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(108, 24);
+            this.comboBox1.TabIndex = 24;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(306, 165);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(50, 23);
+            this.label17.TabIndex = 23;
+            this.label17.Text = "Turno";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(166, 46);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(65, 23);
+            this.label16.TabIndex = 22;
+            this.label16.Text = "Docente";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(33, 46);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(71, 23);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "Alumnos";
+            // 
+            // lstBox_Docente
+            // 
+            this.lstBox_Docente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.lstBox_Docente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstBox_Docente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lstBox_Docente.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstBox_Docente.ForeColor = System.Drawing.Color.White;
+            this.lstBox_Docente.FormattingEnabled = true;
+            this.lstBox_Docente.ItemHeight = 19;
+            this.lstBox_Docente.Location = new System.Drawing.Point(142, 72);
+            this.lstBox_Docente.Name = "lstBox_Docente";
+            this.lstBox_Docente.Size = new System.Drawing.Size(108, 57);
+            this.lstBox_Docente.TabIndex = 20;
+            // 
+            // lstBox_Alumnos
+            // 
+            this.lstBox_Alumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.lstBox_Alumnos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstBox_Alumnos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lstBox_Alumnos.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstBox_Alumnos.ForeColor = System.Drawing.Color.White;
+            this.lstBox_Alumnos.FormattingEnabled = true;
+            this.lstBox_Alumnos.ItemHeight = 19;
+            this.lstBox_Alumnos.Location = new System.Drawing.Point(17, 72);
+            this.lstBox_Alumnos.Name = "lstBox_Alumnos";
+            this.lstBox_Alumnos.Size = new System.Drawing.Size(108, 304);
+            this.lstBox_Alumnos.TabIndex = 19;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(184, 13);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(112, 28);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Crear grupo";
+            // 
+            // txt_nombreA
+            // 
+            this.txt_nombreA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.txt_nombreA.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_nombreA.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombreA.ForeColor = System.Drawing.Color.White;
+            this.txt_nombreA.Location = new System.Drawing.Point(142, 192);
+            this.txt_nombreA.Name = "txt_nombreA";
+            this.txt_nombreA.Size = new System.Drawing.Size(122, 23);
+            this.txt_nombreA.TabIndex = 30;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Location = new System.Drawing.Point(138, 165);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(133, 23);
+            this.label22.TabIndex = 31;
+            this.label22.Text = "Nombre del grupo";
+            // 
             // GrupoAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
-            this.ClientSize = new System.Drawing.Size(800, 509);
+            this.ClientSize = new System.Drawing.Size(950, 627);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
@@ -675,5 +702,7 @@ namespace Colegio5
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txt_nombreA;
     }
 }

@@ -75,7 +75,7 @@ namespace Colegio5
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(374, 3);
+            this.label1.Location = new System.Drawing.Point(365, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 34);
             this.label1.TabIndex = 0;
@@ -165,7 +165,7 @@ namespace Colegio5
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(113, 40);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(715, 573);
+            this.panel1.Size = new System.Drawing.Size(731, 575);
             this.panel1.TabIndex = 23;
             // 
             // cmb_caracterizacionNA
@@ -274,9 +274,9 @@ namespace Colegio5
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(384, 411);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 28);
+            this.label12.Size = new System.Drawing.Size(88, 28);
             this.label12.TabIndex = 58;
-            this.label12.Text = "SERV?";
+            this.label12.Text = "SERVICIO";
             // 
             // cmb_localidadAlumno
             // 
@@ -496,9 +496,9 @@ namespace Colegio5
             this.btn_cerrarVentana1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrarVentana1.ForeColor = System.Drawing.Color.Transparent;
             this.btn_cerrarVentana1.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrarVentana1.Image")));
-            this.btn_cerrarVentana1.Location = new System.Drawing.Point(887, 3);
+            this.btn_cerrarVentana1.Location = new System.Drawing.Point(12, 12);
             this.btn_cerrarVentana1.Name = "btn_cerrarVentana1";
-            this.btn_cerrarVentana1.Size = new System.Drawing.Size(35, 32);
+            this.btn_cerrarVentana1.Size = new System.Drawing.Size(34, 41);
             this.btn_cerrarVentana1.TabIndex = 24;
             this.btn_cerrarVentana1.UseVisualStyleBackColor = true;
             this.btn_cerrarVentana1.Click += new System.EventHandler(this.btn_cerrarVentana1_Click);
@@ -513,7 +513,7 @@ namespace Colegio5
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
-            this.ClientSize = new System.Drawing.Size(934, 625);
+            this.ClientSize = new System.Drawing.Size(950, 627);
             this.Controls.Add(this.btn_cerrarVentana1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);

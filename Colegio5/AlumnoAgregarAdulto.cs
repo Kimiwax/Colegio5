@@ -16,10 +16,32 @@ namespace Colegio5
         {
             InitializeComponent();
         }
-
+        static int contador = 0;
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
+
+            DialogResult Result = MessageBox.Show("¿Desea agregar otro familiar?", "Aviso", MessageBoxButtons.YesNo);
+
+            if (Result == DialogResult.Yes)
+            {
+                contador += 1;
+                if(contador <= 2)
+                {
+                    AlumnoAgregarAdulto nuevoFamiliar = new AlumnoAgregarAdulto();
+                    nuevoFamiliar.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("no se pueden agregar mas familiares");
+                }
+                
+            }
+            else {
+                MessageBox.Show("Se agrego correctamente al alumno");
+            }
+            contador = 0;
+            //this.Close();
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -30,6 +52,11 @@ namespace Colegio5
         private void btn_cerrarVentana_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

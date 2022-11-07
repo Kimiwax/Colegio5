@@ -89,13 +89,14 @@ namespace Colegio5
         private void btn_alumnos_MouseEnter(object sender, EventArgs e)
         {
             btn_alumnos.BackColor = Color.FromArgb(9, 132, 227);
+            btn_alumnos.FlatAppearance.BorderSize = 1;
             
         }
 
         private void btn_alumnos_MouseLeave(object sender, EventArgs e)
         {
             btn_alumnos.BackColor = Color.FromArgb(42, 47, 87);
-           
+            btn_alumnos.FlatAppearance.BorderSize = 0;
         }
 
         private void button5_MouseEnter(object sender, EventArgs e)

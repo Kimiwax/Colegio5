@@ -82,11 +82,23 @@
     <Compile Include="AlumnosAgregar.Designer.cs">
       <DependentUpon>AlumnosAgregar.cs</DependentUpon>
     </Compile>
+    <Compile Include="DocentesModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocentesModificar.Designer.cs">
+      <DependentUpon>DocentesModificar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Grupos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Grupos.Designer.cs">
       <DependentUpon>Grupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GruposModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GruposModificar.Designer.cs">
+      <DependentUpon>GruposModificar.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
@@ -150,8 +162,14 @@
     <EmbeddedResource Include="AlumnosAgregar.resx">
       <DependentUpon>AlumnosAgregar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DocentesModificar.resx">
+      <DependentUpon>DocentesModificar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Grupos.resx">
       <DependentUpon>Grupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GruposModificar.resx">
+      <DependentUpon>GruposModificar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -255,6 +273,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Recursos\cerrarVentanaIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recursos\lupa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
