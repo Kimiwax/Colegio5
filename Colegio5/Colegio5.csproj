@@ -130,6 +130,7 @@
     <Compile Include="AlumnoModificar.Designer.cs">
       <DependentUpon>AlumnoModificar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Metodos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

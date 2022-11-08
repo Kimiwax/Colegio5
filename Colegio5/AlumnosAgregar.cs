@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClaseVariables;
 using System.Data.OleDb;
+using MetodosColeg;
 
 namespace Colegio5
 {
@@ -217,6 +218,41 @@ namespace Colegio5
             this.Close();
         }
 
-        
+        private void txt_nombreA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MetodosColeg.Metodos.ValidarLetras(e);
+          
+            
+        }
+
+        private void txt_apellidoA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.ValidarLetras(e);
+        }
+
+        private void txt_dniA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.ValidarNumeros(e);
+        }
+
+        private void txt_LegajoA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.ValidarNumeros(e);
+        }
+
+        private void txt_obrasocialA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.ValidarLetras(e);
+        }
+
+        private void txt_pensionA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.ValidarLetras(e);
+        }
+
+        private void txt_domicilioA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.ValidarSoloNumerosYLetras(e);
+        }
     }
 }

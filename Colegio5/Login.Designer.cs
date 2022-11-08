@@ -34,18 +34,18 @@ namespace Colegio5
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_invitado = new System.Windows.Forms.Label();
             this.lbl_admin = new System.Windows.Forms.Label();
-            this.pictureBox_Invitado = new System.Windows.Forms.PictureBox();
-            this.pictureBox_Admin = new System.Windows.Forms.PictureBox();
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_contraseña = new System.Windows.Forms.TextBox();
             this.btn_ingresar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox_Usuario = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Invitado = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Admin = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Usuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Invitado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Admin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Usuario)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -96,32 +96,6 @@ namespace Colegio5
             this.lbl_admin.TabIndex = 3;
             this.lbl_admin.Text = "Administrador";
             // 
-            // pictureBox_Invitado
-            // 
-            this.pictureBox_Invitado.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Invitado.Image")));
-            this.pictureBox_Invitado.Location = new System.Drawing.Point(0, 250);
-            this.pictureBox_Invitado.Name = "pictureBox_Invitado";
-            this.pictureBox_Invitado.Size = new System.Drawing.Size(190, 192);
-            this.pictureBox_Invitado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox_Invitado.TabIndex = 2;
-            this.pictureBox_Invitado.TabStop = false;
-            this.pictureBox_Invitado.Click += new System.EventHandler(this.pictureBox_Invitado_Click);
-            this.pictureBox_Invitado.MouseEnter += new System.EventHandler(this.pictureBox_Invitado_MouseEnter);
-            this.pictureBox_Invitado.MouseLeave += new System.EventHandler(this.pictureBox_Invitado_MouseLeave);
-            // 
-            // pictureBox_Admin
-            // 
-            this.pictureBox_Admin.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Admin.Image")));
-            this.pictureBox_Admin.Location = new System.Drawing.Point(0, 62);
-            this.pictureBox_Admin.Name = "pictureBox_Admin";
-            this.pictureBox_Admin.Size = new System.Drawing.Size(190, 190);
-            this.pictureBox_Admin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox_Admin.TabIndex = 1;
-            this.pictureBox_Admin.TabStop = false;
-            this.pictureBox_Admin.Click += new System.EventHandler(this.pictureBox_Admin_Click);
-            this.pictureBox_Admin.MouseEnter += new System.EventHandler(this.pictureBox_Admin_MouseEnter);
-            this.pictureBox_Admin.MouseLeave += new System.EventHandler(this.pictureBox_Admin_MouseLeave);
-            // 
             // lbl_usuario
             // 
             this.lbl_usuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -153,12 +127,15 @@ namespace Colegio5
             this.txt_contraseña.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_contraseña.ForeColor = System.Drawing.Color.DimGray;
             this.txt_contraseña.Location = new System.Drawing.Point(381, 315);
+            this.txt_contraseña.MaxLength = 10;
             this.txt_contraseña.Name = "txt_contraseña";
+            this.txt_contraseña.PasswordChar = '*';
             this.txt_contraseña.Size = new System.Drawing.Size(214, 30);
             this.txt_contraseña.TabIndex = 6;
             this.txt_contraseña.Text = "INGRESE SU CONTRASEÑA";
             this.txt_contraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_contraseña.Enter += new System.EventHandler(this.txt_contraseña_Enter);
+            this.txt_contraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_contraseña_KeyPress);
             this.txt_contraseña.Leave += new System.EventHandler(this.txt_contraseña_Leave);
             // 
             // btn_ingresar
@@ -197,6 +174,32 @@ namespace Colegio5
             this.pictureBox_Usuario.TabIndex = 2;
             this.pictureBox_Usuario.TabStop = false;
             // 
+            // pictureBox_Invitado
+            // 
+            this.pictureBox_Invitado.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Invitado.Image")));
+            this.pictureBox_Invitado.Location = new System.Drawing.Point(0, 250);
+            this.pictureBox_Invitado.Name = "pictureBox_Invitado";
+            this.pictureBox_Invitado.Size = new System.Drawing.Size(190, 192);
+            this.pictureBox_Invitado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox_Invitado.TabIndex = 2;
+            this.pictureBox_Invitado.TabStop = false;
+            this.pictureBox_Invitado.Click += new System.EventHandler(this.pictureBox_Invitado_Click);
+            this.pictureBox_Invitado.MouseEnter += new System.EventHandler(this.pictureBox_Invitado_MouseEnter);
+            this.pictureBox_Invitado.MouseLeave += new System.EventHandler(this.pictureBox_Invitado_MouseLeave);
+            // 
+            // pictureBox_Admin
+            // 
+            this.pictureBox_Admin.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Admin.Image")));
+            this.pictureBox_Admin.Location = new System.Drawing.Point(0, 62);
+            this.pictureBox_Admin.Name = "pictureBox_Admin";
+            this.pictureBox_Admin.Size = new System.Drawing.Size(190, 190);
+            this.pictureBox_Admin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox_Admin.TabIndex = 1;
+            this.pictureBox_Admin.TabStop = false;
+            this.pictureBox_Admin.Click += new System.EventHandler(this.pictureBox_Admin_Click);
+            this.pictureBox_Admin.MouseEnter += new System.EventHandler(this.pictureBox_Admin_MouseEnter);
+            this.pictureBox_Admin.MouseLeave += new System.EventHandler(this.pictureBox_Admin_MouseLeave);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,9 +221,9 @@ namespace Colegio5
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Usuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Invitado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Admin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Usuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

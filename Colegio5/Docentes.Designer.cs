@@ -86,7 +86,7 @@ namespace Colegio5
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(761, 7);
+            this.button2.Location = new System.Drawing.Point(755, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(118, 47);
             this.button2.TabIndex = 2;

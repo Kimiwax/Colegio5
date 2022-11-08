@@ -32,15 +32,9 @@ namespace Colegio5
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DocentesModificar));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tP_VerDocente = new System.Windows.Forms.TabPage();
-            this.tP_modDocente = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tP_darDeBaja = new System.Windows.Forms.TabPage();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelTop = new System.Windows.Forms.Panel();
-            this.btn_cerrarVentana = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.cmb_caracterizacionD = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.cmb_localidadD = new System.Windows.Forms.ComboBox();
@@ -61,8 +55,8 @@ namespace Colegio5
             this.txt_nombreD = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.txt_apellidoD = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tP_modDocente = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -85,13 +79,19 @@ namespace Colegio5
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
+            this.tP_darDeBaja = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.btn_cerrarVentana = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tP_VerDocente.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.tP_modDocente.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tP_darDeBaja.SuspendLayout();
             this.panelTop.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -118,128 +118,6 @@ namespace Colegio5
             this.tP_VerDocente.TabIndex = 2;
             this.tP_VerDocente.Text = "DATOS DEL DOCENTE";
             this.tP_VerDocente.Click += new System.EventHandler(this.tP_VerAlumno_Click);
-            // 
-            // tP_modDocente
-            // 
-            this.tP_modDocente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
-            this.tP_modDocente.Controls.Add(this.panel1);
-            this.tP_modDocente.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tP_modDocente.Location = new System.Drawing.Point(4, 32);
-            this.tP_modDocente.Name = "tP_modDocente";
-            this.tP_modDocente.Padding = new System.Windows.Forms.Padding(3);
-            this.tP_modDocente.Size = new System.Drawing.Size(942, 552);
-            this.tP_modDocente.TabIndex = 0;
-            this.tP_modDocente.Text = "MODIFICAR DOCENTE";
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox9);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.textBox10);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.textBox11);
-            this.panel1.Location = new System.Drawing.Point(21, 17);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(897, 510);
-            this.panel1.TabIndex = 24;
-            // 
-            // tP_darDeBaja
-            // 
-            this.tP_darDeBaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
-            this.tP_darDeBaja.Controls.Add(this.label15);
-            this.tP_darDeBaja.Controls.Add(this.label14);
-            this.tP_darDeBaja.Controls.Add(this.label1);
-            this.tP_darDeBaja.Location = new System.Drawing.Point(4, 32);
-            this.tP_darDeBaja.Name = "tP_darDeBaja";
-            this.tP_darDeBaja.Padding = new System.Windows.Forms.Padding(3);
-            this.tP_darDeBaja.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tP_darDeBaja.Size = new System.Drawing.Size(942, 552);
-            this.tP_darDeBaja.TabIndex = 3;
-            this.tP_darDeBaja.Text = "DAR DE BAJA";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
-            this.label15.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(24, 122);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(886, 77);
-            this.label15.TabIndex = 36;
-            this.label15.Text = "Al hacer esto no podra efectuar cambios sobre el alumno hasta que el mismo vuelva" +
-    " a ser habilitado desde esta misma ventana.";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
-            this.label14.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(450, 38);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(223, 34);
-            this.label14.TabIndex = 35;
-            this.label14.Text = "Nombre Ejemplo, dni:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
-            this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(24, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(401, 34);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Esta a punto de deshabilitar al alumno:";
-            // 
-            // panelTop
-            // 
-            this.panelTop.BackColor = System.Drawing.Color.Transparent;
-            this.panelTop.Controls.Add(this.btn_cerrarVentana);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(2);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(950, 37);
-            this.panelTop.TabIndex = 8;
-            // 
-            // btn_cerrarVentana
-            // 
-            this.btn_cerrarVentana.FlatAppearance.BorderSize = 0;
-            this.btn_cerrarVentana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cerrarVentana.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_cerrarVentana.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrarVentana.Image")));
-            this.btn_cerrarVentana.Location = new System.Drawing.Point(912, 1);
-            this.btn_cerrarVentana.Name = "btn_cerrarVentana";
-            this.btn_cerrarVentana.Size = new System.Drawing.Size(35, 32);
-            this.btn_cerrarVentana.TabIndex = 25;
-            this.btn_cerrarVentana.UseVisualStyleBackColor = true;
-            this.btn_cerrarVentana.Click += new System.EventHandler(this.btn_cerrarVentana_Click);
             // 
             // panel2
             // 
@@ -273,6 +151,28 @@ namespace Colegio5
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(899, 525);
             this.panel2.TabIndex = 25;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.White;
+            this.textBox3.Location = new System.Drawing.Point(168, 150);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(220, 24);
+            this.textBox3.TabIndex = 70;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.White;
+            this.textBox2.Location = new System.Drawing.Point(168, 110);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(220, 24);
+            this.textBox2.TabIndex = 69;
             // 
             // cmb_caracterizacionD
             // 
@@ -389,7 +289,7 @@ namespace Colegio5
             this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label20.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(22, 110);
+            this.label20.Location = new System.Drawing.Point(3, 109);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(140, 22);
             this.label20.TabIndex = 51;
@@ -482,67 +382,90 @@ namespace Colegio5
             this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label25.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(100, 75);
+            this.label25.Location = new System.Drawing.Point(90, 70);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(62, 22);
+            this.label25.Size = new System.Drawing.Size(69, 22);
             this.label25.TabIndex = 11;
-            this.label25.Text = "Apellido";
+            this.label25.Text = "APELLIDO:";
             // 
             // txt_nombreD
             // 
             this.txt_nombreD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
             this.txt_nombreD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_nombreD.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombreD.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombreD.ForeColor = System.Drawing.Color.White;
-            this.txt_nombreD.Location = new System.Drawing.Point(168, 36);
+            this.txt_nombreD.Location = new System.Drawing.Point(168, 28);
             this.txt_nombreD.Name = "txt_nombreD";
-            this.txt_nombreD.Size = new System.Drawing.Size(220, 24);
+            this.txt_nombreD.Size = new System.Drawing.Size(220, 27);
             this.txt_nombreD.TabIndex = 2;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
-            this.label26.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(100, 37);
+            this.label26.Location = new System.Drawing.Point(90, 29);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(60, 22);
+            this.label26.Size = new System.Drawing.Size(70, 23);
             this.label26.TabIndex = 10;
-            this.label26.Text = "Nombre";
+            this.label26.Text = "NOMBRE:";
             // 
             // txt_apellidoD
             // 
             this.txt_apellidoD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
             this.txt_apellidoD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_apellidoD.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apellidoD.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_apellidoD.ForeColor = System.Drawing.Color.White;
-            this.txt_apellidoD.Location = new System.Drawing.Point(168, 74);
+            this.txt_apellidoD.Location = new System.Drawing.Point(168, 67);
             this.txt_apellidoD.Name = "txt_apellidoD";
-            this.txt_apellidoD.Size = new System.Drawing.Size(220, 24);
+            this.txt_apellidoD.Size = new System.Drawing.Size(220, 27);
             this.txt_apellidoD.TabIndex = 3;
             // 
-            // textBox2
+            // tP_modDocente
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(168, 110);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(220, 24);
-            this.textBox2.TabIndex = 69;
+            this.tP_modDocente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.tP_modDocente.Controls.Add(this.panel1);
+            this.tP_modDocente.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tP_modDocente.Location = new System.Drawing.Point(4, 32);
+            this.tP_modDocente.Name = "tP_modDocente";
+            this.tP_modDocente.Padding = new System.Windows.Forms.Padding(3);
+            this.tP_modDocente.Size = new System.Drawing.Size(942, 552);
+            this.tP_modDocente.TabIndex = 0;
+            this.tP_modDocente.Text = "MODIFICAR DOCENTE";
             // 
-            // textBox3
+            // panel1
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(168, 150);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(220, 24);
-            this.textBox3.TabIndex = 70;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.textBox9);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.textBox10);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.textBox11);
+            this.panel1.Location = new System.Drawing.Point(21, 17);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(897, 510);
+            this.panel1.TabIndex = 24;
             // 
             // textBox1
             // 
@@ -814,6 +737,83 @@ namespace Colegio5
             this.textBox11.Size = new System.Drawing.Size(220, 24);
             this.textBox11.TabIndex = 72;
             // 
+            // tP_darDeBaja
+            // 
+            this.tP_darDeBaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.tP_darDeBaja.Controls.Add(this.label15);
+            this.tP_darDeBaja.Controls.Add(this.label14);
+            this.tP_darDeBaja.Controls.Add(this.label1);
+            this.tP_darDeBaja.Location = new System.Drawing.Point(4, 32);
+            this.tP_darDeBaja.Name = "tP_darDeBaja";
+            this.tP_darDeBaja.Padding = new System.Windows.Forms.Padding(3);
+            this.tP_darDeBaja.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tP_darDeBaja.Size = new System.Drawing.Size(942, 552);
+            this.tP_darDeBaja.TabIndex = 3;
+            this.tP_darDeBaja.Text = "DAR DE BAJA";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.label15.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(24, 122);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(886, 77);
+            this.label15.TabIndex = 36;
+            this.label15.Text = "Al hacer esto no podra efectuar cambios sobre el alumno hasta que el mismo vuelva" +
+    " a ser habilitado desde esta misma ventana.";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.label14.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(450, 38);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(223, 34);
+            this.label14.TabIndex = 35;
+            this.label14.Text = "Nombre Ejemplo, dni:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(24, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(401, 34);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Esta a punto de deshabilitar al alumno:";
+            // 
+            // panelTop
+            // 
+            this.panelTop.BackColor = System.Drawing.Color.Transparent;
+            this.panelTop.Controls.Add(this.btn_cerrarVentana);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(0, 0);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(2);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(950, 37);
+            this.panelTop.TabIndex = 8;
+            // 
+            // btn_cerrarVentana
+            // 
+            this.btn_cerrarVentana.FlatAppearance.BorderSize = 0;
+            this.btn_cerrarVentana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrarVentana.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_cerrarVentana.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrarVentana.Image")));
+            this.btn_cerrarVentana.Location = new System.Drawing.Point(912, 1);
+            this.btn_cerrarVentana.Name = "btn_cerrarVentana";
+            this.btn_cerrarVentana.Size = new System.Drawing.Size(35, 32);
+            this.btn_cerrarVentana.TabIndex = 25;
+            this.btn_cerrarVentana.UseVisualStyleBackColor = true;
+            this.btn_cerrarVentana.Click += new System.EventHandler(this.btn_cerrarVentana_Click);
+            // 
             // DocentesModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -828,14 +828,14 @@ namespace Colegio5
             this.Text = "DocentesModificar";
             this.tabControl1.ResumeLayout(false);
             this.tP_VerDocente.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.tP_modDocente.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tP_darDeBaja.ResumeLayout(false);
             this.tP_darDeBaja.PerformLayout();
             this.panelTop.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

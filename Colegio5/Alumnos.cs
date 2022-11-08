@@ -23,7 +23,6 @@ namespace Colegio5
             dgv_alumnos.Rows.Add("46591747", "Alejandro", "Lopez", "TES", "Glew", "Roca 1324");
             dgv_alumnos.Rows.Add("43641756", "Camila", "Caio", "DV", "A.Korn", "Segui 1325");
 
-
   
         }
 
@@ -62,11 +61,7 @@ namespace Colegio5
             Variables.Orden = new OleDbCommand(consulta2, Variables.ConexionConBD);
             Variables.Lector = Variables.Orden.ExecuteReader();
 
-            //DataTable dt = new DataTable();
-            //dt.Load(Variables.Lector);
-            //dgv_alumnos.DataSource = dt;
-
-            //dgv_alumnos.ClearSelection();
+           
 
             while (Variables.Lector.Read())
             {

@@ -33,6 +33,7 @@ namespace Colegio5
             this.btn_finalizarAdul = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtp_fenacAdul = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.txt_parentescoAdul = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,15 +45,13 @@ namespace Colegio5
             this.label12 = new System.Windows.Forms.Label();
             this.txt_domicilioAdul = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_localidadAdul = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.txt_fechaDeNacAdul = new System.Windows.Forms.TextBox();
             this.txt_apellidoAdul = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_dniAdul = new System.Windows.Forms.TextBox();
-            this.txt_sexoAdul = new System.Windows.Forms.TextBox();
+            this.txt_emailAdul = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_nombreAdul = new System.Windows.Forms.TextBox();
@@ -61,33 +60,34 @@ namespace Colegio5
             this.label2 = new System.Windows.Forms.Label();
             this.btn_cerrarVentana = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtp_fenacAdul2 = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_parentescoAdul2 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_telefono2Adul2 = new System.Windows.Forms.TextBox();
+            this.cmb_permanenteAdul2 = new System.Windows.Forms.ComboBox();
+            this.cmb_sexoAdul2 = new System.Windows.Forms.ComboBox();
+            this.txt_ocupacionAdul2 = new System.Windows.Forms.TextBox();
+            this.txt_telefonoAdul2 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_domicioAdul2 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txt_apellidoAdul2 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txt_dniAdul2 = new System.Windows.Forms.TextBox();
+            this.txt_emailAdul2 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txt_nombreAdul2 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.cmb_localidadAdul = new System.Windows.Forms.ComboBox();
+            this.cmb_localidadAdul2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -99,11 +99,11 @@ namespace Colegio5
             this.btn_finalizarAdul.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_finalizarAdul.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_finalizarAdul.ForeColor = System.Drawing.Color.White;
-            this.btn_finalizarAdul.Location = new System.Drawing.Point(371, 572);
+            this.btn_finalizarAdul.Location = new System.Drawing.Point(382, 573);
             this.btn_finalizarAdul.Name = "btn_finalizarAdul";
             this.btn_finalizarAdul.Size = new System.Drawing.Size(206, 46);
             this.btn_finalizarAdul.TabIndex = 32;
-            this.btn_finalizarAdul.Text = "Siguiente";
+            this.btn_finalizarAdul.Text = "FINALIZAR";
             this.btn_finalizarAdul.UseVisualStyleBackColor = false;
             this.btn_finalizarAdul.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -126,6 +126,8 @@ namespace Colegio5
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.panel1.Controls.Add(this.cmb_localidadAdul);
+            this.panel1.Controls.Add(this.dtp_fenacAdul);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.txt_parentescoAdul);
             this.panel1.Controls.Add(this.label6);
@@ -137,15 +139,13 @@ namespace Colegio5
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.txt_domicilioAdul);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.txt_localidadAdul);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.txt_fechaDeNacAdul);
             this.panel1.Controls.Add(this.txt_apellidoAdul);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txt_dniAdul);
-            this.panel1.Controls.Add(this.txt_sexoAdul);
+            this.panel1.Controls.Add(this.txt_emailAdul);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txt_nombreAdul);
@@ -156,6 +156,17 @@ namespace Colegio5
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(901, 240);
             this.panel1.TabIndex = 34;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // dtp_fenacAdul
+            // 
+            this.dtp_fenacAdul.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtp_fenacAdul.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fenacAdul.Location = new System.Drawing.Point(149, 73);
+            this.dtp_fenacAdul.MaxDate = new System.DateTime(2090, 12, 31, 0, 0, 0, 0);
+            this.dtp_fenacAdul.Name = "dtp_fenacAdul";
+            this.dtp_fenacAdul.Size = new System.Drawing.Size(264, 24);
+            this.dtp_fenacAdul.TabIndex = 60;
             // 
             // label13
             // 
@@ -163,7 +174,7 @@ namespace Colegio5
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label13.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(469, 172);
+            this.label13.Location = new System.Drawing.Point(469, 177);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(114, 26);
             this.label13.TabIndex = 59;
@@ -175,10 +186,11 @@ namespace Colegio5
             this.txt_parentescoAdul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_parentescoAdul.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_parentescoAdul.ForeColor = System.Drawing.Color.White;
-            this.txt_parentescoAdul.Location = new System.Drawing.Point(592, 173);
+            this.txt_parentescoAdul.Location = new System.Drawing.Point(592, 178);
             this.txt_parentescoAdul.Name = "txt_parentescoAdul";
             this.txt_parentescoAdul.Size = new System.Drawing.Size(283, 24);
             this.txt_parentescoAdul.TabIndex = 58;
+            this.txt_parentescoAdul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_parentescoAdul_KeyPress);
             // 
             // label6
             // 
@@ -186,7 +198,7 @@ namespace Colegio5
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label6.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(480, 140);
+            this.label6.Location = new System.Drawing.Point(480, 145);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 26);
             this.label6.TabIndex = 57;
@@ -198,10 +210,11 @@ namespace Colegio5
             this.txt_telefono2Adul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_telefono2Adul.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_telefono2Adul.ForeColor = System.Drawing.Color.White;
-            this.txt_telefono2Adul.Location = new System.Drawing.Point(592, 140);
+            this.txt_telefono2Adul.Location = new System.Drawing.Point(592, 145);
             this.txt_telefono2Adul.Name = "txt_telefono2Adul";
             this.txt_telefono2Adul.Size = new System.Drawing.Size(283, 24);
             this.txt_telefono2Adul.TabIndex = 56;
+            this.txt_telefono2Adul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_telefono2Adul_KeyPress);
             // 
             // cmb_permanenteAdul
             // 
@@ -213,7 +226,7 @@ namespace Colegio5
             this.cmb_permanenteAdul.Items.AddRange(new object[] {
             "Si",
             "No"});
-            this.cmb_permanenteAdul.Location = new System.Drawing.Point(592, 7);
+            this.cmb_permanenteAdul.Location = new System.Drawing.Point(592, 12);
             this.cmb_permanenteAdul.Name = "cmb_permanenteAdul";
             this.cmb_permanenteAdul.Size = new System.Drawing.Size(283, 27);
             this.cmb_permanenteAdul.TabIndex = 55;
@@ -228,7 +241,7 @@ namespace Colegio5
             this.cmb_sexoAdul.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.cmb_sexoAdul.Location = new System.Drawing.Point(192, 103);
+            this.cmb_sexoAdul.Location = new System.Drawing.Point(149, 106);
             this.cmb_sexoAdul.Name = "cmb_sexoAdul";
             this.cmb_sexoAdul.Size = new System.Drawing.Size(264, 27);
             this.cmb_sexoAdul.TabIndex = 54;
@@ -239,10 +252,11 @@ namespace Colegio5
             this.txt_ocupacionAdul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_ocupacionAdul.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ocupacionAdul.ForeColor = System.Drawing.Color.White;
-            this.txt_ocupacionAdul.Location = new System.Drawing.Point(192, 170);
+            this.txt_ocupacionAdul.Location = new System.Drawing.Point(149, 173);
             this.txt_ocupacionAdul.Name = "txt_ocupacionAdul";
             this.txt_ocupacionAdul.Size = new System.Drawing.Size(264, 24);
             this.txt_ocupacionAdul.TabIndex = 50;
+            this.txt_ocupacionAdul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ocupacionAdul_KeyPress);
             // 
             // txt_telefonoAdul
             // 
@@ -250,10 +264,11 @@ namespace Colegio5
             this.txt_telefonoAdul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_telefonoAdul.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_telefonoAdul.ForeColor = System.Drawing.Color.White;
-            this.txt_telefonoAdul.Location = new System.Drawing.Point(592, 106);
+            this.txt_telefonoAdul.Location = new System.Drawing.Point(592, 111);
             this.txt_telefonoAdul.Name = "txt_telefonoAdul";
             this.txt_telefonoAdul.Size = new System.Drawing.Size(283, 24);
             this.txt_telefonoAdul.TabIndex = 49;
+            this.txt_telefonoAdul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_telefonoAdul_KeyPress);
             // 
             // label12
             // 
@@ -261,7 +276,7 @@ namespace Colegio5
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label12.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(492, 105);
+            this.label12.Location = new System.Drawing.Point(492, 110);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(91, 26);
             this.label12.TabIndex = 48;
@@ -273,10 +288,11 @@ namespace Colegio5
             this.txt_domicilioAdul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_domicilioAdul.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_domicilioAdul.ForeColor = System.Drawing.Color.White;
-            this.txt_domicilioAdul.Location = new System.Drawing.Point(592, 72);
+            this.txt_domicilioAdul.Location = new System.Drawing.Point(592, 77);
             this.txt_domicilioAdul.Name = "txt_domicilioAdul";
             this.txt_domicilioAdul.Size = new System.Drawing.Size(283, 24);
             this.txt_domicilioAdul.TabIndex = 47;
+            this.txt_domicilioAdul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_domicilioAdul_KeyPress);
             // 
             // label8
             // 
@@ -284,22 +300,11 @@ namespace Colegio5
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label8.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(488, 71);
+            this.label8.Location = new System.Drawing.Point(488, 76);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 26);
             this.label8.TabIndex = 46;
             this.label8.Text = "DOMICILIO:";
-            // 
-            // txt_localidadAdul
-            // 
-            this.txt_localidadAdul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.txt_localidadAdul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_localidadAdul.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_localidadAdul.ForeColor = System.Drawing.Color.White;
-            this.txt_localidadAdul.Location = new System.Drawing.Point(592, 41);
-            this.txt_localidadAdul.Name = "txt_localidadAdul";
-            this.txt_localidadAdul.Size = new System.Drawing.Size(283, 24);
-            this.txt_localidadAdul.TabIndex = 45;
             // 
             // label7
             // 
@@ -307,7 +312,7 @@ namespace Colegio5
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label7.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(482, 40);
+            this.label7.Location = new System.Drawing.Point(482, 47);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 26);
             this.label7.TabIndex = 44;
@@ -319,7 +324,7 @@ namespace Colegio5
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label11.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(468, 8);
+            this.label11.Location = new System.Drawing.Point(468, 13);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(115, 26);
             this.label11.TabIndex = 40;
@@ -331,22 +336,11 @@ namespace Colegio5
             this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label14.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(78, 167);
+            this.label14.Location = new System.Drawing.Point(35, 170);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(108, 26);
             this.label14.TabIndex = 36;
             this.label14.Text = "OCUPACIÓN:";
-            // 
-            // txt_fechaDeNacAdul
-            // 
-            this.txt_fechaDeNacAdul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.txt_fechaDeNacAdul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_fechaDeNacAdul.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_fechaDeNacAdul.ForeColor = System.Drawing.Color.White;
-            this.txt_fechaDeNacAdul.Location = new System.Drawing.Point(192, 69);
-            this.txt_fechaDeNacAdul.Name = "txt_fechaDeNacAdul";
-            this.txt_fechaDeNacAdul.Size = new System.Drawing.Size(264, 24);
-            this.txt_fechaDeNacAdul.TabIndex = 35;
             // 
             // txt_apellidoAdul
             // 
@@ -354,11 +348,12 @@ namespace Colegio5
             this.txt_apellidoAdul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_apellidoAdul.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_apellidoAdul.ForeColor = System.Drawing.Color.White;
-            this.txt_apellidoAdul.Location = new System.Drawing.Point(192, 37);
+            this.txt_apellidoAdul.Location = new System.Drawing.Point(149, 40);
             this.txt_apellidoAdul.Name = "txt_apellidoAdul";
             this.txt_apellidoAdul.Size = new System.Drawing.Size(264, 24);
             this.txt_apellidoAdul.TabIndex = 34;
             this.txt_apellidoAdul.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txt_apellidoAdul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellidoAdul_KeyPress);
             // 
             // label9
             // 
@@ -366,7 +361,7 @@ namespace Colegio5
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label9.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(144, 140);
+            this.label9.Location = new System.Drawing.Point(101, 143);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(42, 26);
             this.label9.TabIndex = 27;
@@ -378,21 +373,24 @@ namespace Colegio5
             this.txt_dniAdul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_dniAdul.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_dniAdul.ForeColor = System.Drawing.Color.White;
-            this.txt_dniAdul.Location = new System.Drawing.Point(192, 140);
+            this.txt_dniAdul.Location = new System.Drawing.Point(149, 143);
             this.txt_dniAdul.Name = "txt_dniAdul";
             this.txt_dniAdul.Size = new System.Drawing.Size(264, 24);
             this.txt_dniAdul.TabIndex = 23;
+            this.txt_dniAdul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dniAdul_KeyPress);
             // 
-            // txt_sexoAdul
+            // txt_emailAdul
             // 
-            this.txt_sexoAdul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.txt_sexoAdul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_sexoAdul.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_sexoAdul.ForeColor = System.Drawing.Color.White;
-            this.txt_sexoAdul.Location = new System.Drawing.Point(192, 200);
-            this.txt_sexoAdul.Name = "txt_sexoAdul";
-            this.txt_sexoAdul.Size = new System.Drawing.Size(264, 24);
-            this.txt_sexoAdul.TabIndex = 20;
+            this.txt_emailAdul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.txt_emailAdul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_emailAdul.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_emailAdul.ForeColor = System.Drawing.Color.White;
+            this.txt_emailAdul.Location = new System.Drawing.Point(149, 203);
+            this.txt_emailAdul.Name = "txt_emailAdul";
+            this.txt_emailAdul.ShortcutsEnabled = false;
+            this.txt_emailAdul.Size = new System.Drawing.Size(264, 24);
+            this.txt_emailAdul.TabIndex = 20;
+            this.txt_emailAdul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_emailAdul_KeyPress);
             // 
             // label10
             // 
@@ -400,7 +398,7 @@ namespace Colegio5
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label10.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(130, 104);
+            this.label10.Location = new System.Drawing.Point(87, 107);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 26);
             this.label10.TabIndex = 17;
@@ -412,7 +410,7 @@ namespace Colegio5
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label4.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(101, 37);
+            this.label4.Location = new System.Drawing.Point(58, 40);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 26);
             this.label4.TabIndex = 11;
@@ -424,10 +422,11 @@ namespace Colegio5
             this.txt_nombreAdul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_nombreAdul.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombreAdul.ForeColor = System.Drawing.Color.White;
-            this.txt_nombreAdul.Location = new System.Drawing.Point(192, 7);
+            this.txt_nombreAdul.Location = new System.Drawing.Point(149, 10);
             this.txt_nombreAdul.Name = "txt_nombreAdul";
             this.txt_nombreAdul.Size = new System.Drawing.Size(264, 24);
             this.txt_nombreAdul.TabIndex = 2;
+            this.txt_nombreAdul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombreAdul_KeyPress);
             // 
             // label3
             // 
@@ -435,7 +434,7 @@ namespace Colegio5
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label3.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(105, 7);
+            this.label3.Location = new System.Drawing.Point(62, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 26);
             this.label3.TabIndex = 10;
@@ -447,7 +446,7 @@ namespace Colegio5
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label5.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(85, 70);
+            this.label5.Location = new System.Drawing.Point(42, 73);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 26);
             this.label5.TabIndex = 12;
@@ -459,7 +458,7 @@ namespace Colegio5
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(126, 197);
+            this.label2.Location = new System.Drawing.Point(83, 200);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 26);
             this.label2.TabIndex = 9;
@@ -484,29 +483,29 @@ namespace Colegio5
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.panel2.Controls.Add(this.cmb_localidadAdul2);
+            this.panel2.Controls.Add(this.dtp_fenacAdul2);
             this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txt_parentescoAdul2);
             this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.txt_telefono2Adul2);
+            this.panel2.Controls.Add(this.cmb_permanenteAdul2);
+            this.panel2.Controls.Add(this.cmb_sexoAdul2);
+            this.panel2.Controls.Add(this.txt_ocupacionAdul2);
+            this.panel2.Controls.Add(this.txt_telefonoAdul2);
             this.panel2.Controls.Add(this.label17);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.txt_domicioAdul2);
             this.panel2.Controls.Add(this.label18);
-            this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.label20);
             this.panel2.Controls.Add(this.label21);
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.textBox8);
+            this.panel2.Controls.Add(this.txt_apellidoAdul2);
             this.panel2.Controls.Add(this.label22);
-            this.panel2.Controls.Add(this.textBox9);
-            this.panel2.Controls.Add(this.textBox10);
+            this.panel2.Controls.Add(this.txt_dniAdul2);
+            this.panel2.Controls.Add(this.txt_emailAdul2);
             this.panel2.Controls.Add(this.label23);
             this.panel2.Controls.Add(this.label24);
-            this.panel2.Controls.Add(this.textBox11);
+            this.panel2.Controls.Add(this.txt_nombreAdul2);
             this.panel2.Controls.Add(this.label25);
             this.panel2.Controls.Add(this.label26);
             this.panel2.Controls.Add(this.label27);
@@ -514,6 +513,16 @@ namespace Colegio5
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(901, 240);
             this.panel2.TabIndex = 36;
+            // 
+            // dtp_fenacAdul2
+            // 
+            this.dtp_fenacAdul2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtp_fenacAdul2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fenacAdul2.Location = new System.Drawing.Point(149, 73);
+            this.dtp_fenacAdul2.MaxDate = new System.DateTime(2090, 12, 31, 0, 0, 0, 0);
+            this.dtp_fenacAdul2.Name = "dtp_fenacAdul2";
+            this.dtp_fenacAdul2.Size = new System.Drawing.Size(264, 24);
+            this.dtp_fenacAdul2.TabIndex = 60;
             // 
             // label15
             // 
@@ -527,16 +536,16 @@ namespace Colegio5
             this.label15.TabIndex = 59;
             this.label15.Text = "PARENTESCO:";
             // 
-            // textBox1
+            // txt_parentescoAdul2
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(592, 173);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(283, 24);
-            this.textBox1.TabIndex = 58;
+            this.txt_parentescoAdul2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.txt_parentescoAdul2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_parentescoAdul2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_parentescoAdul2.ForeColor = System.Drawing.Color.White;
+            this.txt_parentescoAdul2.Location = new System.Drawing.Point(592, 173);
+            this.txt_parentescoAdul2.Name = "txt_parentescoAdul2";
+            this.txt_parentescoAdul2.Size = new System.Drawing.Size(283, 24);
+            this.txt_parentescoAdul2.TabIndex = 58;
             // 
             // label16
             // 
@@ -550,68 +559,68 @@ namespace Colegio5
             this.label16.TabIndex = 57;
             this.label16.Text = "TELÉFONO 2:";
             // 
-            // textBox2
+            // txt_telefono2Adul2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(592, 143);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(283, 24);
-            this.textBox2.TabIndex = 56;
+            this.txt_telefono2Adul2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.txt_telefono2Adul2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_telefono2Adul2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_telefono2Adul2.ForeColor = System.Drawing.Color.White;
+            this.txt_telefono2Adul2.Location = new System.Drawing.Point(592, 143);
+            this.txt_telefono2Adul2.Name = "txt_telefono2Adul2";
+            this.txt_telefono2Adul2.Size = new System.Drawing.Size(283, 24);
+            this.txt_telefono2Adul2.TabIndex = 56;
             // 
-            // comboBox1
+            // cmb_permanenteAdul2
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmb_permanenteAdul2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.cmb_permanenteAdul2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_permanenteAdul2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_permanenteAdul2.ForeColor = System.Drawing.Color.White;
+            this.cmb_permanenteAdul2.FormattingEnabled = true;
+            this.cmb_permanenteAdul2.Items.AddRange(new object[] {
             "Si",
             "No"});
-            this.comboBox1.Location = new System.Drawing.Point(592, 9);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(283, 27);
-            this.comboBox1.TabIndex = 55;
+            this.cmb_permanenteAdul2.Location = new System.Drawing.Point(592, 9);
+            this.cmb_permanenteAdul2.Name = "cmb_permanenteAdul2";
+            this.cmb_permanenteAdul2.Size = new System.Drawing.Size(283, 27);
+            this.cmb_permanenteAdul2.TabIndex = 55;
             // 
-            // comboBox2
+            // cmb_sexoAdul2
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmb_sexoAdul2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.cmb_sexoAdul2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_sexoAdul2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_sexoAdul2.ForeColor = System.Drawing.Color.White;
+            this.cmb_sexoAdul2.FormattingEnabled = true;
+            this.cmb_sexoAdul2.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.comboBox2.Location = new System.Drawing.Point(192, 103);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(264, 27);
-            this.comboBox2.TabIndex = 54;
+            this.cmb_sexoAdul2.Location = new System.Drawing.Point(149, 106);
+            this.cmb_sexoAdul2.Name = "cmb_sexoAdul2";
+            this.cmb_sexoAdul2.Size = new System.Drawing.Size(264, 27);
+            this.cmb_sexoAdul2.TabIndex = 54;
             // 
-            // textBox3
+            // txt_ocupacionAdul2
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(192, 170);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(264, 24);
-            this.textBox3.TabIndex = 50;
+            this.txt_ocupacionAdul2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.txt_ocupacionAdul2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ocupacionAdul2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ocupacionAdul2.ForeColor = System.Drawing.Color.White;
+            this.txt_ocupacionAdul2.Location = new System.Drawing.Point(149, 173);
+            this.txt_ocupacionAdul2.Name = "txt_ocupacionAdul2";
+            this.txt_ocupacionAdul2.Size = new System.Drawing.Size(264, 24);
+            this.txt_ocupacionAdul2.TabIndex = 50;
             // 
-            // textBox4
+            // txt_telefonoAdul2
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(592, 107);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(283, 24);
-            this.textBox4.TabIndex = 49;
+            this.txt_telefonoAdul2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.txt_telefonoAdul2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_telefonoAdul2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_telefonoAdul2.ForeColor = System.Drawing.Color.White;
+            this.txt_telefonoAdul2.Location = new System.Drawing.Point(592, 107);
+            this.txt_telefonoAdul2.Name = "txt_telefonoAdul2";
+            this.txt_telefonoAdul2.Size = new System.Drawing.Size(283, 24);
+            this.txt_telefonoAdul2.TabIndex = 49;
             // 
             // label17
             // 
@@ -625,16 +634,16 @@ namespace Colegio5
             this.label17.TabIndex = 48;
             this.label17.Text = "TELÉFONO:";
             // 
-            // textBox5
+            // txt_domicioAdul2
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.White;
-            this.textBox5.Location = new System.Drawing.Point(592, 73);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(283, 24);
-            this.textBox5.TabIndex = 47;
+            this.txt_domicioAdul2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.txt_domicioAdul2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_domicioAdul2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_domicioAdul2.ForeColor = System.Drawing.Color.White;
+            this.txt_domicioAdul2.Location = new System.Drawing.Point(592, 73);
+            this.txt_domicioAdul2.Name = "txt_domicioAdul2";
+            this.txt_domicioAdul2.Size = new System.Drawing.Size(283, 24);
+            this.txt_domicioAdul2.TabIndex = 47;
             // 
             // label18
             // 
@@ -647,17 +656,6 @@ namespace Colegio5
             this.label18.Size = new System.Drawing.Size(95, 26);
             this.label18.TabIndex = 46;
             this.label18.Text = "DOMICILIO:";
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(592, 43);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(283, 24);
-            this.textBox6.TabIndex = 45;
             // 
             // label19
             // 
@@ -690,33 +688,22 @@ namespace Colegio5
             this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label21.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(78, 167);
+            this.label21.Location = new System.Drawing.Point(35, 170);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(108, 26);
             this.label21.TabIndex = 36;
             this.label21.Text = "OCUPACIÓN:";
             // 
-            // textBox7
+            // txt_apellidoAdul2
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.White;
-            this.textBox7.Location = new System.Drawing.Point(192, 70);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(264, 24);
-            this.textBox7.TabIndex = 35;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.White;
-            this.textBox8.Location = new System.Drawing.Point(192, 40);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(264, 24);
-            this.textBox8.TabIndex = 34;
+            this.txt_apellidoAdul2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.txt_apellidoAdul2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_apellidoAdul2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_apellidoAdul2.ForeColor = System.Drawing.Color.White;
+            this.txt_apellidoAdul2.Location = new System.Drawing.Point(149, 43);
+            this.txt_apellidoAdul2.Name = "txt_apellidoAdul2";
+            this.txt_apellidoAdul2.Size = new System.Drawing.Size(264, 24);
+            this.txt_apellidoAdul2.TabIndex = 34;
             // 
             // label22
             // 
@@ -724,33 +711,33 @@ namespace Colegio5
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label22.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(144, 140);
+            this.label22.Location = new System.Drawing.Point(101, 143);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(42, 26);
             this.label22.TabIndex = 27;
             this.label22.Text = "DNI:";
             // 
-            // textBox9
+            // txt_dniAdul2
             // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.Color.White;
-            this.textBox9.Location = new System.Drawing.Point(192, 140);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(264, 24);
-            this.textBox9.TabIndex = 23;
+            this.txt_dniAdul2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.txt_dniAdul2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_dniAdul2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_dniAdul2.ForeColor = System.Drawing.Color.White;
+            this.txt_dniAdul2.Location = new System.Drawing.Point(149, 143);
+            this.txt_dniAdul2.Name = "txt_dniAdul2";
+            this.txt_dniAdul2.Size = new System.Drawing.Size(264, 24);
+            this.txt_dniAdul2.TabIndex = 23;
             // 
-            // textBox10
+            // txt_emailAdul2
             // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.ForeColor = System.Drawing.Color.White;
-            this.textBox10.Location = new System.Drawing.Point(192, 200);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(264, 24);
-            this.textBox10.TabIndex = 20;
+            this.txt_emailAdul2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.txt_emailAdul2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_emailAdul2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_emailAdul2.ForeColor = System.Drawing.Color.White;
+            this.txt_emailAdul2.Location = new System.Drawing.Point(149, 203);
+            this.txt_emailAdul2.Name = "txt_emailAdul2";
+            this.txt_emailAdul2.Size = new System.Drawing.Size(264, 24);
+            this.txt_emailAdul2.TabIndex = 20;
             // 
             // label23
             // 
@@ -758,7 +745,7 @@ namespace Colegio5
             this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label23.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(130, 103);
+            this.label23.Location = new System.Drawing.Point(87, 106);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(56, 26);
             this.label23.TabIndex = 17;
@@ -770,22 +757,22 @@ namespace Colegio5
             this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label24.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(101, 37);
+            this.label24.Location = new System.Drawing.Point(58, 40);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(85, 26);
             this.label24.TabIndex = 11;
             this.label24.Text = "APELLIDO:";
             // 
-            // textBox11
+            // txt_nombreAdul2
             // 
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox11.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.ForeColor = System.Drawing.Color.White;
-            this.textBox11.Location = new System.Drawing.Point(192, 10);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(264, 24);
-            this.textBox11.TabIndex = 2;
+            this.txt_nombreAdul2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.txt_nombreAdul2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_nombreAdul2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombreAdul2.ForeColor = System.Drawing.Color.White;
+            this.txt_nombreAdul2.Location = new System.Drawing.Point(149, 13);
+            this.txt_nombreAdul2.Name = "txt_nombreAdul2";
+            this.txt_nombreAdul2.Size = new System.Drawing.Size(264, 24);
+            this.txt_nombreAdul2.TabIndex = 2;
             // 
             // label25
             // 
@@ -793,7 +780,7 @@ namespace Colegio5
             this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label25.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(105, 9);
+            this.label25.Location = new System.Drawing.Point(62, 12);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(81, 26);
             this.label25.TabIndex = 10;
@@ -805,7 +792,7 @@ namespace Colegio5
             this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label26.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(85, 70);
+            this.label26.Location = new System.Drawing.Point(42, 73);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(101, 26);
             this.label26.TabIndex = 12;
@@ -817,7 +804,7 @@ namespace Colegio5
             this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label27.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(117, 197);
+            this.label27.Location = new System.Drawing.Point(74, 200);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(69, 26);
             this.label27.TabIndex = 9;
@@ -835,6 +822,47 @@ namespace Colegio5
             this.label28.Size = new System.Drawing.Size(254, 34);
             this.label28.TabIndex = 37;
             this.label28.Text = "ADULTO RESPONSABLE  2";
+            // 
+            // cmb_localidadAdul
+            // 
+            this.cmb_localidadAdul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.cmb_localidadAdul.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_localidadAdul.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_localidadAdul.ForeColor = System.Drawing.Color.White;
+            this.cmb_localidadAdul.FormattingEnabled = true;
+            this.cmb_localidadAdul.Items.AddRange(new object[] {
+            "Alejandro Korn",
+            "Longchamps",
+            "Burzaco",
+            "Doomselar",
+            "Guernica",
+            "Glew",
+            "San Vicente"});
+            this.cmb_localidadAdul.Location = new System.Drawing.Point(592, 44);
+            this.cmb_localidadAdul.Name = "cmb_localidadAdul";
+            this.cmb_localidadAdul.Size = new System.Drawing.Size(283, 27);
+            this.cmb_localidadAdul.TabIndex = 61;
+            // 
+            // cmb_localidadAdul2
+            // 
+            this.cmb_localidadAdul2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.cmb_localidadAdul2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_localidadAdul2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_localidadAdul2.ForeColor = System.Drawing.Color.White;
+            this.cmb_localidadAdul2.FormattingEnabled = true;
+            this.cmb_localidadAdul2.Items.AddRange(new object[] {
+            "",
+            "Alejandro Korn",
+            "Longchamps",
+            "Burzaco",
+            "Doomselar",
+            "Guernica",
+            "Glew",
+            "San Vicente"});
+            this.cmb_localidadAdul2.Location = new System.Drawing.Point(592, 42);
+            this.cmb_localidadAdul2.Name = "cmb_localidadAdul2";
+            this.cmb_localidadAdul2.Size = new System.Drawing.Size(283, 27);
+            this.cmb_localidadAdul2.TabIndex = 62;
             // 
             // AlumnoAgregarAdulto
             // 
@@ -869,15 +897,13 @@ namespace Colegio5
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt_domicilioAdul;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_localidadAdul;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txt_fechaDeNacAdul;
         private System.Windows.Forms.TextBox txt_apellidoAdul;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txt_dniAdul;
-        private System.Windows.Forms.TextBox txt_sexoAdul;
+        private System.Windows.Forms.TextBox txt_emailAdul;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_nombreAdul;
@@ -894,31 +920,33 @@ namespace Colegio5
         private System.Windows.Forms.Button btn_cerrarVentana;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_parentescoAdul2;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_telefono2Adul2;
+        private System.Windows.Forms.ComboBox cmb_permanenteAdul2;
+        private System.Windows.Forms.ComboBox cmb_sexoAdul2;
+        private System.Windows.Forms.TextBox txt_ocupacionAdul2;
+        private System.Windows.Forms.TextBox txt_telefonoAdul2;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_domicioAdul2;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txt_apellidoAdul2;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txt_dniAdul2;
+        private System.Windows.Forms.TextBox txt_emailAdul2;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txt_nombreAdul2;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.DateTimePicker dtp_fenacAdul;
+        private System.Windows.Forms.DateTimePicker dtp_fenacAdul2;
+        private System.Windows.Forms.ComboBox cmb_localidadAdul;
+        private System.Windows.Forms.ComboBox cmb_localidadAdul2;
     }
 }

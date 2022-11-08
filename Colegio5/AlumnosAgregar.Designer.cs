@@ -91,6 +91,7 @@ namespace Colegio5
             this.txt_nombreA.Name = "txt_nombreA";
             this.txt_nombreA.Size = new System.Drawing.Size(283, 23);
             this.txt_nombreA.TabIndex = 2;
+            this.txt_nombreA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombreA_KeyPress);
             // 
             // label3
             // 
@@ -226,6 +227,7 @@ namespace Colegio5
             this.txt_pensionA.Name = "txt_pensionA";
             this.txt_pensionA.Size = new System.Drawing.Size(283, 24);
             this.txt_pensionA.TabIndex = 62;
+            this.txt_pensionA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pensionA_KeyPress);
             // 
             // label13
             // 
@@ -249,6 +251,7 @@ namespace Colegio5
             this.txt_LegajoA.Name = "txt_LegajoA";
             this.txt_LegajoA.Size = new System.Drawing.Size(283, 23);
             this.txt_LegajoA.TabIndex = 60;
+            this.txt_LegajoA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_LegajoA_KeyPress);
             // 
             // cmb_sedeinclusionA
             // 
@@ -356,6 +359,7 @@ namespace Colegio5
             this.txt_domicilioA.Name = "txt_domicilioA";
             this.txt_domicilioA.Size = new System.Drawing.Size(283, 24);
             this.txt_domicilioA.TabIndex = 47;
+            this.txt_domicilioA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_domicilioA_KeyPress);
             // 
             // label8
             // 
@@ -403,6 +407,7 @@ namespace Colegio5
             this.txt_obrasocialA.Name = "txt_obrasocialA";
             this.txt_obrasocialA.Size = new System.Drawing.Size(283, 24);
             this.txt_obrasocialA.TabIndex = 41;
+            this.txt_obrasocialA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_obrasocialA_KeyPress);
             // 
             // label11
             // 
@@ -438,6 +443,7 @@ namespace Colegio5
             this.txt_apellidoA.Name = "txt_apellidoA";
             this.txt_apellidoA.Size = new System.Drawing.Size(283, 23);
             this.txt_apellidoA.TabIndex = 34;
+            this.txt_apellidoA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellidoA_KeyPress);
             // 
             // button2
             // 
@@ -477,6 +483,7 @@ namespace Colegio5
             this.txt_dniA.Name = "txt_dniA";
             this.txt_dniA.Size = new System.Drawing.Size(283, 23);
             this.txt_dniA.TabIndex = 23;
+            this.txt_dniA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dniA_KeyPress);
             // 
             // label4
             // 

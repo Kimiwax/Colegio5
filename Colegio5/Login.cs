@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClaseVariables;
+using MetodosColeg;
 
 namespace Colegio5
 {
@@ -105,6 +106,11 @@ namespace Colegio5
                 txt_contraseña.Text = "INGRESE SU CONTRASEÑA";
                 txt_contraseña.ForeColor = Color.DimGray;
             }
+        }
+
+        private void txt_contraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MetodosColeg.Metodos.ValidarNumeros(e);
         }
     }
 }
