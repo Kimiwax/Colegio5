@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
+using System.Windows.Forms;
 
 namespace ClaseVariables
 {
@@ -14,9 +15,23 @@ namespace ClaseVariables
         public static OleDbCommand Orden;
         public static OleDbDataReader Lector;
 
+        public static int Row = 0;
+        public static int GuardarDniDocente = 0;
+        public static int RecibirDniDocente = 0;
+        public static int RecibirDniAlumno = 0;
+        public static int GuardarDniAlumno = 0;
 
         public static string selecLocalidad = "";
         public static string selecCaracterizacion = "";
+        public static string selecLocalidad3 = "";
+        public static string selecCaracterizacion2 = "";
+        public static string seleccCud = "";
+        public static string selecParentesco = "";
+
+        public static string selecLocalidad2 = "";
+        public static string selecParentesco2 = "";
+        public static string DNIAlumno = "";
+        public static string guardarDNI = "";
 
         public static bool fechaDeNacIncorrecta = false;
 

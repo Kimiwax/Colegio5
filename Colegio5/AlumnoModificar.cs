@@ -10,16 +10,17 @@ using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
 using ClaseVariables;
 using System.Reflection;
+using System.Data.OleDb;
+using MetodosColeg;
 
 namespace Colegio5
 {
     public partial class AlumnoModificar : Form
     {
-        public AlumnoModificar()
+        public AlumnoModificar(int dni)
         {
             InitializeComponent();
-            txt_nombre.Text = ClaseVariables.Variables.nombre;
-            txt_apellido.Text = ClaseVariables.Variables.apellido;
+            Variables.RecibirDniAlumno = dni;
 
         }
 
@@ -60,27 +61,6 @@ namespace Colegio5
                 
         }
 
-        //private void createWordDoc (object filename, object saveAs)
-        //{
-        //    Word.Application wordApp = new Word.Application();
-        //    object missing = Missing.Value;
-        //    Word.Document myWordDoc = null;
-
-        //    if (FileDialog.Exists((string)filename))
-        //    {
-        //        object readOnly = false;
-        //        object isVisible = false;
-        //        wordApp.Visible = false;
-
-        //        myWordDoc = wordApp.Documents.Open(ref filename, ref missing, ref readOnly,
-        //                                        ref missing, ref missing, ref missing,
-        //                                        ref missing, ref missing, ref missing,
-        //                                        ref missing, ref missing, ref missing,
-        //                                        ref missing, ref missing, ref missing, ref missing);
-
-        //        myWordDoc.Activate();
-        //    }
-        //}
 
         private void btn_cerrarVentana_Click(object sender, EventArgs e)
         {
@@ -157,6 +137,62 @@ namespace Colegio5
 
 
             ObjWord.Visible = true;
+        }
+
+        private void tP_VerAlumno_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AlumnoModificar_Load(object sender, EventArgs e)
+        {
+            Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
+            Variables.ConexionConBD.Open();
+
+            string ConsultaAlumno = "SELECT Persona.Nombre, Persona.Apellido, Persona.FechaNac, Persona.Sexo, Persona.DNI, Caracterizacion.Especificacion, Alumno.FechaIng, Alumno.ObraSocial, Alumno.CUD, Localidad.NomLocalidad, Persona.Direccion, SedIncDom.Detalle" +
+                                    " FROM Caracterizacion INNER JOIN((SedIncDom INNER JOIN(Localidad INNER JOIN(Persona INNER JOIN Alumno ON Persona.DNI = Alumno.DNIAlumno) ON Localidad.CP = Persona.CodigoPostal) ON SedIncDom.CodSedIncDom = Alumno.CodigoSedIncDom) INNER JOIN AlumnoCaracterizaciones ON Alumno.DNIAlumno = AlumnoCaracterizaciones.dniAlumno) ON Caracterizacion.CodCaracterizacion = AlumnoCaracterizaciones.CodigoCaracterizaciones" +
+                                    " WHERE Persona.DNI = " + Variables.RecibirDniAlumno + ";";
+
+            Variables.Orden = new OleDbCommand(ConsultaAlumno, Variables.ConexionConBD);
+            Variables.Lector = Variables.Orden.ExecuteReader();
+
+            while (Variables.Lector.Read())
+            {
+
+                dgv_Alumnos.Rows.Add();
+                dgv_Alumnos[0, dgv_Alumnos.Rows.Count - 1].Value = Variables.Lector["Nombre"];
+                dgv_Alumnos[1, dgv_Alumnos.Rows.Count - 1].Value = Variables.Lector["Apellido"];
+                dgv_Alumnos[2, dgv_Alumnos.Rows.Count - 1].Value = Variables.Lector["FechaNac"];
+                dgv_Alumnos[3, dgv_Alumnos.Rows.Count - 1].Value = Variables.Lector["Sexo"];
+                dgv_Alumnos[4, dgv_Alumnos.Rows.Count - 1].Value = Variables.Lector["DNI"];
+                dgv_Alumnos[5, dgv_Alumnos.Rows.Count - 1].Value = Variables.Lector["Especificacion"];
+                dgv_Alumnos[6, dgv_Alumnos.Rows.Count - 1].Value = Variables.Lector["FechaIng"];
+                dgv_Alumnos[7, dgv_Alumnos.Rows.Count - 1].Value = Variables.Lector["ObraSocial"];
+                dgv_Alumnos[8, dgv_Alumnos.Rows.Count - 1].Value = Variables.Lector["CUD"];
+                dgv_Alumnos[9, dgv_Alumnos.Rows.Count - 1].Value = Variables.Lector["NomLocalidad"];
+                dgv_Alumnos[10, dgv_Alumnos.Rows.Count - 1].Value = Variables.Lector["Direccion"];
+                dgv_Alumnos[11, dgv_Alumnos.Rows.Count - 1].Value = Variables.Lector["Detalle"];
+
+            }
+            dgv_Alumnos.ClearSelection();
+
+
+
+            txt_nombreA.Text = dgv_Alumnos.Rows[0].Cells[0].Value.ToString();
+            txt_apellidoA.Text = dgv_Alumnos.Rows[0].Cells[1].Value.ToString();
+            txt_fecnacA.Text = dgv_Alumnos.Rows[0].Cells[2].Value.ToString().Substring(0, 10);
+            txt_sexoA.Text = dgv_Alumnos.Rows[0].Cells[3].Value.ToString();
+            txt_dniA.Text = dgv_Alumnos.Rows[0].Cells[4].Value.ToString();
+            txt_caracterizacionA.Text = dgv_Alumnos.Rows[0].Cells[5].Value.ToString();
+            txt_ingresoA.Text = dgv_Alumnos.Rows[0].Cells[6].Value.ToString().Substring(0, 10);
+            txt_osA.Text = dgv_Alumnos.Rows[0].Cells[7].Value.ToString();
+            txt_pensionA.Text = dgv_Alumnos.Rows[0].Cells[8].Value.ToString();
+            txt_localidadA.Text = dgv_Alumnos.Rows[0].Cells[9].Value.ToString();
+            txt_domicilioA.Text = dgv_Alumnos.Rows[0].Cells[10].Value.ToString();
+            txt_servicioA.Text = dgv_Alumnos.Rows[0].Cells[11].Value.ToString();
+
+            Variables.Lector.Close();
+            Variables.ConexionConBD.Close();
         }
     }
 }

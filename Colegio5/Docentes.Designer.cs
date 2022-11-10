@@ -43,10 +43,8 @@ namespace Colegio5
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -110,6 +108,8 @@ namespace Colegio5
             // 
             this.dgv_Docentes.AllowUserToAddRows = false;
             this.dgv_Docentes.AllowUserToDeleteRows = false;
+            this.dgv_Docentes.AllowUserToResizeColumns = false;
+            this.dgv_Docentes.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_Docentes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -132,10 +132,8 @@ namespace Colegio5
             this.Column1,
             this.Column2,
             this.Column3,
-            this.Column4,
             this.Column7,
-            this.Column8,
-            this.Column6});
+            this.Column8});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,8 +157,10 @@ namespace Colegio5
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Docentes.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Docentes.RowHeadersVisible = false;
+            this.dgv_Docentes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_Docentes.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_Docentes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Docentes.Size = new System.Drawing.Size(857, 395);
             this.dgv_Docentes.TabIndex = 4;
             this.dgv_Docentes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Docentes_CellDoubleClick);
@@ -185,12 +185,6 @@ namespace Colegio5
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Grupos";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
             // Column7
             // 
             this.Column7.HeaderText = "Localidad";
@@ -202,12 +196,6 @@ namespace Colegio5
             this.Column8.HeaderText = "Domicilio";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Teléfono";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
             // 
             // panel3
             // 
@@ -264,6 +252,7 @@ namespace Colegio5
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Docentes";
             this.Text = "AgregarDocentes";
+            this.Load += new System.EventHandler(this.Docentes_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -288,9 +277,7 @@ namespace Colegio5
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

@@ -33,6 +33,7 @@ namespace Colegio5
             return Variables.Lector;
 
             Variables.ConexionConBD.Close();
+            
         }
 
         private void carga_cmbLocalidad()
@@ -122,12 +123,12 @@ namespace Colegio5
                 errorIcono.SetError(txt_obrasocialA, "Ingrese OBRA SOCIAL del alumno ");
                 noError = false;
             }
-            else if (string.IsNullOrEmpty(txt_pensionA.Text))
-            {
-                errorIcono.Clear();
-                errorIcono.SetError(txt_pensionA, "Ingrese PENSIÓN del alumno ");
-                noError = false;
-            }
+            //else if (string.IsNullOrEmpty(txt_pensionA.Text))
+            //{
+            //    errorIcono.Clear();
+            //    errorIcono.SetError(txt_pensionA, "Ingrese PENSIÓN del alumno ");
+            //    noError = false;
+            //}
             else if (cmb_cudA.SelectedIndex == -1)
             {
                 errorIcono.Clear();
@@ -172,9 +173,10 @@ namespace Colegio5
                 string FechaingresoA = dtp_fechaIngresoA.Value.ToString("dd/MM/yyyy");
 
                 string insertPersona = "INSERT INTO Persona (DNI, Nombre, Apellido, FechaNac, Sexo, Direccion, CodigoPostal) Values (" + txt_dniA.Text + ", '" + txt_nombreA.Text + "','" + txt_apellidoA.Text + "','" + FechaNacimientoA + "','" + cmb_sexoA.Text + "','" + txt_domicilioA.Text + "'," + Variables.selecLocalidad + ");";
-                string insertAlumno = "INSERT INTO Alumno (DNIAlumno, ObraSocial, CUD, FechaIng, CodigoSedIncDom, Legajo) Values (" + txt_dniA.Text + ",'" + txt_obrasocialA.Text + "','" + txt_pensionA.Text + "','" + FechaingresoA + "'," + valorSedInc + "," + txt_LegajoA.Text + ");";
+                string insertAlumno = "INSERT INTO Alumno (DNIAlumno, ObraSocial, CUD, FechaIng, CodigoSedIncDom, Legajo, Especificacion) Values (" + txt_dniA.Text + ",'" + txt_obrasocialA.Text + "','" + Variables.seleccCud + "','" + FechaingresoA + "'," + valorSedInc + "," + txt_LegajoA.Text + ",'" + txt_Especificacion.Text + "');";
                 string insertAlumnoCaracterizacion = "INSERT INTO AlumnoCaracterizaciones (dniAlumno, CodigoCaracterizaciones) Values (" + txt_dniA.Text + ", " + Variables.selecCaracterizacion + ");";
 
+                Variables.guardarDNI = txt_dniA.Text;
 
                 Variables.Orden = new OleDbCommand(insertPersona, Variables.ConexionConBD);
                 Variables.Orden.ExecuteNonQuery();
@@ -187,14 +189,16 @@ namespace Colegio5
 
                 Variables.ConexionConBD.Close();
 
-                AlumnoAgregarAdulto f3 = new AlumnoAgregarAdulto();
+                AlumnoAgregarAdulto f3 = new AlumnoAgregarAdulto(Variables.guardarDNI);
                 f3.ShowDialog();
-                MessageBox.Show("Todos los datos del alumno fueron ingresados");
+                this.Close();
             }
 
 
                
         }
+
+        
 
         private void selecciona_localidad(object sender, EventArgs e)
         {
@@ -205,6 +209,11 @@ namespace Colegio5
         {
             carga_cmbLocalidad();
             carga_cmbCaracterizacion();
+            cmb_localidadAlumno.Text = "";
+            cmb_caracterizacionNA.Text = "";
+            cmb_sedeinclusionA.Text = "";
+            cmb_sexoA.Text = "";
+            cmb_cudA.Text = "";
            
         }
 
@@ -253,6 +262,22 @@ namespace Colegio5
         private void txt_domicilioA_KeyPress(object sender, KeyPressEventArgs e)
         {
             Metodos.ValidarSoloNumerosYLetras(e);
+        }
+
+        private void selecciona_cud(object sender, EventArgs e)
+        {
+            //MessageBox.Show(cmb_cudA.SelectedItem.ToString());
+            Variables.seleccCud = Convert.ToString(cmb_cudA.SelectedItem);
+        }
+
+        private void dtp_fechaIngresoA_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

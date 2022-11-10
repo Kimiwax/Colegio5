@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using ClaseVariables;
+using MetodosColeg;
 
 
 namespace Colegio5
@@ -24,6 +25,8 @@ namespace Colegio5
         {
             carga_cmbLocalidad();
             carga_cmbCaracterizacion();
+            cmb_caracterizacionD.Text = "";
+            cmb_localidadD.Text = "";
         }
 
         public static OleDbDataReader LecturaDB(string consulta)
@@ -37,6 +40,9 @@ namespace Colegio5
 
             Variables.ConexionConBD.Close();
         }
+
+       
+
         private void carga_cmbLocalidad()
         {
             string consulta2 = "Select CP, NomLocalidad from Localidad;";
@@ -64,29 +70,158 @@ namespace Colegio5
         }
         private void button2_Click(object sender, EventArgs e)
         {
+            if (IsValidate())
+            {
+                errorDoc.Clear();
+                Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
+                Variables.ConexionConBD.Open();
 
-            Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
-            Variables.ConexionConBD.Open();
+                string FechaNacimientoD = dtp_fechadenacD.Value.ToString("dd/MM/yyyy");
 
-            string FechaNacimientoD = dtp_fechadenacD.Value.ToString("dd/MM/yyyy");
-            
 
-            string insertPersona = "INSERT INTO Persona (DNI, Nombre, Apellido, FechaNac, Sexo, Direccion, CodigoPostal) Values (" + txt_dniD.Text + ", '" + txt_nombreD.Text + "','" + txt_apellidoD.Text + "','" + FechaNacimientoD + "','" + cmb_sexoD.Text + "','" + txt_direccionD.Text + "'," + cmb_localidadD.ValueMember + ");";
-            string insertDocente = "INSERT INTO Docente (DNIDocente, Legajo, Mail, CodCaracterizacion) Values (" + txt_dniD.Text + ",'" + txt_legajoD.Text + "','" + txt_emailD.Text + "','" + cmb_caracterizacionD.ValueMember + ");";
+                string insertPersona = "INSERT INTO Persona (DNI, Nombre, Apellido, FechaNac, Sexo, Direccion, CodigoPostal) Values (" + txt_dniD.Text + ", '" + txt_nombreD.Text + "','" + txt_apellidoD.Text + "','" + FechaNacimientoD + "','" + cmb_sexoD.Text + "','" + txt_direccionD.Text + "'," + Variables.selecLocalidad + ");";
+                string insertDocente = "INSERT INTO Docente (DNIDocente, Legajo, Mail, CodCaracterizacion) Values (" + txt_dniD.Text + ",'" + txt_legajoD.Text + "','" + txt_emailD.Text + "'," + Variables.selecCaracterizacion + ");";
+                string insertTelefono = "INSERT INTO Telefono(DniPersona, NumTel) values (" + txt_dniD.Text + "," + txt_telefonoD.Text + ");";
 
-            Variables.Orden = new OleDbCommand(insertPersona, Variables.ConexionConBD);
-            Variables.Orden.ExecuteNonQuery();
+                Variables.Orden = new OleDbCommand(insertPersona, Variables.ConexionConBD);
+                Variables.Orden.ExecuteNonQuery();
 
-            Variables.Orden = new OleDbCommand(insertDocente, Variables.ConexionConBD);
-            Variables.Orden.ExecuteNonQuery();
+                Variables.Orden = new OleDbCommand(insertDocente, Variables.ConexionConBD);
+                Variables.Orden.ExecuteNonQuery();
 
-            Variables.ConexionConBD.Close();
-            this.Close();
+                Variables.Orden = new OleDbCommand(insertTelefono, Variables.ConexionConBD);
+                Variables.Orden.ExecuteNonQuery();
+
+                Variables.ConexionConBD.Close();
+
+                MessageBox.Show("Docente cargado Correctamente");
+                this.Close();
+
+            }
+                
         }
 
         private void btn_cerrarVentana_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmb_caracterizacionD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Variables.selecCaracterizacion = Convert.ToString(cmb_caracterizacionD.SelectedValue);
+        }
+
+        private void cmb_localidadD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Variables.selecLocalidad = Convert.ToString(cmb_localidadD.SelectedValue);
+        }
+
+        private bool IsValidate()
+        {
+            bool noError = true;
+            
+            if (string.IsNullOrEmpty(txt_nombreD.Text))
+            {
+                errorDoc.SetError(txt_nombreD, "Ingrese NOMBRE del Docente ");
+                noError = false;
+            }
+            else if (string.IsNullOrEmpty(txt_apellidoD.Text))
+            {
+                errorDoc.Clear();
+                errorDoc.SetError(txt_apellidoD, "Ingrese APELLIDO del Docente ");
+                noError = false;
+            }
+            else if (DateTime.Now.Subtract(dtp_fechadenacD.Value.Date).Days < 10)
+            {
+                errorDoc.Clear();
+                errorDoc.SetError(dtp_fechadenacD, "Ingrese una fecha correcta ");
+                noError = false;
+            }
+            else if (cmb_sexoD.SelectedIndex == -1)
+            {
+                errorDoc.Clear();
+                errorDoc.SetError(cmb_sexoD, "Seleccione SEXO del Docente ");
+                noError = false;
+            }
+            else if (string.IsNullOrEmpty(txt_dniD.Text))
+            {
+                errorDoc.Clear();
+                errorDoc.SetError(txt_dniD, "Ingrese DNI del Docente ");
+                noError = false;
+            }
+            else if (string.IsNullOrEmpty(txt_legajoD.Text))
+            {
+                errorDoc.Clear();
+                errorDoc.SetError(txt_legajoD, "Ingrese LEGAJO del Docente ");
+                noError = false;
+            }
+            else if (string.IsNullOrEmpty(txt_telefonoD.Text))
+            {
+                errorDoc.Clear();
+                errorDoc.SetError(txt_telefonoD, "Ingrese TELÉFONO del Docente ");
+                noError = false;
+            }
+            else if (cmb_caracterizacionD.SelectedIndex == -1)
+            {
+                errorDoc.Clear();
+                errorDoc.SetError(cmb_caracterizacionD, "Seleccione a que grupo de CARACTERIZACIÓN pertenece el Docente ");
+                noError = false;
+            }
+            else if (string.IsNullOrEmpty(txt_emailD.Text))
+            {
+                errorDoc.Clear();
+                errorDoc.SetError(txt_emailD, "Ingrese CORREO ELECTRONICO del Docente ");
+                noError = false;
+            }
+            else if (string.IsNullOrEmpty(txt_direccionD.Text))
+            {
+                errorDoc.Clear();
+                errorDoc.SetError(txt_direccionD, "Ingrese DOMICILIO del Docente ");
+                noError = false;
+            }
+            else if (cmb_localidadD.SelectedIndex == -1)
+            {
+                errorDoc.Clear();
+                errorDoc.SetError(cmb_localidadD, "Ingrese LOCALIDAD del Docente ");
+                noError = false;
+            }
+
+            return noError;
+        }
+
+        private void txt_nombreD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MetodosColeg.Metodos.ValidarLetras(e);
+        }
+
+        private void txt_apellidoD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.ValidarLetras(e);
+        }
+
+        private void txt_dniD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.ValidarNumeros(e);
+        }
+
+        private void txt_legajoD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.ValidarNumeros(e);
+        }
+
+        private void txt_telefonoD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.ValidarNumeros(e);
+        }
+
+        private void txt_emailD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.Validaremail(e);
+        }
+
+        private void txt_direccionD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.ValidarSoloNumerosYLetras(e);
         }
     }
 }

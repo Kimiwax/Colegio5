@@ -278,5 +278,8 @@
   <ItemGroup>
     <None Include="Recursos\lupa.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IntentoLogo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -38,11 +38,13 @@ namespace Colegio5
             this.label5 = new System.Windows.Forms.Label();
             this.txt_contraseña = new System.Windows.Forms.TextBox();
             this.btn_ingresar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox_Usuario = new System.Windows.Forms.PictureBox();
             this.pictureBox_Invitado = new System.Windows.Forms.PictureBox();
             this.pictureBox_Admin = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Usuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Invitado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Admin)).BeginInit();
@@ -151,6 +153,16 @@ namespace Colegio5
             this.btn_ingresar.UseVisualStyleBackColor = true;
             this.btn_ingresar.Click += new System.EventHandler(this.btn_ingresar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Colegio5.Properties.Resources.IntentoLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(637, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(107, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
@@ -206,6 +218,7 @@ namespace Colegio5
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
             this.ClientSize = new System.Drawing.Size(800, 487);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_usuario);
             this.Controls.Add(this.btn_ingresar);
@@ -221,6 +234,7 @@ namespace Colegio5
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Usuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Invitado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Admin)).EndInit();
@@ -243,5 +257,6 @@ namespace Colegio5
         private System.Windows.Forms.TextBox txt_contraseña;
         private System.Windows.Forms.Button btn_ingresar;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
