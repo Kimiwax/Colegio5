@@ -22,20 +22,14 @@ namespace Colegio5
             Variables.RecibirDniDocente = Dni;
         }
 
-        private void tP_VerAlumno_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btn_cerrarVentana_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void panelTop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+   
 
         public static OleDbDataReader LecturaDB(string consulta)
         {
@@ -132,6 +126,8 @@ namespace Colegio5
             txt_direccionModDoc2.Text = dgv_verDocentes.Rows[0].Cells[9].Value.ToString();
             cmb_localidadD.Text = dgv_verDocentes.Rows[0].Cells[10].Value.ToString();
 
+            lbl_nombreDni.Text = dgv_verDocentes.Rows[0].Cells[0].Value.ToString() + " " +  dgv_verDocentes.Rows[0].Cells[1].Value.ToString() + " " + dgv_verDocentes.Rows[0].Cells[4].Value.ToString(); ;
+
 
         }
 
@@ -171,11 +167,6 @@ namespace Colegio5
         }
 
         
-
-        private void txt_nombreD_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void cmb_CaracterizacionModDoc_SelectedIndexChanged_1(object sender, EventArgs e)
         {

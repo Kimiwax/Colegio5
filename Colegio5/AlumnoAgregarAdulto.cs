@@ -369,22 +369,11 @@ namespace Colegio5
         
 
 
-
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_cerrarVentana_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void txt_nombreAdul_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -434,11 +423,6 @@ namespace Colegio5
         private void txt_parentescoAdul_KeyPress(object sender, KeyPressEventArgs e)
         {
             Metodos.ValidarLetras(e);
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void cmb_localidadAdul_SelectedIndexChanged(object sender, EventArgs e)

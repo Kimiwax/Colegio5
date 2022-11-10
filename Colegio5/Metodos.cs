@@ -5,11 +5,52 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using ClaseVariables;
+using System.Data.OleDb;
 
 namespace MetodosColeg
 {
     public class Metodos
     {
+
+        public static void ConectaDB()
+        {
+            Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
+            Variables.ConexionConBD.Open();
+        }
+
+        public static OleDbDataReader LecturaDB(string consulta)
+        {
+            Variables.Orden = new OleDbCommand(consulta, Variables.ConexionConBD);
+            Variables.Lector = Variables.Orden.ExecuteReader();
+            return Variables.Lector;
+        }
+
+        public static void CerrarDB()
+        {
+            Variables.ConexionConBD.Close();
+        }
+
+        public static void CargaDB(string consulta)
+        {
+            Variables.Orden = new OleDbCommand(consulta, Variables.ConexionConBD);
+            Variables.Orden.ExecuteNonQuery();
+        }
+
+        public static void AbrirFormHijo(object formHijo, Panel panelcontenedor)
+        {
+
+            if (panelcontenedor.Controls.Count > 0)
+               panelcontenedor.Controls.RemoveAt(0);
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            panelcontenedor.Controls.Add(fh);
+            panelcontenedor.Tag = fh;
+            fh.Show();
+
+        }
+
 
         public static void ValidarLetras(KeyPressEventArgs ele)
         {

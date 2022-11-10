@@ -51,9 +51,6 @@ namespace Colegio5
             //btn_crearGrupo.Text = "Cancel";
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+   
     }
 }

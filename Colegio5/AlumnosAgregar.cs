@@ -62,20 +62,12 @@ namespace Colegio5
             Variables.Lector.Close();
         }
         
-        private void VerificarFechaDeNac()
-        {
-            int dias = DateTime.Now.Subtract(dtp_fechadenacA.Value.Date).Days;
-
-            if(dias < 5)
-            {
-                ClaseVariables.Variables.fechaDeNacIncorrecta = true;
-            }
-        }
+       
 
         private bool IsValidate()
         {
             bool noError = true;
-            //VerificarFechaDeNac();
+          
             if (string.IsNullOrEmpty(txt_nombreA.Text))
             {   
                 errorIcono.SetError(txt_nombreA, "Ingrese NOMBRE del alumno ");
@@ -99,7 +91,7 @@ namespace Colegio5
                 errorIcono.SetError(cmb_sexoA, "Seleccione SEXO del alumno ");
                 noError = false;
             }
-            else if (string.IsNullOrEmpty(txt_dniA.Text))
+            else if (string.IsNullOrEmpty(txt_dniA.Text) || txt_dniA.Text.Length < 8)
             {
                 errorIcono.Clear();
                 errorIcono.SetError(txt_dniA, "Ingrese DNI del alumno ");
@@ -123,12 +115,7 @@ namespace Colegio5
                 errorIcono.SetError(txt_obrasocialA, "Ingrese OBRA SOCIAL del alumno ");
                 noError = false;
             }
-            //else if (string.IsNullOrEmpty(txt_pensionA.Text))
-            //{
-            //    errorIcono.Clear();
-            //    errorIcono.SetError(txt_pensionA, "Ingrese PENSIÓN del alumno ");
-            //    noError = false;
-            //}
+         
             else if (cmb_cudA.SelectedIndex == -1)
             {
                 errorIcono.Clear();
@@ -270,14 +257,5 @@ namespace Colegio5
             Variables.seleccCud = Convert.ToString(cmb_cudA.SelectedItem);
         }
 
-        private void dtp_fechaIngresoA_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

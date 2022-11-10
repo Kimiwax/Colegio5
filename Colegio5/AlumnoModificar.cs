@@ -25,41 +25,11 @@ namespace Colegio5
         }
 
 
-       
-
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-       private void findAndReplace(Word.Application wordApp, object ToFindText, object replaceWithText)
-        {
-            object matchCase = true;
-            object matchWholeWord = true;
-            object matchWildCards = false;
-            object matchSoundLike = false;
-            object matchAllforms = false;
-            object forward = true;
-            object format = false;
-            object matchKashida = false;
-            object matchdialectitics = false;
-            object matchAlefHamza = false;
-            object matchControl = false;
-            object read_only = false;
-            object visible = true;
-            object replace = 2;
-            object wrap = 1;
-
-            wordApp.Selection.Find.Execute(ref ToFindText,
-                ref matchCase, ref matchWholeWord,
-                ref matchWildCards, ref matchSoundLike,
-                ref matchAllforms, ref forward,
-                ref wrap, ref format, ref replaceWithText,
-                ref replace, ref matchKashida,
-                ref matchdialectitics, ref matchAlefHamza,
-                ref matchControl);
-                
-        }
 
 
         private void btn_cerrarVentana_Click(object sender, EventArgs e)
@@ -137,12 +107,9 @@ namespace Colegio5
 
 
             ObjWord.Visible = true;
+            this.Close();
         }
 
-        private void tP_VerAlumno_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void AlumnoModificar_Load(object sender, EventArgs e)
         {
@@ -190,6 +157,9 @@ namespace Colegio5
             txt_localidadA.Text = dgv_Alumnos.Rows[0].Cells[9].Value.ToString();
             txt_domicilioA.Text = dgv_Alumnos.Rows[0].Cells[10].Value.ToString();
             txt_servicioA.Text = dgv_Alumnos.Rows[0].Cells[11].Value.ToString();
+
+            txt_nomape.Text = dgv_Alumnos.Rows[0].Cells[0].Value.ToString() + " " + dgv_Alumnos.Rows[0].Cells[1].Value.ToString(); ;
+            txt_dni.Text = dgv_Alumnos.Rows[0].Cells[4].Value.ToString();
 
             Variables.Lector.Close();
             Variables.ConexionConBD.Close();

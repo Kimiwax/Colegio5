@@ -135,7 +135,6 @@ namespace Colegio5
             this.dgv_alumnos.TabIndex = 4;
             this.dgv_alumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_alumnos_CellClick);
             this.dgv_alumnos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_alumnos_CellDoubleClick);
-            this.dgv_alumnos.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_alumnos_ColumnHeaderMouseClick);
             // 
             // Dni
             // 
@@ -194,14 +193,17 @@ namespace Colegio5
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(58)))));
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Caracterización",
             "Grupos",
             "Niveles"});
-            this.comboBox1.Location = new System.Drawing.Point(38, 42);
+            this.comboBox1.Location = new System.Drawing.Point(37, 38);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 21);
+            this.comboBox1.Size = new System.Drawing.Size(149, 27);
             this.comboBox1.TabIndex = 7;
             // 
             // pictureBox1

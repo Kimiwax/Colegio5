@@ -9,6 +9,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClaseVariables;
+using MetodosColeg;
 
 namespace Colegio5
 {
@@ -29,15 +30,6 @@ namespace Colegio5
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            lbl_topPanel.Text = "Hola";
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -48,24 +40,14 @@ namespace Colegio5
             panelTop.BackColor = Color.FromArgb(254, 202, 87);
         }
 
-        public void abrirFormAlumnos(object formHijo)
-        {
-
-            if (this.panelContenedor.Controls.Count > 0)
-                this.panelContenedor.Controls.RemoveAt(0);
-            Form fh = formHijo as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
-            fh.Show();
-            
-        }
+      
 
         private void btn_alumnos_Click(object sender, EventArgs e)
         {
             panelContenedor.Controls.Clear();
-            abrirFormAlumnos(new Alumnos());
+            Metodos.AbrirFormHijo(new Alumnos(), this.panelContenedor);
+
+      
             lbl_topPanel.Text = "Alumnos";
             panelTop.BackColor = Color.FromArgb(9, 132, 227);
             
@@ -77,7 +59,8 @@ namespace Colegio5
         private void button5_Click(object sender, EventArgs e)
         {
             panelContenedor.Controls.Clear();
-            abrirFormAlumnos(new Docentes());
+            Metodos.AbrirFormHijo(new Docentes(), this.panelContenedor);
+          
             lbl_topPanel.Text = "Docentes";
             panelTop.BackColor = Color.FromArgb(255, 127, 80);
             
@@ -134,7 +117,8 @@ namespace Colegio5
         private void button2_Click(object sender, EventArgs e)
         {
             panelContenedor.Controls.Clear();
-            abrirFormAlumnos(new Grupos());
+            Metodos.AbrirFormHijo(new Grupos(), this.panelContenedor);
+           
             lbl_topPanel.Text = "Grupos";
             panelTop.BackColor = Color.FromArgb(32, 191, 107);
         }

@@ -186,7 +186,7 @@ namespace Colegio5
             this.panelContenedorGrupos.Name = "panelContenedorGrupos";
             this.panelContenedorGrupos.Size = new System.Drawing.Size(456, 174);
             this.panelContenedorGrupos.TabIndex = 26;
-            this.panelContenedorGrupos.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorGrupos_Paint);
+       
             // 
             // label16
             // 

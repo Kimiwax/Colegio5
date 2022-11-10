@@ -211,7 +211,6 @@ namespace Colegio5
             this.tP_VerAlumno.Size = new System.Drawing.Size(992, 652);
             this.tP_VerAlumno.TabIndex = 2;
             this.tP_VerAlumno.Text = "DATOS DEL ALUMNO";
-            this.tP_VerAlumno.Click += new System.EventHandler(this.tP_VerAlumno_Click);
             // 
             // panel3
             // 
@@ -1718,6 +1717,7 @@ namespace Colegio5
             // 
             // txt_nomape
             // 
+            this.txt_nomape.Enabled = false;
             this.txt_nomape.Location = new System.Drawing.Point(171, 19);
             this.txt_nomape.Name = "txt_nomape";
             this.txt_nomape.Size = new System.Drawing.Size(232, 27);
@@ -1725,6 +1725,7 @@ namespace Colegio5
             // 
             // txt_dni
             // 
+            this.txt_dni.Enabled = false;
             this.txt_dni.Location = new System.Drawing.Point(484, 19);
             this.txt_dni.Name = "txt_dni";
             this.txt_dni.Size = new System.Drawing.Size(232, 27);

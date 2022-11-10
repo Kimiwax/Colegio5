@@ -157,7 +157,6 @@ namespace Colegio5
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(951, 333);
             this.panel1.TabIndex = 34;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // chk_otroAdulto
             // 
@@ -376,7 +375,7 @@ namespace Colegio5
             this.txt_apellidoAdul.ShortcutsEnabled = false;
             this.txt_apellidoAdul.Size = new System.Drawing.Size(264, 24);
             this.txt_apellidoAdul.TabIndex = 34;
-            this.txt_apellidoAdul.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+   
             this.txt_apellidoAdul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellidoAdul_KeyPress);
             // 
             // label9
@@ -745,7 +744,7 @@ namespace Colegio5
             this.label19.Size = new System.Drawing.Size(101, 26);
             this.label19.TabIndex = 44;
             this.label19.Text = "LOCALIDAD:";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
+     
             // 
             // label20
             // 

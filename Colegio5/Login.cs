@@ -19,10 +19,7 @@ namespace Colegio5
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void pictureBox_Admin_MouseEnter(object sender, EventArgs e)
         {

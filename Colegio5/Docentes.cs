@@ -19,9 +19,7 @@ namespace Colegio5
         public Docentes()
         {
             InitializeComponent();
-            //dgv_Docentes.Rows.Add("91017565", "Liliana", "Basile", "-", "Guernica", "Sta Ana 154", 1148184287);
-            //dgv_Docentes.Rows.Add("75917475", "Martin", "Vega", "-", "Longchamps", "Pampa 3454", 1146224927);
-            //dgv_Docentes.Rows.Add("16417565", "Gabriela", "Barbero", "-", "A.Korn", "Salta 2654", 1462546387);
+         
         }
 
         private void button2_Click(object sender, EventArgs e)

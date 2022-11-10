@@ -135,10 +135,6 @@ namespace Colegio5
             Cargar_Grilla();
         }
 
-        private void dgv_alumnos_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            
-        }
 
         private void dgv_alumnos_CellClick(object sender, DataGridViewCellEventArgs e)
         {

@@ -312,7 +312,7 @@ namespace Colegio5
             this.label12.Size = new System.Drawing.Size(93, 28);
             this.label12.TabIndex = 58;
             this.label12.Text = "SERVICIO:";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+          
             // 
             // cmb_localidadAlumno
             // 
@@ -355,7 +355,7 @@ namespace Colegio5
             this.dtp_fechaIngresoA.Name = "dtp_fechaIngresoA";
             this.dtp_fechaIngresoA.Size = new System.Drawing.Size(334, 20);
             this.dtp_fechaIngresoA.TabIndex = 55;
-            this.dtp_fechaIngresoA.ValueChanged += new System.EventHandler(this.dtp_fechaIngresoA_ValueChanged);
+          
             // 
             // cmb_sexoA
             // 
