@@ -15,6 +15,9 @@ namespace Colegio5
         public ShowDialogGrupos()
         {
             InitializeComponent();
+            lstBox_Alumnos.Items.Add("Micaela Pereyra");
+            lstBox_Alumnos.Items.Add("Marcos Cruz");
+            lstBox_Alumnos.Items.Add("Abigail Paz");
         }
 
         private void btn_aceptar_Click(object sender, EventArgs e)

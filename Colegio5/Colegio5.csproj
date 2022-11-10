@@ -94,11 +94,11 @@
     <Compile Include="Grupos.Designer.cs">
       <DependentUpon>Grupos.cs</DependentUpon>
     </Compile>
-    <Compile Include="GruposModificar.cs">
+    <Compile Include="GruposVer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GruposModificar.Designer.cs">
-      <DependentUpon>GruposModificar.cs</DependentUpon>
+    <Compile Include="GruposVer.Designer.cs">
+      <DependentUpon>GruposVer.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
@@ -169,8 +169,8 @@
     <EmbeddedResource Include="Grupos.resx">
       <DependentUpon>Grupos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GruposModificar.resx">
-      <DependentUpon>GruposModificar.cs</DependentUpon>
+    <EmbeddedResource Include="GruposVer.resx">
+      <DependentUpon>GruposVer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>

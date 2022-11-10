@@ -33,32 +33,19 @@ namespace Colegio5
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox_UsuarioSel = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.btn_agregar = new System.Windows.Forms.Button();
+            this.btn_instrucciones = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btn_alumnos = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
             this.lbl_topPanel = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_UsuarioSel)).BeginInit();
             this.panelTop.SuspendLayout();
-            this.panelContenedor.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +56,7 @@ namespace Colegio5
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.panel1.Controls.Add(this.pictureBox_UsuarioSel);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.btn_agregar);
+            this.panel1.Controls.Add(this.btn_instrucciones);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.btn_alumnos);
@@ -114,28 +101,28 @@ namespace Colegio5
             this.button4.MouseEnter += new System.EventHandler(this.button4_MouseEnter);
             this.button4.MouseLeave += new System.EventHandler(this.button4_MouseLeave);
             // 
-            // btn_agregar
+            // btn_instrucciones
             // 
-            this.btn_agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_agregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_agregar.FlatAppearance.BorderSize = 0;
-            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar.ForeColor = System.Drawing.Color.White;
-            this.btn_agregar.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar.Image")));
-            this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_agregar.Location = new System.Drawing.Point(0, 464);
-            this.btn_agregar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(77, 98);
-            this.btn_agregar.TabIndex = 8;
-            this.btn_agregar.Text = "Agregar";
-            this.btn_agregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_agregar.UseVisualStyleBackColor = true;
-            this.btn_agregar.Click += new System.EventHandler(this.button3_Click);
-            this.btn_agregar.MouseEnter += new System.EventHandler(this.btn_agregar_MouseEnter);
-            this.btn_agregar.MouseLeave += new System.EventHandler(this.btn_agregar_MouseLeave);
+            this.btn_instrucciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_instrucciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_instrucciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_instrucciones.FlatAppearance.BorderSize = 0;
+            this.btn_instrucciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_instrucciones.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_instrucciones.ForeColor = System.Drawing.Color.White;
+            this.btn_instrucciones.Image = ((System.Drawing.Image)(resources.GetObject("btn_instrucciones.Image")));
+            this.btn_instrucciones.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_instrucciones.Location = new System.Drawing.Point(0, 464);
+            this.btn_instrucciones.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_instrucciones.Name = "btn_instrucciones";
+            this.btn_instrucciones.Size = new System.Drawing.Size(77, 98);
+            this.btn_instrucciones.TabIndex = 8;
+            this.btn_instrucciones.Text = "Instructivo";
+            this.btn_instrucciones.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_instrucciones.UseVisualStyleBackColor = true;
+            this.btn_instrucciones.Click += new System.EventHandler(this.button3_Click);
+            this.btn_instrucciones.MouseEnter += new System.EventHandler(this.btn_agregar_MouseEnter);
+            this.btn_instrucciones.MouseLeave += new System.EventHandler(this.btn_agregar_MouseLeave);
             // 
             // button2
             // 
@@ -233,144 +220,12 @@ namespace Colegio5
             // 
             // panelContenedor
             // 
-            this.panelContenedor.Controls.Add(this.panel2);
-            this.panelContenedor.Controls.Add(this.panel3);
             this.panelContenedor.Location = new System.Drawing.Point(77, 73);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(923, 645);
             this.panelContenedor.TabIndex = 7;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(708, 139);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 106);
-            this.panel2.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(49, 70);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 23);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Camila Caio";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(40, 47);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 23);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Alejandro Lopez";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(40, 24);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 23);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Agustin Larroca";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(6, 2);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 22);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Ultimos alumnos agregados";
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(706, 273);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 106);
-            this.panel3.TabIndex = 10;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(39, 70);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 23);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Gabriela Barbero";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(54, 47);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 23);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Martin Vega";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(51, 24);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 23);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Liliana Basile";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(5, 2);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 22);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Ultimos docentes agregados";
             // 
             // panel4
             // 
@@ -435,11 +290,6 @@ namespace Colegio5
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_UsuarioSel)).EndInit();
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
-            this.panelContenedor.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -451,22 +301,12 @@ namespace Colegio5
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btn_agregar;
+        private System.Windows.Forms.Button btn_instrucciones;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox_UsuarioSel;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Label lbl_topPanel;
         public System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btn_minimizar;

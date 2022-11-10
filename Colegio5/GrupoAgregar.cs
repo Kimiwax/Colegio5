@@ -15,10 +15,10 @@ namespace Colegio5
         public GrupoAgregar()
         {
             InitializeComponent();
-            dataGridView1.Rows.Add("20-45101756-5", "Agustin", "Larroca", "Alumno");
-            dataGridView1.Rows.Add("20-45101756-5", "Pablo", "Perez", "Alumno");
-            dataGridView1.Rows.Add("20-34622756-5", "Micaela", "Villa", "Alumno");
-            dataGridView1.Rows.Add("20-98425462-5", "Patricia", "Perrone", "Docente");
+            dataGridView1.Rows.Add("45865743", "Micaela", "Pereyra", "Alumno");
+            dataGridView1.Rows.Add("46764562", "Marcos", "Cruz", "Alumno");
+            dataGridView1.Rows.Add("46764562", "Abigail", "Paz", "Alumno");
+            dataGridView1.Rows.Add("34435434", "Sandra", "Benitez", "Docente");
            
         }
 
@@ -49,6 +49,11 @@ namespace Colegio5
             }
             else { }
             //btn_crearGrupo.Text = "Cancel";
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

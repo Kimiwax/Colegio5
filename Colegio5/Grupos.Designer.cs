@@ -66,7 +66,7 @@ namespace Colegio5
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(130, 37);
             this.btn_buscar.TabIndex = 27;
-            this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.Text = "VER";
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
@@ -80,7 +80,7 @@ namespace Colegio5
             this.btn_crearGrupo.Name = "btn_crearGrupo";
             this.btn_crearGrupo.Size = new System.Drawing.Size(130, 37);
             this.btn_crearGrupo.TabIndex = 26;
-            this.btn_crearGrupo.Text = "Crear";
+            this.btn_crearGrupo.Text = "CREAR";
             this.btn_crearGrupo.UseVisualStyleBackColor = true;
             this.btn_crearGrupo.Click += new System.EventHandler(this.btn_crearGrupo_Click);
             // 

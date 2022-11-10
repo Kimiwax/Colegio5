@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClaseVariables;
@@ -40,8 +41,10 @@ namespace Colegio5
 
         private void button3_Click(object sender, EventArgs e)
         {
-            abrirFormAlumnos(new AgregarInstancias());
-            lbl_topPanel.Text = "Crear";
+            
+            System.Diagnostics.Process.Start("Instructivo.pdf");
+            
+            lbl_topPanel.Text = "Instructivo";
             panelTop.BackColor = Color.FromArgb(254, 202, 87);
         }
 
@@ -65,10 +68,7 @@ namespace Colegio5
             abrirFormAlumnos(new Alumnos());
             lbl_topPanel.Text = "Alumnos";
             panelTop.BackColor = Color.FromArgb(9, 132, 227);
-            panel2.Enabled = false;
-            panel2.Visible = false;
-            panel3.Enabled = false;
-            panel3.Visible = false;
+            
 
         }
 
@@ -80,10 +80,7 @@ namespace Colegio5
             abrirFormAlumnos(new Docentes());
             lbl_topPanel.Text = "Docentes";
             panelTop.BackColor = Color.FromArgb(255, 127, 80);
-            panel2.Enabled = false;
-            panel2.Visible = false;
-            panel3.Enabled = false;
-            panel3.Visible = false;
+            
         }
 
         private void btn_alumnos_MouseEnter(object sender, EventArgs e)
@@ -111,7 +108,7 @@ namespace Colegio5
 
         private void button2_MouseEnter(object sender, EventArgs e)
         {
-            button2.BackColor = Color.FromArgb(123, 237, 159);
+            button2.BackColor = Color.FromArgb(32, 191, 107);
         }
 
         private void button2_MouseLeave(object sender, EventArgs e)
@@ -139,7 +136,7 @@ namespace Colegio5
             panelContenedor.Controls.Clear();
             abrirFormAlumnos(new Grupos());
             lbl_topPanel.Text = "Grupos";
-            panelTop.BackColor = Color.FromArgb(123, 237, 159);
+            panelTop.BackColor = Color.FromArgb(32, 191, 107);
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -156,12 +153,12 @@ namespace Colegio5
 
         private void btn_agregar_MouseEnter(object sender, EventArgs e)
         {
-            btn_agregar.BackColor = Color.FromArgb(254, 202, 87);
+            btn_instrucciones.BackColor = Color.FromArgb(254, 202, 87);
         }
 
         private void btn_agregar_MouseLeave(object sender, EventArgs e)
         {
-            btn_agregar.BackColor = Color.FromArgb(42, 47, 87);
+            btn_instrucciones.BackColor = Color.FromArgb(42, 47, 87);
         }
 
         private void btn_minimizar_Click(object sender, EventArgs e)

@@ -93,6 +93,8 @@ namespace Colegio5
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(108, 23);
             this.label10.TabIndex = 21;
+            this.label10.Text = "TES";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
@@ -104,6 +106,8 @@ namespace Colegio5
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(108, 23);
             this.label9.TabIndex = 20;
+            this.label9.Text = "Mañana";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
@@ -115,6 +119,8 @@ namespace Colegio5
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 23);
             this.label8.TabIndex = 19;
+            this.label8.Text = "1er Ciclo";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -126,6 +132,8 @@ namespace Colegio5
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(108, 23);
             this.label7.TabIndex = 18;
+            this.label7.Text = "Primario";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -173,6 +181,8 @@ namespace Colegio5
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 23);
             this.label3.TabIndex = 14;
+            this.label3.Text = "Sandra Benitez";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -203,7 +213,6 @@ namespace Colegio5
             this.lstBox_Alumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
             this.lstBox_Alumnos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstBox_Alumnos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lstBox_Alumnos.Enabled = false;
             this.lstBox_Alumnos.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstBox_Alumnos.ForeColor = System.Drawing.Color.White;
             this.lstBox_Alumnos.FormattingEnabled = true;
@@ -221,9 +230,9 @@ namespace Colegio5
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(159, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(397, 28);
+            this.label2.Size = new System.Drawing.Size(443, 28);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Se va a crear un grupo con los siguientes datos";
+            this.label2.Text = "Se va a crear un grupo \"242\" con los siguientes datos";
             // 
             // btn_aceptar
             // 
