@@ -16,10 +16,12 @@ namespace Colegio5
 {
     public partial class DocentesModificar : Form
     {
-        public DocentesModificar(int Dni)
+        public DocentesModificar(int Dni, string nom, string ape)
         {
             InitializeComponent();
             Variables.RecibirDniDocente = Dni;
+            Variables.RecibirNomDocente = nom;
+            Variables.RecibirApeDocente = ape;
         }
 
       
@@ -126,7 +128,9 @@ namespace Colegio5
             txt_direccionModDoc2.Text = dgv_verDocentes.Rows[0].Cells[9].Value.ToString();
             cmb_localidadD.Text = dgv_verDocentes.Rows[0].Cells[10].Value.ToString();
 
-            lbl_nombreDni.Text = dgv_verDocentes.Rows[0].Cells[0].Value.ToString() + " " +  dgv_verDocentes.Rows[0].Cells[1].Value.ToString() + " " + dgv_verDocentes.Rows[0].Cells[4].Value.ToString(); ;
+            txt_nomBajadoc.Text = Variables.RecibirNomDocente;
+            txt_apeBajaDoc.Text = Variables.RecibirApeDocente;
+            txt_dniBajaDoc.Text = Variables.RecibirDniDocente.ToString();
 
 
         }
@@ -171,6 +175,38 @@ namespace Colegio5
         private void cmb_CaracterizacionModDoc_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             Variables.selecCaracterizacion2 = Convert.ToString(cmb_CaracterizacionModDoc.SelectedValue);
+        }
+
+        private void btn_eliminarDocente_Click(object sender, EventArgs e)
+        {
+            Metodos.ConectaDB();
+
+            string BajaDocente = "UPDATE Docente set Habilitado=" + 0 + " WHERE Docente.DNIDocente = " + Variables.RecibirDniDocente + "; ";
+
+            Variables.Orden = new OleDbCommand(BajaDocente, Variables.ConexionConBD);
+            Variables.Orden.ExecuteNonQuery();
+
+            MessageBox.Show("Se Deshabilito al docente correctamente");
+
+            Metodos.CerrarDB2();
+
+            this.Close();
+        }
+
+        private void btn_habilitarDocente_Click(object sender, EventArgs e)
+        {
+            Metodos.ConectaDB();
+
+            string BajaDocente = "UPDATE Docente set Habilitado=" + 1 + " WHERE Docente.DNIDocente = " + Variables.RecibirDniDocente + "; ";
+
+            Variables.Orden = new OleDbCommand(BajaDocente, Variables.ConexionConBD);
+            Variables.Orden.ExecuteNonQuery();
+
+            MessageBox.Show("Se Habilito al docente correctamente");
+
+            Metodos.CerrarDB2();
+
+            this.Close();
         }
     }
 }

@@ -20,13 +20,25 @@ namespace ClaseVariables
         public static int RecibirDniDocente = 0;
         public static int RecibirDniAlumno = 0;
         public static int GuardarDniAlumno = 0;
+        public static string GuardarNomDocente;
+        public static string RecibirNomDocente;
+        public static string GuardarApeDocente;
+        public static string RecibirApeDocente;
+
+        public static string guardarNomAlumno;
+        public static string RecibirNomAlumno;
+        public static string RecibirApeAlumno;
+        public static string GuardarApeAlumno;
+      
 
         public static string selecLocalidad = "";
         public static string selecCaracterizacion = "";
         public static string selecLocalidad3 = "";
+        public static string selecLocalidad4 = "";
         public static string selecCaracterizacion2 = "";
         public static string seleccCud = "";
         public static string selecParentesco = "";
+        public static string selecSedeInclusion = "";
 
         public static string selecLocalidad2 = "";
         public static string selecParentesco2 = "";

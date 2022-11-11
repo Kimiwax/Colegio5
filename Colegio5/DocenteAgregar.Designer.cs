@@ -37,6 +37,7 @@ namespace Colegio5
             this.label4 = new System.Windows.Forms.Label();
             this.btn_agregarD = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.cmb_caracterizacionD = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cmb_localidadD = new System.Windows.Forms.ComboBox();
@@ -57,7 +58,6 @@ namespace Colegio5
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_cerrarVentana = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.errorDoc = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorDoc)).BeginInit();
@@ -162,6 +162,14 @@ namespace Colegio5
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(885, 646);
             this.panel1.TabIndex = 24;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.panel2.Location = new System.Drawing.Point(438, 11);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 500);
+            this.panel2.TabIndex = 69;
             // 
             // cmb_caracterizacionD
             // 
@@ -332,6 +340,7 @@ namespace Colegio5
             this.txt_dniD.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_dniD.ForeColor = System.Drawing.Color.Black;
             this.txt_dniD.Location = new System.Drawing.Point(79, 375);
+            this.txt_dniD.MaxLength = 8;
             this.txt_dniD.Name = "txt_dniD";
             this.txt_dniD.ShortcutsEnabled = false;
             this.txt_dniD.Size = new System.Drawing.Size(310, 31);
@@ -424,14 +433,6 @@ namespace Colegio5
             this.btn_cerrarVentana.TabIndex = 26;
             this.btn_cerrarVentana.UseVisualStyleBackColor = true;
             this.btn_cerrarVentana.Click += new System.EventHandler(this.btn_cerrarVentana_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
-            this.panel2.Location = new System.Drawing.Point(438, 11);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 500);
-            this.panel2.TabIndex = 69;
             // 
             // errorDoc
             // 

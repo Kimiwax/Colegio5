@@ -92,13 +92,18 @@ namespace Colegio5
             this.label12 = new System.Windows.Forms.Label();
             this.txt_apellidoModDoc2 = new System.Windows.Forms.TextBox();
             this.tP_darDeBaja = new System.Windows.Forms.TabPage();
+            this.btn_habilitarDocente = new System.Windows.Forms.Button();
+            this.btn_eliminarDocente = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.lbl_nombreDni = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
             this.btn_cerrarVentana = new System.Windows.Forms.Button();
-            this.btn_eliminarDocente = new System.Windows.Forms.Button();
-            this.btn_habilitarDocente = new System.Windows.Forms.Button();
+            this.txt_dniBajaDoc = new System.Windows.Forms.TextBox();
+            this.txt_apeBajaDoc = new System.Windows.Forms.TextBox();
+            this.txt_nomBajadoc = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tP_VerDocente.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -858,10 +863,15 @@ namespace Colegio5
             // tP_darDeBaja
             // 
             this.tP_darDeBaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.tP_darDeBaja.Controls.Add(this.txt_dniBajaDoc);
+            this.tP_darDeBaja.Controls.Add(this.txt_apeBajaDoc);
+            this.tP_darDeBaja.Controls.Add(this.txt_nomBajadoc);
+            this.tP_darDeBaja.Controls.Add(this.label44);
+            this.tP_darDeBaja.Controls.Add(this.label13);
+            this.tP_darDeBaja.Controls.Add(this.label14);
             this.tP_darDeBaja.Controls.Add(this.btn_habilitarDocente);
             this.tP_darDeBaja.Controls.Add(this.btn_eliminarDocente);
             this.tP_darDeBaja.Controls.Add(this.label15);
-            this.tP_darDeBaja.Controls.Add(this.lbl_nombreDni);
             this.tP_darDeBaja.Controls.Add(this.label1);
             this.tP_darDeBaja.Location = new System.Drawing.Point(4, 32);
             this.tP_darDeBaja.Name = "tP_darDeBaja";
@@ -871,32 +881,51 @@ namespace Colegio5
             this.tP_darDeBaja.TabIndex = 3;
             this.tP_darDeBaja.Text = "DAR DE BAJA";
             // 
+            // btn_habilitarDocente
+            // 
+            this.btn_habilitarDocente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(159)))), ((int)(((byte)(61)))));
+            this.btn_habilitarDocente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(81)))), ((int)(((byte)(40)))));
+            this.btn_habilitarDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_habilitarDocente.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_habilitarDocente.ForeColor = System.Drawing.Color.White;
+            this.btn_habilitarDocente.Location = new System.Drawing.Point(172, 375);
+            this.btn_habilitarDocente.Name = "btn_habilitarDocente";
+            this.btn_habilitarDocente.Size = new System.Drawing.Size(216, 92);
+            this.btn_habilitarDocente.TabIndex = 100;
+            this.btn_habilitarDocente.Text = "VOLVER A HABILITAR DOCENTE";
+            this.btn_habilitarDocente.UseVisualStyleBackColor = false;
+            this.btn_habilitarDocente.Click += new System.EventHandler(this.btn_habilitarDocente_Click);
+            // 
+            // btn_eliminarDocente
+            // 
+            this.btn_eliminarDocente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_eliminarDocente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(87)))));
+            this.btn_eliminarDocente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(87)))));
+            this.btn_eliminarDocente.FlatAppearance.BorderSize = 0;
+            this.btn_eliminarDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_eliminarDocente.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminarDocente.ForeColor = System.Drawing.Color.White;
+            this.btn_eliminarDocente.Location = new System.Drawing.Point(620, 375);
+            this.btn_eliminarDocente.Name = "btn_eliminarDocente";
+            this.btn_eliminarDocente.Size = new System.Drawing.Size(216, 92);
+            this.btn_eliminarDocente.TabIndex = 37;
+            this.btn_eliminarDocente.Text = "ELIMINAR \r\nDOCENTE";
+            this.btn_eliminarDocente.UseVisualStyleBackColor = false;
+            this.btn_eliminarDocente.Click += new System.EventHandler(this.btn_eliminarDocente_Click);
+            // 
             // label15
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label15.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(54, 126);
+            this.label15.Location = new System.Drawing.Point(30, 125);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(886, 105);
             this.label15.TabIndex = 36;
             this.label15.Text = "Al eliminar a este DOCENTE, este ya no formara parte de la plantilla principal de" +
     " DOCENTES, para volver a incorporarlo debera volver a esta misma pestaña para de" +
     "shacer la situación";
-            // 
-            // lbl_nombreDni
-            // 
-            this.lbl_nombreDni.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbl_nombreDni.AutoSize = true;
-            this.lbl_nombreDni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
-            this.lbl_nombreDni.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombreDni.ForeColor = System.Drawing.Color.White;
-            this.lbl_nombreDni.Location = new System.Drawing.Point(486, 38);
-            this.lbl_nombreDni.Name = "lbl_nombreDni";
-            this.lbl_nombreDni.Size = new System.Drawing.Size(223, 34);
-            this.lbl_nombreDni.TabIndex = 35;
-            this.lbl_nombreDni.Text = "Nombre Ejemplo, dni:";
             // 
             // label1
             // 
@@ -905,7 +934,7 @@ namespace Colegio5
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(54, 38);
+            this.label1.Location = new System.Drawing.Point(30, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(405, 34);
             this.label1.TabIndex = 34;
@@ -935,35 +964,66 @@ namespace Colegio5
             this.btn_cerrarVentana.UseVisualStyleBackColor = true;
             this.btn_cerrarVentana.Click += new System.EventHandler(this.btn_cerrarVentana_Click);
             // 
-            // btn_eliminarDocente
+            // txt_dniBajaDoc
             // 
-            this.btn_eliminarDocente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_eliminarDocente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(87)))));
-            this.btn_eliminarDocente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(87)))));
-            this.btn_eliminarDocente.FlatAppearance.BorderSize = 0;
-            this.btn_eliminarDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_eliminarDocente.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_eliminarDocente.ForeColor = System.Drawing.Color.White;
-            this.btn_eliminarDocente.Location = new System.Drawing.Point(620, 375);
-            this.btn_eliminarDocente.Name = "btn_eliminarDocente";
-            this.btn_eliminarDocente.Size = new System.Drawing.Size(216, 92);
-            this.btn_eliminarDocente.TabIndex = 37;
-            this.btn_eliminarDocente.Text = "ELIMINAR \r\nDOCENTE";
-            this.btn_eliminarDocente.UseVisualStyleBackColor = false;
+            this.txt_dniBajaDoc.Location = new System.Drawing.Point(819, 63);
+            this.txt_dniBajaDoc.Name = "txt_dniBajaDoc";
+            this.txt_dniBajaDoc.Size = new System.Drawing.Size(158, 27);
+            this.txt_dniBajaDoc.TabIndex = 114;
             // 
-            // btn_habilitarDocente
+            // txt_apeBajaDoc
             // 
-            this.btn_habilitarDocente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(159)))), ((int)(((byte)(61)))));
-            this.btn_habilitarDocente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(81)))), ((int)(((byte)(40)))));
-            this.btn_habilitarDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_habilitarDocente.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_habilitarDocente.ForeColor = System.Drawing.Color.White;
-            this.btn_habilitarDocente.Location = new System.Drawing.Point(172, 375);
-            this.btn_habilitarDocente.Name = "btn_habilitarDocente";
-            this.btn_habilitarDocente.Size = new System.Drawing.Size(216, 92);
-            this.btn_habilitarDocente.TabIndex = 100;
-            this.btn_habilitarDocente.Text = "VOLVER A HABILITAR DOCENTE";
-            this.btn_habilitarDocente.UseVisualStyleBackColor = false;
+            this.txt_apeBajaDoc.Location = new System.Drawing.Point(632, 63);
+            this.txt_apeBajaDoc.Name = "txt_apeBajaDoc";
+            this.txt_apeBajaDoc.Size = new System.Drawing.Size(158, 27);
+            this.txt_apeBajaDoc.TabIndex = 113;
+            // 
+            // txt_nomBajadoc
+            // 
+            this.txt_nomBajadoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_nomBajadoc.Location = new System.Drawing.Point(451, 63);
+            this.txt_nomBajadoc.Name = "txt_nomBajadoc";
+            this.txt_nomBajadoc.Size = new System.Drawing.Size(158, 27);
+            this.txt_nomBajadoc.TabIndex = 112;
+            // 
+            // label44
+            // 
+            this.label44.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.label44.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.White;
+            this.label44.Location = new System.Drawing.Point(830, 14);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(54, 34);
+            this.label44.TabIndex = 111;
+            this.label44.Text = "DNI:";
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.label13.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(657, 14);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 34);
+            this.label13.TabIndex = 110;
+            this.label13.Text = "APELLIDO:";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.label14.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(479, 14);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(101, 34);
+            this.label14.TabIndex = 109;
+            this.label14.Text = "NOMBRE:";
             // 
             // DocentesModificar
             // 
@@ -1001,7 +1061,6 @@ namespace Colegio5
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabPage tP_darDeBaja;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label lbl_nombreDni;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Button btn_cerrarVentana;
@@ -1064,5 +1123,11 @@ namespace Colegio5
         private System.Windows.Forms.ComboBox cmb_sexoModDoc2;
         private System.Windows.Forms.Button btn_habilitarDocente;
         private System.Windows.Forms.Button btn_eliminarDocente;
+        private System.Windows.Forms.TextBox txt_dniBajaDoc;
+        private System.Windows.Forms.TextBox txt_apeBajaDoc;
+        private System.Windows.Forms.TextBox txt_nomBajadoc;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

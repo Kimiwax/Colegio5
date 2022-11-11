@@ -17,10 +17,12 @@ namespace Colegio5
 {
     public partial class AlumnoModificar : Form
     {
-        public AlumnoModificar(int dni)
+        public AlumnoModificar(int dni, string nom, string ape)
         {
             InitializeComponent();
             Variables.RecibirDniAlumno = dni;
+            Variables.RecibirNomAlumno = nom;
+            Variables.RecibirApeAlumno = ape;
 
         }
 
@@ -54,34 +56,34 @@ namespace Colegio5
             object anio = "anio";
             object texto = "texto";
 
-            
 
-                Word.Document ObjDoc = ObjWord.Documents.Open(ref parametro,
-                ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss,
-                ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss,
-                ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss);
 
-                DateTime fechaActual = DateTime.Today;
+            Word.Document ObjDoc = ObjWord.Documents.Open(ref parametro,
+            ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss,
+            ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss,
+            ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss);
 
-                Word.Range DIA = ObjDoc.Bookmarks.get_Item(ref dia).Range;
-                DIA.Text = fechaActual.Day.ToString();
+            DateTime fechaActual = DateTime.Today;
 
-                Word.Range MES = ObjDoc.Bookmarks.get_Item(ref mes).Range;
+            Word.Range DIA = ObjDoc.Bookmarks.get_Item(ref dia).Range;
+            DIA.Text = fechaActual.Day.ToString();
 
-                System.Globalization.DateTimeFormatInfo dtinfo =
-                new System.Globalization.CultureInfo("es-ES", false).DateTimeFormat;
-                MES.Text = dtinfo.GetMonthName(fechaActual.Month);
+            Word.Range MES = ObjDoc.Bookmarks.get_Item(ref mes).Range;
 
-                Word.Range ANIO = ObjDoc.Bookmarks.get_Item(ref anio).Range;
+            System.Globalization.DateTimeFormatInfo dtinfo =
+            new System.Globalization.CultureInfo("es-ES", false).DateTimeFormat;
+            MES.Text = dtinfo.GetMonthName(fechaActual.Month);
 
-                ANIO.Text = fechaActual.Year.ToString();
-                Word.Range NOMAPE = ObjDoc.Bookmarks.get_Item(ref nomA).Range;
-                NOMAPE.Text = txt_nomape.Text;
+            Word.Range ANIO = ObjDoc.Bookmarks.get_Item(ref anio).Range;
 
-                Word.Range DNI = ObjDoc.Bookmarks.get_Item(ref docA).Range;
-                DNI.Text = txt_dni.Text;
+            ANIO.Text = fechaActual.Year.ToString();
+            Word.Range NOMAPE = ObjDoc.Bookmarks.get_Item(ref nomA).Range;
+            NOMAPE.Text = txt_nomape.Text;
 
-                Word.Range DOCENTE = ObjDoc.Bookmarks.get_Item(ref doc).Range;
+            Word.Range DNI = ObjDoc.Bookmarks.get_Item(ref docA).Range;
+            DNI.Text = txt_dni.Text;
+
+            Word.Range DOCENTE = ObjDoc.Bookmarks.get_Item(ref doc).Range;
             DOCENTE.Text = txt_docente.Text;
 
             Word.Range TEXTO = ObjDoc.Bookmarks.get_Item(ref texto).Range;
@@ -103,25 +105,57 @@ namespace Colegio5
             ObjDoc.Bookmarks.Add("docente", ref rango6);
             ObjDoc.Bookmarks.Add("texto", ref rango7);
 
-
-
-
             ObjWord.Visible = true;
             this.Close();
         }
 
+        private void carga_cmbCaracterizacion()
+        {
+            string consulta2 = "Select CodCaracterizacion, Especificacion from Caracterizacion;";
+            Variables.Lector = Metodos.LecturaDB(consulta2);
+            DataTable dsCombo2 = new DataTable();
+            dsCombo2.Load(Variables.Lector);
+            cmb_caracterizacionAMod.DataSource = dsCombo2;
+            cmb_caracterizacionAMod.DisplayMember = "Especificacion";
+            cmb_caracterizacionAMod.ValueMember = "CodCaracterizacion";
+            Variables.Lector.Close();
+        }
+
+        private void carga_cmbLocalidad()
+        {
+            string consulta3 = "Select CP, NomLocalidad from Localidad;";
+            Variables.Lector = Metodos.LecturaDB(consulta3);
+            DataTable dsCombo = new DataTable();//Creo el objeto de tipo datatable para que reciba los registros del lector
+            dsCombo.Load(Variables.Lector);
+            cmb_localidadAMod.DataSource = dsCombo;
+            cmb_localidadAMod.DisplayMember = "NomLocalidad";//Muestro el nombre de localidad al usuario
+            cmb_localidadAMod.ValueMember = "CP";//Tomo el valor de codigo postal de la localidad
+            Variables.Lector.Close();
+        }
+
+        private void carga_SedeInclusion()
+        {
+            string consulta3 = "Select CodSedIncDom, Detalle from SedIncDom;";
+            Variables.Lector = Metodos.LecturaDB(consulta3);
+            DataTable dsCombo = new DataTable();
+            dsCombo.Load(Variables.Lector);
+            cmb_sedeinclusionAMod.DataSource = dsCombo;
+            cmb_sedeinclusionAMod.DisplayMember = "Detalle";
+            cmb_sedeinclusionAMod.ValueMember = "CodSedIncDom";
+            Variables.Lector.Close();
+        }
+
+
 
         private void AlumnoModificar_Load(object sender, EventArgs e)
         {
-            Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
-            Variables.ConexionConBD.Open();
+            Metodos.ConectaDB();
 
             string ConsultaAlumno = "SELECT Persona.Nombre, Persona.Apellido, Persona.FechaNac, Persona.Sexo, Persona.DNI, Caracterizacion.Especificacion, Alumno.FechaIng, Alumno.ObraSocial, Alumno.CUD, Localidad.NomLocalidad, Persona.Direccion, SedIncDom.Detalle" +
                                     " FROM Caracterizacion INNER JOIN((SedIncDom INNER JOIN(Localidad INNER JOIN(Persona INNER JOIN Alumno ON Persona.DNI = Alumno.DNIAlumno) ON Localidad.CP = Persona.CodigoPostal) ON SedIncDom.CodSedIncDom = Alumno.CodigoSedIncDom) INNER JOIN AlumnoCaracterizaciones ON Alumno.DNIAlumno = AlumnoCaracterizaciones.dniAlumno) ON Caracterizacion.CodCaracterizacion = AlumnoCaracterizaciones.CodigoCaracterizaciones" +
                                     " WHERE Persona.DNI = " + Variables.RecibirDniAlumno + ";";
 
-            Variables.Orden = new OleDbCommand(ConsultaAlumno, Variables.ConexionConBD);
-            Variables.Lector = Variables.Orden.ExecuteReader();
+            Metodos.CargaDB(ConsultaAlumno);
 
             while (Variables.Lector.Read())
             {
@@ -158,11 +192,106 @@ namespace Colegio5
             txt_domicilioA.Text = dgv_Alumnos.Rows[0].Cells[10].Value.ToString();
             txt_servicioA.Text = dgv_Alumnos.Rows[0].Cells[11].Value.ToString();
 
+            carga_cmbCaracterizacion();
+            carga_cmbLocalidad();
+            carga_SedeInclusion();
+
+            txt_nombreAMod.Text = txt_nombreA.Text;
+            txt_apellidoAMod.Text = txt_apellidoA.Text;
+            dtp_fechadenacAMod.Text = txt_fecnacA.Text;
+            cmb_sexoAMod.Text = txt_sexoA.Text;
+            cmb_caracterizacionAMod.Text = txt_caracterizacionA.Text;
+            txt_obrasocialAMod.Text = txt_osA.Text;
+            cmb_cudAMod.Text = txt_pensionA.Text;
+            cmb_localidadAMod.Text = txt_localidadA.Text;
+            txt_domicilioAMod.Text = txt_domicilioA.Text;
+            dtp_fechaIngresoAMod.Text = txt_ingresoA.Text;
+            cmb_sedeinclusionAMod.Text = txt_servicioA.Text;
+
+            txt_nomBaja.Text = Variables.RecibirNomAlumno;
+            txt_apeBaja.Text = Variables.RecibirApeAlumno;
+            txt_dniBaja.Text = Variables.RecibirDniAlumno.ToString();
+            
+
             txt_nomape.Text = dgv_Alumnos.Rows[0].Cells[0].Value.ToString() + " " + dgv_Alumnos.Rows[0].Cells[1].Value.ToString(); ;
             txt_dni.Text = dgv_Alumnos.Rows[0].Cells[4].Value.ToString();
 
-            Variables.Lector.Close();
-            Variables.ConexionConBD.Close();
+            Metodos.CerrarDB();
+        }
+
+        private void btn_ModificarAlumno_Click(object sender, EventArgs e)
+        {
+            Metodos.ConectaDB();
+
+            string FechaNacimientoNuevaAlumno = dtp_fechadenacAMod.Value.ToString("dd/MM/yyyy");
+            string FechaIngresoNuevaAlumno = dtp_fechaIngresoAMod.Value.ToString("dd/MM/yyyy");
+
+            string modificarPersona = "UPDATE Persona set Nombre='" + txt_nombreAMod.Text + "', Apellido='" + txt_apellidoAMod.Text + "', FechaNac='" + FechaNacimientoNuevaAlumno + "', Sexo='" + cmb_sexoAMod.Text + "', Direccion ='" + txt_domicilioAMod.Text + "', CodigoPostal =" + Variables.selecLocalidad4 + " WHERE Persona.DNI =" + Variables.RecibirDniAlumno + "; ";
+            Variables.Orden = new OleDbCommand(modificarPersona, Variables.ConexionConBD);
+            Variables.Orden.ExecuteNonQuery();
+
+            string ModificarAlumno = "UPDATE Alumno set FechaIng='" + FechaIngresoNuevaAlumno + "', CUD='" + cmb_cudAMod.Text + "', CodigoSedIncDom=" + Variables.selecSedeInclusion + ", ObraSocial='" + txt_obrasocialAMod.Text + "' WHERE Alumno.DNIAlumno = " + Variables.RecibirDniAlumno + "; ";
+            Variables.Orden = new OleDbCommand(ModificarAlumno, Variables.ConexionConBD);
+            Variables.Orden.ExecuteNonQuery();
+
+            string ModificarAlumCarac = "UPDATE AlumnoCaracterizaciones set CodigoCaracterizaciones=" + Variables.selecSedeInclusion + " WHERE  AlumnoCaracterizaciones.dniAlumno =" + Variables.RecibirDniDocente + "; ";
+
+            Variables.Orden = new OleDbCommand(ModificarAlumCarac, Variables.ConexionConBD);
+            Variables.Orden.ExecuteNonQuery();
+
+            Metodos.CerrarDB2();
+
+            MessageBox.Show("Se actualizaron correctamente los registros");
+            this.Close();
+        }
+
+        private void cmb_localidadAMod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Variables.selecLocalidad4 = Convert.ToString(cmb_localidadAMod.SelectedValue);
+        }
+
+        private void cmb_sedeinclusionAMod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Variables.selecSedeInclusion = Convert.ToString(cmb_sedeinclusionAMod.SelectedValue);
+        }
+
+        private void cmb_caracterizacionAMod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Variables.selecCaracterizacion = Convert.ToString(cmb_caracterizacionAMod.SelectedValue);
+        }
+
+        private void btn_eliminarAlumno_Click(object sender, EventArgs e)
+        {
+            Metodos.ConectaDB();
+
+            string BajaAlumno = "UPDATE Alumno set Habilitado=" + 0 + " WHERE Alumno.DNIAlumno = " + Variables.RecibirDniAlumno + "; ";
+
+            Variables.Orden = new OleDbCommand(BajaAlumno, Variables.ConexionConBD);
+            Variables.Orden.ExecuteNonQuery();
+
+            MessageBox.Show("Se Deshabilito al alumno correctamente");
+
+            Metodos.CerrarDB2();
+            
+
+            this.Close();
+        }
+
+        private void btn_habilitarAlumno_Click(object sender, EventArgs e)
+        {
+            Metodos.ConectaDB();
+
+            string BajaAlumno = "UPDATE Alumno set Habilitado=" + 1 + " WHERE Alumno.DNIAlumno = " + Variables.RecibirDniAlumno + "; ";
+
+            Variables.Orden = new OleDbCommand(BajaAlumno, Variables.ConexionConBD);
+            Variables.Orden.ExecuteNonQuery();
+
+            MessageBox.Show("Se Habilito al alumno correctamente");
+
+            Metodos.CerrarDB2();
+
+            
+            this.Close();
         }
     }
 }

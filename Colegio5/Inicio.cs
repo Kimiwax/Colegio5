@@ -33,11 +33,11 @@ namespace Colegio5
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            //panelContenedor.Controls.Clear();
             System.Diagnostics.Process.Start("Instructivo.pdf");
             
-            lbl_topPanel.Text = "Instructivo";
-            panelTop.BackColor = Color.FromArgb(254, 202, 87);
+            //lbl_topPanel.Text = "Instructivo";
+            //panelTop.BackColor = Color.FromArgb(254, 202, 87);
         }
 
       

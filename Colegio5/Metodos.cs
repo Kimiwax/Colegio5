@@ -21,17 +21,36 @@ namespace MetodosColeg
 
         public static OleDbDataReader LecturaDB(string consulta)
         {
+
+            Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
+            Variables.ConexionConBD.Open();
+
             Variables.Orden = new OleDbCommand(consulta, Variables.ConexionConBD);
             Variables.Lector = Variables.Orden.ExecuteReader();
             return Variables.Lector;
+
+            Variables.ConexionConBD.Close();
         }
 
         public static void CerrarDB()
         {
+            Variables.Lector.Close();
+            Variables.ConexionConBD.Close();
+        }
+
+        public static void CerrarDB2()
+        {
+            
             Variables.ConexionConBD.Close();
         }
 
         public static void CargaDB(string consulta)
+        {
+            Variables.Orden = new OleDbCommand(consulta, Variables.ConexionConBD);
+            Variables.Lector = Variables.Orden.ExecuteReader();
+        }
+
+        public static void CargaDB2 (string consulta)
         {
             Variables.Orden = new OleDbCommand(consulta, Variables.ConexionConBD);
             Variables.Orden.ExecuteNonQuery();

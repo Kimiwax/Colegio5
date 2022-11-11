@@ -29,8 +29,8 @@ namespace Colegio5
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlumnoModificar));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tP_VerAlumno = new System.Windows.Forms.TabPage();
@@ -171,6 +171,13 @@ namespace Colegio5
             this.label1 = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
             this.btn_cerrarVentana = new System.Windows.Forms.Button();
+            this.btn_habilitarAlumno = new System.Windows.Forms.Button();
+            this.btn_eliminarAlumno = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.txt_nomBaja = new System.Windows.Forms.TextBox();
+            this.txt_apeBaja = new System.Windows.Forms.TextBox();
+            this.txt_dniBaja = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tP_VerAlumno.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -558,14 +565,14 @@ namespace Colegio5
             this.dgv_Alumnos.AllowUserToAddRows = false;
             this.dgv_Alumnos.AllowUserToDeleteRows = false;
             this.dgv_Alumnos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Alumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Alumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Alumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Alumnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreA,
@@ -716,14 +723,14 @@ namespace Colegio5
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreTutor,
@@ -1346,6 +1353,7 @@ namespace Colegio5
             this.btn_ModificarAlumno.TabIndex = 102;
             this.btn_ModificarAlumno.Text = "MODIFICAR";
             this.btn_ModificarAlumno.UseVisualStyleBackColor = false;
+            this.btn_ModificarAlumno.Click += new System.EventHandler(this.btn_ModificarAlumno_Click);
             // 
             // txt_obrasocialAMod
             // 
@@ -1420,6 +1428,7 @@ namespace Colegio5
             this.cmb_caracterizacionAMod.Name = "cmb_caracterizacionAMod";
             this.cmb_caracterizacionAMod.Size = new System.Drawing.Size(334, 31);
             this.cmb_caracterizacionAMod.TabIndex = 96;
+            this.cmb_caracterizacionAMod.SelectedIndexChanged += new System.EventHandler(this.cmb_caracterizacionAMod_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -1476,6 +1485,7 @@ namespace Colegio5
             this.cmb_sedeinclusionAMod.Name = "cmb_sedeinclusionAMod";
             this.cmb_sedeinclusionAMod.Size = new System.Drawing.Size(334, 31);
             this.cmb_sedeinclusionAMod.TabIndex = 90;
+            this.cmb_sedeinclusionAMod.SelectedIndexChanged += new System.EventHandler(this.cmb_sedeinclusionAMod_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -1509,6 +1519,7 @@ namespace Colegio5
             this.cmb_localidadAMod.Name = "cmb_localidadAMod";
             this.cmb_localidadAMod.Size = new System.Drawing.Size(334, 31);
             this.cmb_localidadAMod.TabIndex = 88;
+            this.cmb_localidadAMod.SelectedIndexChanged += new System.EventHandler(this.cmb_localidadAMod_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -1802,6 +1813,13 @@ namespace Colegio5
             // tP_darDeBaja
             // 
             this.tP_darDeBaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.tP_darDeBaja.Controls.Add(this.txt_dniBaja);
+            this.tP_darDeBaja.Controls.Add(this.txt_apeBaja);
+            this.tP_darDeBaja.Controls.Add(this.txt_nomBaja);
+            this.tP_darDeBaja.Controls.Add(this.label44);
+            this.tP_darDeBaja.Controls.Add(this.label13);
+            this.tP_darDeBaja.Controls.Add(this.btn_habilitarAlumno);
+            this.tP_darDeBaja.Controls.Add(this.btn_eliminarAlumno);
             this.tP_darDeBaja.Controls.Add(this.label15);
             this.tP_darDeBaja.Controls.Add(this.label14);
             this.tP_darDeBaja.Controls.Add(this.label1);
@@ -1832,11 +1850,11 @@ namespace Colegio5
             this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label14.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(450, 38);
+            this.label14.Location = new System.Drawing.Point(452, 12);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(223, 34);
+            this.label14.Size = new System.Drawing.Size(101, 34);
             this.label14.TabIndex = 35;
-            this.label14.Text = "Nombre Ejemplo, dni:";
+            this.label14.Text = "NOMBRE:";
             // 
             // label1
             // 
@@ -1845,7 +1863,7 @@ namespace Colegio5
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
             this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(24, 38);
+            this.label1.Location = new System.Drawing.Point(8, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(401, 34);
             this.label1.TabIndex = 34;
@@ -1874,6 +1892,87 @@ namespace Colegio5
             this.btn_cerrarVentana.TabIndex = 25;
             this.btn_cerrarVentana.UseVisualStyleBackColor = true;
             this.btn_cerrarVentana.Click += new System.EventHandler(this.btn_cerrarVentana_Click);
+            // 
+            // btn_habilitarAlumno
+            // 
+            this.btn_habilitarAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(159)))), ((int)(((byte)(61)))));
+            this.btn_habilitarAlumno.Enabled = false;
+            this.btn_habilitarAlumno.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(81)))), ((int)(((byte)(40)))));
+            this.btn_habilitarAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_habilitarAlumno.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_habilitarAlumno.ForeColor = System.Drawing.Color.White;
+            this.btn_habilitarAlumno.Location = new System.Drawing.Point(157, 391);
+            this.btn_habilitarAlumno.Name = "btn_habilitarAlumno";
+            this.btn_habilitarAlumno.Size = new System.Drawing.Size(216, 92);
+            this.btn_habilitarAlumno.TabIndex = 102;
+            this.btn_habilitarAlumno.Text = "VOLVER A HABILITAR ALUMNO";
+            this.btn_habilitarAlumno.UseVisualStyleBackColor = false;
+            this.btn_habilitarAlumno.Click += new System.EventHandler(this.btn_habilitarAlumno_Click);
+            // 
+            // btn_eliminarAlumno
+            // 
+            this.btn_eliminarAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_eliminarAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(87)))));
+            this.btn_eliminarAlumno.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(87)))));
+            this.btn_eliminarAlumno.FlatAppearance.BorderSize = 0;
+            this.btn_eliminarAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_eliminarAlumno.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminarAlumno.ForeColor = System.Drawing.Color.White;
+            this.btn_eliminarAlumno.Location = new System.Drawing.Point(605, 391);
+            this.btn_eliminarAlumno.Name = "btn_eliminarAlumno";
+            this.btn_eliminarAlumno.Size = new System.Drawing.Size(216, 92);
+            this.btn_eliminarAlumno.TabIndex = 101;
+            this.btn_eliminarAlumno.Text = "ELIMINAR \r\nALUMNO";
+            this.btn_eliminarAlumno.UseVisualStyleBackColor = false;
+            this.btn_eliminarAlumno.Click += new System.EventHandler(this.btn_eliminarAlumno_Click);
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.label13.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(630, 12);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 34);
+            this.label13.TabIndex = 104;
+            this.label13.Text = "APELLIDO:";
+            // 
+            // label44
+            // 
+            this.label44.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.label44.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.White;
+            this.label44.Location = new System.Drawing.Point(803, 12);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(54, 34);
+            this.label44.TabIndex = 105;
+            this.label44.Text = "DNI:";
+            // 
+            // txt_nomBaja
+            // 
+            this.txt_nomBaja.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_nomBaja.Location = new System.Drawing.Point(424, 61);
+            this.txt_nomBaja.Name = "txt_nomBaja";
+            this.txt_nomBaja.Size = new System.Drawing.Size(158, 27);
+            this.txt_nomBaja.TabIndex = 106;
+            // 
+            // txt_apeBaja
+            // 
+            this.txt_apeBaja.Location = new System.Drawing.Point(605, 61);
+            this.txt_apeBaja.Name = "txt_apeBaja";
+            this.txt_apeBaja.Size = new System.Drawing.Size(158, 27);
+            this.txt_apeBaja.TabIndex = 107;
+            // 
+            // txt_dniBaja
+            // 
+            this.txt_dniBaja.Location = new System.Drawing.Point(792, 61);
+            this.txt_dniBaja.Name = "txt_dniBaja";
+            this.txt_dniBaja.Size = new System.Drawing.Size(158, 27);
+            this.txt_dniBaja.TabIndex = 108;
             // 
             // AlumnoModificar
             // 
@@ -2050,5 +2149,12 @@ namespace Colegio5
         private System.Windows.Forms.TextBox txt_obrasocialAMod;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btn_ModificarAlumno;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btn_habilitarAlumno;
+        private System.Windows.Forms.Button btn_eliminarAlumno;
+        private System.Windows.Forms.TextBox txt_dniBaja;
+        private System.Windows.Forms.TextBox txt_apeBaja;
+        private System.Windows.Forms.TextBox txt_nomBaja;
     }
 }

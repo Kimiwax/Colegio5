@@ -160,7 +160,7 @@ namespace Colegio5
                 string FechaingresoA = dtp_fechaIngresoA.Value.ToString("dd/MM/yyyy");
 
                 string insertPersona = "INSERT INTO Persona (DNI, Nombre, Apellido, FechaNac, Sexo, Direccion, CodigoPostal) Values (" + txt_dniA.Text + ", '" + txt_nombreA.Text + "','" + txt_apellidoA.Text + "','" + FechaNacimientoA + "','" + cmb_sexoA.Text + "','" + txt_domicilioA.Text + "'," + Variables.selecLocalidad + ");";
-                string insertAlumno = "INSERT INTO Alumno (DNIAlumno, ObraSocial, CUD, FechaIng, CodigoSedIncDom, Legajo, Especificacion) Values (" + txt_dniA.Text + ",'" + txt_obrasocialA.Text + "','" + Variables.seleccCud + "','" + FechaingresoA + "'," + valorSedInc + "," + txt_LegajoA.Text + ",'" + txt_Especificacion.Text + "');";
+                string insertAlumno = "INSERT INTO Alumno (DNIAlumno, ObraSocial, CUD, FechaIng, CodigoSedIncDom, Legajo, Especificacion, Habilitado) Values (" + txt_dniA.Text + ",'" + txt_obrasocialA.Text + "','" + Variables.seleccCud + "','" + FechaingresoA + "'," + valorSedInc + "," + txt_LegajoA.Text + ",'" + txt_Especificacion.Text + "'," + 1 + ");";
                 string insertAlumnoCaracterizacion = "INSERT INTO AlumnoCaracterizaciones (dniAlumno, CodigoCaracterizaciones) Values (" + txt_dniA.Text + ", " + Variables.selecCaracterizacion + ");";
 
                 Variables.guardarDNI = txt_dniA.Text;
@@ -253,7 +253,6 @@ namespace Colegio5
 
         private void selecciona_cud(object sender, EventArgs e)
         {
-            //MessageBox.Show(cmb_cudA.SelectedItem.ToString());
             Variables.seleccCud = Convert.ToString(cmb_cudA.SelectedItem);
         }
 

@@ -27,7 +27,10 @@ namespace Colegio5
         {
             //AlumnoAgregarAdulto f2 = new AlumnoAgregarAdulto();
             AlumnosAgregar f2 = new AlumnosAgregar();
-            f2.Show();
+            f2.ShowDialog();
+
+            dgv_alumnos.Rows.Clear();
+            Cargar_Grilla();
           
         }
 
@@ -37,8 +40,8 @@ namespace Colegio5
             Variables.ConexionConBD.Open();
 
             string consultaInicial = "SELECT Alumno.DNIAlumno, Persona.Nombre, Persona.Apellido, Caracterizacion.Especificacion, Localidad.NomLocalidad, Persona.Direccion" +
-                                       " FROM Caracterizacion INNER JOIN((Localidad INNER JOIN(Persona INNER JOIN Alumno ON Persona.DNI = Alumno.DNIAlumno) ON Localidad.CP = Persona.CodigoPostal) INNER JOIN AlumnoCaracterizaciones ON Alumno.DNIAlumno = AlumnoCaracterizaciones.dniAlumno) ON Caracterizacion.CodCaracterizacion = AlumnoCaracterizaciones.CodigoCaracterizaciones;";
-
+                                       " FROM Caracterizacion INNER JOIN((Localidad INNER JOIN(Persona INNER JOIN Alumno ON Persona.DNI = Alumno.DNIAlumno) ON Localidad.CP = Persona.CodigoPostal) INNER JOIN AlumnoCaracterizaciones ON Alumno.DNIAlumno = AlumnoCaracterizaciones.dniAlumno) ON Caracterizacion.CodCaracterizacion = AlumnoCaracterizaciones.CodigoCaracterizaciones" +
+                                       " WHERE Alumno.Habilitado = " + 1 + ";";
             Variables.Orden = new OleDbCommand(consultaInicial, Variables.ConexionConBD);
             Variables.Lector = Variables.Orden.ExecuteReader();
 
@@ -115,8 +118,10 @@ namespace Colegio5
             {
                 Variables.Row = e.RowIndex;
                 Variables.GuardarDniAlumno = Convert.ToInt32(dgv_alumnos.Rows[Variables.Row].Cells[0].Value);
-                
-                AlumnoModificar f3 = new AlumnoModificar(Variables.GuardarDniAlumno);
+                Variables.guardarNomAlumno = Convert.ToString(dgv_alumnos.Rows[Variables.Row].Cells[1].Value);
+                Variables.GuardarApeAlumno = Convert.ToString(dgv_alumnos.Rows[Variables.Row].Cells[2].Value);
+
+                AlumnoModificar f3 = new AlumnoModificar(Variables.GuardarDniAlumno, Variables.guardarNomAlumno, Variables.GuardarApeAlumno);
                 f3.FormClosed += new System.Windows.Forms.FormClosedEventHandler(f3_FormClosed);
                 f3.ShowDialog();
             }
@@ -144,6 +149,44 @@ namespace Colegio5
             }
             else
             {
+            }
+        }
+
+        private void cmb_filtros_SelectedValueChanged(object sender, EventArgs e)
+        {
+            dgv_alumnos.DataSource = null;
+            dgv_alumnos.Rows.Clear();
+
+            if (cmb_filtros.Text == "Alumnos de Baja")
+            {
+                Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
+                Variables.ConexionConBD.Open();
+
+                string consulta2 = "SELECT Alumno.DNIAlumno, Persona.Nombre, Persona.Apellido, Caracterizacion.Especificacion, Localidad.NomLocalidad, Persona.Direccion" +
+                                       " FROM Caracterizacion INNER JOIN((Localidad INNER JOIN(Persona INNER JOIN Alumno ON Persona.DNI = Alumno.DNIAlumno) ON Localidad.CP = Persona.CodigoPostal) INNER JOIN AlumnoCaracterizaciones ON Alumno.DNIAlumno = AlumnoCaracterizaciones.dniAlumno) ON Caracterizacion.CodCaracterizacion = AlumnoCaracterizaciones.CodigoCaracterizaciones" +
+                                       " WHERE Alumno.Habilitado = " + 0 + ";";
+
+                Variables.Orden = new OleDbCommand(consulta2, Variables.ConexionConBD);
+                Variables.Lector = Variables.Orden.ExecuteReader();
+
+                while (Variables.Lector.Read())
+                {
+                    dgv_alumnos.Rows.Add();
+                    dgv_alumnos[0, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["DNIAlumno"];
+                    dgv_alumnos[1, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Nombre"];
+                    dgv_alumnos[2, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Apellido"];
+                    dgv_alumnos[3, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Especificacion"];
+                    dgv_alumnos[4, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["NomLocalidad"];
+                    dgv_alumnos[5, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Direccion"];
+                }
+                dgv_alumnos.ClearSelection();
+
+                Variables.Lector.Close();
+                Variables.ConexionConBD.Close();
+            }
+            else if (cmb_filtros.Text == "Todos")
+            {
+                Cargar_Grilla();
             }
         }
     }

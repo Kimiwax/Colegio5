@@ -80,7 +80,7 @@ namespace Colegio5
 
 
                 string insertPersona = "INSERT INTO Persona (DNI, Nombre, Apellido, FechaNac, Sexo, Direccion, CodigoPostal) Values (" + txt_dniD.Text + ", '" + txt_nombreD.Text + "','" + txt_apellidoD.Text + "','" + FechaNacimientoD + "','" + cmb_sexoD.Text + "','" + txt_direccionD.Text + "'," + Variables.selecLocalidad + ");";
-                string insertDocente = "INSERT INTO Docente (DNIDocente, Legajo, Mail, CodCaracterizacion) Values (" + txt_dniD.Text + ",'" + txt_legajoD.Text + "','" + txt_emailD.Text + "'," + Variables.selecCaracterizacion + ");";
+                string insertDocente = "INSERT INTO Docente (DNIDocente, Legajo, Mail, CodCaracterizacion, Habilitado) Values (" + txt_dniD.Text + ",'" + txt_legajoD.Text + "','" + txt_emailD.Text + "'," + Variables.selecCaracterizacion + "," + 1 + ");";
                 string insertTelefono = "INSERT INTO Telefono(DniPersona, NumTel) values (" + txt_dniD.Text + "," + txt_telefonoD.Text + ");";
 
                 Variables.Orden = new OleDbCommand(insertPersona, Variables.ConexionConBD);
@@ -143,7 +143,7 @@ namespace Colegio5
                 errorDoc.SetError(cmb_sexoD, "Seleccione SEXO del Docente ");
                 noError = false;
             }
-            else if (string.IsNullOrEmpty(txt_dniD.Text))
+            else if (string.IsNullOrEmpty(txt_dniD.Text) || txt_dniD.Text.Length < 6)
             {
                 errorDoc.Clear();
                 errorDoc.SetError(txt_dniD, "Ingrese DNI del Docente ");
