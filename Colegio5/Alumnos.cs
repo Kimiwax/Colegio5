@@ -189,5 +189,10 @@ namespace Colegio5
                 Cargar_Grilla();
             }
         }
+
+        private void dgv_alumnos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

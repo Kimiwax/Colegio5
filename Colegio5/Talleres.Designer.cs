@@ -1,7 +1,7 @@
 ﻿
 namespace Colegio5
 {
-    partial class Grupos
+    partial class Talleres
     {
         /// <summary>
         /// Required designer variable.
@@ -29,34 +29,24 @@ namespace Colegio5
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelPrincipal = new System.Windows.Forms.Panel();
             this.panelTop = new System.Windows.Forms.Panel();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.btn_crearGrupo = new System.Windows.Forms.Button();
+            this.panelPrincipal = new System.Windows.Forms.Panel();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelPrincipal
-            // 
-            this.panelPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(30)))));
-            this.panelPrincipal.Location = new System.Drawing.Point(2, 46);
-            this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(948, 581);
-            this.panelPrincipal.TabIndex = 0;
-            // 
             // panelTop
             // 
+            this.panelTop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(30)))));
             this.panelTop.Controls.Add(this.btn_buscar);
             this.panelTop.Controls.Add(this.btn_crearGrupo);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(950, 48);
-            this.panelTop.TabIndex = 1;
+            this.panelTop.TabIndex = 7;
             // 
             // btn_buscar
             // 
@@ -70,7 +60,6 @@ namespace Colegio5
             this.btn_buscar.TabIndex = 27;
             this.btn_buscar.Text = "VER";
             this.btn_buscar.UseVisualStyleBackColor = true;
-            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_crearGrupo
             // 
@@ -84,20 +73,27 @@ namespace Colegio5
             this.btn_crearGrupo.TabIndex = 26;
             this.btn_crearGrupo.Text = "CREAR";
             this.btn_crearGrupo.UseVisualStyleBackColor = true;
-            this.btn_crearGrupo.Click += new System.EventHandler(this.btn_crearGrupo_Click);
             // 
-            // Grupos
+            // panelPrincipal
+            // 
+            this.panelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(30)))));
+            this.panelPrincipal.Location = new System.Drawing.Point(1, 46);
+            this.panelPrincipal.Name = "panelPrincipal";
+            this.panelPrincipal.Size = new System.Drawing.Size(948, 580);
+            this.panelPrincipal.TabIndex = 8;
+            // 
+            // Talleres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(30)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
             this.ClientSize = new System.Drawing.Size(950, 627);
-            this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelPrincipal);
+            this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Grupos";
+            this.Name = "Talleres";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Grupos";
+            this.Text = "AgregarInstancias";
             this.panelTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -105,9 +101,9 @@ namespace Colegio5
 
         #endregion
 
-        private System.Windows.Forms.Panel panelPrincipal;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Button btn_crearGrupo;
+        private System.Windows.Forms.Panel panelPrincipal;
     }
 }

@@ -64,11 +64,11 @@
     <Compile Include="Docentes.Designer.cs">
       <DependentUpon>Docentes.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarInstancias.cs">
+    <Compile Include="Talleres.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarInstancias.Designer.cs">
-      <DependentUpon>AgregarInstancias.cs</DependentUpon>
+    <Compile Include="Talleres.Designer.cs">
+      <DependentUpon>Talleres.cs</DependentUpon>
     </Compile>
     <Compile Include="Alumnos.cs">
       <SubType>Form</SubType>
@@ -138,6 +138,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="TalleresAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalleresAgregar.Designer.cs">
+      <DependentUpon>TalleresAgregar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Variables.cs" />
     <Compile Include="ShowDialogGrupos.cs">
       <SubType>Form</SubType>
@@ -154,8 +160,8 @@
     <EmbeddedResource Include="Docentes.resx">
       <DependentUpon>Docentes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgregarInstancias.resx">
-      <DependentUpon>AgregarInstancias.cs</DependentUpon>
+    <EmbeddedResource Include="Talleres.resx">
+      <DependentUpon>Talleres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Alumnos.resx">
       <DependentUpon>Alumnos.cs</DependentUpon>
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShowDialogGrupos.resx">
       <DependentUpon>ShowDialogGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalleresAgregar.resx">
+      <DependentUpon>TalleresAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\AgregarAdultoACargo.datasource" />
     <None Include="Properties\DataSources\AgregarDocente.datasource" />
@@ -280,6 +289,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\IntentoLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\alumno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\alumnoIcono32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

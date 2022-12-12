@@ -73,6 +73,26 @@ namespace Colegio5.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alumno {
+            get {
+                object obj = ResourceManager.GetObject("alumno", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alumnoIcono32 {
+            get {
+                object obj = ResourceManager.GetObject("alumnoIcono32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap alumnosIcono {
             get {
                 object obj = ResourceManager.GetObject("alumnosIcono", resourceCulture);
@@ -86,6 +106,16 @@ namespace Colegio5.Properties {
         internal static System.Drawing.Bitmap alumnosIcono1 {
             get {
                 object obj = ResourceManager.GetObject("alumnosIcono1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alumnosIcono2 {
+            get {
+                object obj = ResourceManager.GetObject("alumnosIcono2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

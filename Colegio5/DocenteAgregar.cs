@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using ClaseVariables;
 using MetodosColeg;
-
+using System.Text.RegularExpressions;
 
 namespace Colegio5
 {
@@ -173,6 +173,12 @@ namespace Colegio5
                 errorDoc.SetError(txt_emailD, "Ingrese CORREO ELECTRONICO del Docente ");
                 noError = false;
             }
+            else if(!(Regex.IsMatch(txt_emailD.Text, regexMail)))
+            {
+                errorDoc.Clear();
+                errorDoc.SetError(txt_emailD, "Correo electronico invalido ");
+                noError = false;
+            }
             else if (string.IsNullOrEmpty(txt_direccionD.Text))
             {
                 errorDoc.Clear();
@@ -213,9 +219,12 @@ namespace Colegio5
         {
             Metodos.ValidarNumeros(e);
         }
-
+        String regexMail = @"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"
+                                   + "@"
+                                   + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))\z";
         private void txt_emailD_KeyPress(object sender, KeyPressEventArgs e)
         {
+
             Metodos.Validaremail(e);
         }
 

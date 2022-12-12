@@ -30,8 +30,8 @@ namespace Colegio5
 
         private void pictureBox_Admin_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox_Admin.BackColor = Color.FromArgb(42, 47, 87);
-            lbl_admin.BackColor = Color.FromArgb(42, 47, 87);
+            pictureBox_Admin.BackColor = Color.FromArgb(23, 28, 38);
+            lbl_admin.BackColor = Color.FromArgb(23, 28, 38);
         }
 
         private void pictureBox_Invitado_MouseEnter(object sender, EventArgs e)
@@ -42,8 +42,8 @@ namespace Colegio5
 
         private void pictureBox_Invitado_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox_Invitado.BackColor = Color.FromArgb(42, 47, 87);
-            lbl_invitado.BackColor = Color.FromArgb(42,47,87);
+            pictureBox_Invitado.BackColor = Color.FromArgb(23, 28, 38);
+            lbl_invitado.BackColor = Color.FromArgb(23, 28, 38);
         }
 
         private void pictureBox_Admin_Click(object sender, EventArgs e)

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Colegio5
 {
-    public partial class AgregarInstancias : Form
+    public partial class TalleresAgregar : Form
     {
-        public AgregarInstancias()
+        public TalleresAgregar()
         {
             InitializeComponent();
         }

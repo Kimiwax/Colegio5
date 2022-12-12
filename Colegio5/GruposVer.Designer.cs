@@ -31,35 +31,35 @@ namespace Colegio5
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GruposVer));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.listV_docentes = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.listV_alumnos = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panelContenedorGrupos = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_modificarGrupo = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btn_modificarGrupo = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.btn_cerrarVentana = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelContenedorGrupos.SuspendLayout();
@@ -71,7 +71,7 @@ namespace Colegio5
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.listV_docentes);
             this.panel1.Location = new System.Drawing.Point(12, 92);
@@ -79,17 +79,29 @@ namespace Colegio5
             this.panel1.Size = new System.Drawing.Size(481, 174);
             this.panel1.TabIndex = 24;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(123, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(229, 29);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "DOCENTE A CARGO";
+            // 
             // listV_docentes
             // 
             this.listV_docentes.Activation = System.Windows.Forms.ItemActivation.TwoClick;
             this.listV_docentes.Alignment = System.Windows.Forms.ListViewAlignment.Default;
-            this.listV_docentes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.listV_docentes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.listV_docentes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listV_docentes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader8,
             this.columnHeader9});
-            this.listV_docentes.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listV_docentes.Font = new System.Drawing.Font("Montserrat SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listV_docentes.ForeColor = System.Drawing.Color.White;
             this.listV_docentes.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listV_docentes.HideSelection = false;
@@ -100,12 +112,27 @@ namespace Colegio5
             this.listV_docentes.UseCompatibleStateImageBehavior = false;
             this.listV_docentes.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "DNI";
+            this.columnHeader5.Width = 126;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "NOMBRE";
+            this.columnHeader8.Width = 149;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "APELLIDO";
+            this.columnHeader9.Width = 133;
+            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.listV_alumnos);
             this.panel2.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -114,17 +141,29 @@ namespace Colegio5
             this.panel2.Size = new System.Drawing.Size(481, 374);
             this.panel2.TabIndex = 25;
             // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(101, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(264, 29);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "ALUMNOS DEL GRUPO";
+            // 
             // listV_alumnos
             // 
             this.listV_alumnos.Activation = System.Windows.Forms.ItemActivation.TwoClick;
             this.listV_alumnos.Alignment = System.Windows.Forms.ListViewAlignment.Default;
-            this.listV_alumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.listV_alumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.listV_alumnos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listV_alumnos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader3});
-            this.listV_alumnos.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listV_alumnos.Font = new System.Drawing.Font("Montserrat SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listV_alumnos.ForeColor = System.Drawing.Color.White;
             this.listV_alumnos.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listV_alumnos.HideSelection = false;
@@ -152,27 +191,12 @@ namespace Colegio5
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader3.Width = 159;
             // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "DNI";
-            this.columnHeader5.Width = 126;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "NOMBRE";
-            this.columnHeader8.Width = 149;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "APELLIDO";
-            this.columnHeader9.Width = 133;
-            // 
             // panelContenedorGrupos
             // 
             this.panelContenedorGrupos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelContenedorGrupos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.panelContenedorGrupos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.panelContenedorGrupos.Controls.Add(this.label9);
             this.panelContenedorGrupos.Controls.Add(this.label8);
             this.panelContenedorGrupos.Controls.Add(this.label6);
@@ -186,7 +210,57 @@ namespace Colegio5
             this.panelContenedorGrupos.Name = "panelContenedorGrupos";
             this.panelContenedorGrupos.Size = new System.Drawing.Size(456, 174);
             this.panelContenedorGrupos.TabIndex = 26;
-       
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.label9.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(304, 101);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 23);
+            this.label9.TabIndex = 36;
+            this.label9.Text = "Mañana";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.label8.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(163, 101);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 23);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "1er Ciclo";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.label6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(17, 101);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 23);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "Primario";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(132, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(205, 29);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "INFO DEL GRUPO";
             // 
             // label16
             // 
@@ -210,6 +284,18 @@ namespace Colegio5
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(108, 23);
             this.label17.TabIndex = 21;
+            // 
+            // label24
+            // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(42, 66);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(53, 26);
+            this.label24.TabIndex = 15;
+            this.label24.Text = "NIVEL";
             // 
             // label21
             // 
@@ -235,72 +321,24 @@ namespace Colegio5
             this.label23.TabIndex = 16;
             this.label23.Text = "CICLO";
             // 
-            // label24
-            // 
-            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(42, 66);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(53, 26);
-            this.label24.TabIndex = 15;
-            this.label24.Text = "NIVEL";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(119, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 37);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "DOCENTE A CARGO";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(119, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(241, 37);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "ALUMNOS DEL GRUPO";
-            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(424, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 37);
+            this.label3.Size = new System.Drawing.Size(166, 29);
             this.label3.TabIndex = 28;
             this.label3.Text = "GRUPO N: 242";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(151, 3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(186, 37);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "INFO DEL GRUPO";
             // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(87)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.btn_modificarGrupo);
@@ -310,57 +348,6 @@ namespace Colegio5
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(456, 374);
             this.panel3.TabIndex = 29;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(185, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 37);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "OPCIONES";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
-            this.label7.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(229, 380);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 23);
-            this.label7.TabIndex = 21;
-            // 
-            // btn_modificarGrupo
-            // 
-            this.btn_modificarGrupo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_modificarGrupo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(144)))), ((int)(((byte)(102)))));
-            this.btn_modificarGrupo.FlatAppearance.BorderSize = 0;
-            this.btn_modificarGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_modificarGrupo.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificarGrupo.ForeColor = System.Drawing.Color.White;
-            this.btn_modificarGrupo.Location = new System.Drawing.Point(153, 184);
-            this.btn_modificarGrupo.Name = "btn_modificarGrupo";
-            this.btn_modificarGrupo.Size = new System.Drawing.Size(169, 69);
-            this.btn_modificarGrupo.TabIndex = 34;
-            this.btn_modificarGrupo.Text = "MODIFICAR GRUPO";
-            this.btn_modificarGrupo.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(153, 77);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 69);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "CREAR INFORME";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -376,6 +363,58 @@ namespace Colegio5
             this.button2.TabIndex = 36;
             this.button2.Text = "ELIMINAR GRUPO";
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(153, 77);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(169, 69);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "INFORMES";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btn_modificarGrupo
+            // 
+            this.btn_modificarGrupo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_modificarGrupo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(144)))), ((int)(((byte)(102)))));
+            this.btn_modificarGrupo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(144)))), ((int)(((byte)(102)))));
+            this.btn_modificarGrupo.FlatAppearance.BorderSize = 0;
+            this.btn_modificarGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_modificarGrupo.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_modificarGrupo.ForeColor = System.Drawing.Color.White;
+            this.btn_modificarGrupo.Location = new System.Drawing.Point(153, 184);
+            this.btn_modificarGrupo.Name = "btn_modificarGrupo";
+            this.btn_modificarGrupo.Size = new System.Drawing.Size(169, 69);
+            this.btn_modificarGrupo.TabIndex = 34;
+            this.btn_modificarGrupo.Text = "MODIFICAR GRUPO";
+            this.btn_modificarGrupo.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(173, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(130, 29);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "OPCIONES";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.label7.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(229, 380);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(108, 23);
+            this.label7.TabIndex = 21;
             // 
             // btn_cerrarVentana
             // 
@@ -393,50 +432,11 @@ namespace Colegio5
             this.btn_cerrarVentana.UseVisualStyleBackColor = true;
             this.btn_cerrarVentana.Click += new System.EventHandler(this.btn_cerrarVentana_Click);
             // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
-            this.label6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(17, 101);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 23);
-            this.label6.TabIndex = 34;
-            this.label6.Text = "Primario";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
-            this.label8.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(163, 101);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 23);
-            this.label8.TabIndex = 35;
-            this.label8.Text = "1er Ciclo";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
-            this.label9.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(304, 101);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(108, 23);
-            this.label9.TabIndex = 36;
-            this.label9.Text = "Mañana";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // GruposVer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1000, 720);
             this.Controls.Add(this.btn_cerrarVentana);
             this.Controls.Add(this.panel3);
