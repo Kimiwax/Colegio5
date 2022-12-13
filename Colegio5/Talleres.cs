@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClaseVariables;
+
 
 namespace Colegio5
 {
@@ -15,6 +17,11 @@ namespace Colegio5
         public Talleres()
         {
             InitializeComponent();
+            if (Variables.user2)
+            {
+                btn_crearTaller.Enabled = false;
+                btn_crearTaller.Visible = false;
+            }
         }
     }
 }

@@ -41,6 +41,9 @@ namespace Colegio5
             this.panelTop = new System.Windows.Forms.Panel();
             this.lbl_topPanel = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txt_busc = new System.Windows.Forms.TextBox();
+            this.btn_buscador = new System.Windows.Forms.Button();
             this.panelContenedorGrupos = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -57,16 +60,14 @@ namespace Colegio5
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btn_buscador = new System.Windows.Forms.Button();
-            this.txt_busc = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_talleres = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_UsuarioSel)).BeginInit();
             this.panelTop.SuspendLayout();
             this.panelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContenedorGrupos.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,6 +75,7 @@ namespace Colegio5
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.panel1.Controls.Add(this.btn_talleres);
             this.panel1.Controls.Add(this.pictureBox_UsuarioSel);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.btn_instrucciones);
@@ -134,7 +136,7 @@ namespace Colegio5
             this.btn_instrucciones.ForeColor = System.Drawing.Color.White;
             this.btn_instrucciones.Image = ((System.Drawing.Image)(resources.GetObject("btn_instrucciones.Image")));
             this.btn_instrucciones.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_instrucciones.Location = new System.Drawing.Point(0, 415);
+            this.btn_instrucciones.Location = new System.Drawing.Point(2, 477);
             this.btn_instrucciones.Margin = new System.Windows.Forms.Padding(2);
             this.btn_instrucciones.Name = "btn_instrucciones";
             this.btn_instrucciones.Size = new System.Drawing.Size(73, 87);
@@ -158,7 +160,7 @@ namespace Colegio5
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(0, 328);
+            this.button2.Location = new System.Drawing.Point(0, 303);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(73, 87);
@@ -182,7 +184,7 @@ namespace Colegio5
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(0, 241);
+            this.button5.Location = new System.Drawing.Point(0, 216);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(73, 87);
@@ -207,7 +209,7 @@ namespace Colegio5
             this.btn_alumnos.ForeColor = System.Drawing.Color.White;
             this.btn_alumnos.Image = global::Colegio5.Properties.Resources.alumnosIcono2;
             this.btn_alumnos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_alumnos.Location = new System.Drawing.Point(0, 154);
+            this.btn_alumnos.Location = new System.Drawing.Point(0, 129);
             this.btn_alumnos.Margin = new System.Windows.Forms.Padding(2);
             this.btn_alumnos.Name = "btn_alumnos";
             this.btn_alumnos.Size = new System.Drawing.Size(73, 87);
@@ -257,6 +259,47 @@ namespace Colegio5
             this.panelContenedor.Size = new System.Drawing.Size(926, 645);
             this.panelContenedor.TabIndex = 7;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.pictureBox1.Image = global::Colegio5.Properties.Resources.lupa;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txt_busc
+            // 
+            this.txt_busc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txt_busc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_busc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.txt_busc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_busc.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_busc.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txt_busc.Location = new System.Drawing.Point(55, 27);
+            this.txt_busc.Name = "txt_busc";
+            this.txt_busc.Size = new System.Drawing.Size(303, 31);
+            this.txt_busc.TabIndex = 31;
+            this.txt_busc.Text = "Ingrese su busqueda";
+            this.txt_busc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_busc.Enter += new System.EventHandler(this.txt_busc_Enter);
+            // 
+            // btn_buscador
+            // 
+            this.btn_buscador.FlatAppearance.BorderSize = 2;
+            this.btn_buscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscador.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buscador.ForeColor = System.Drawing.Color.White;
+            this.btn_buscador.Location = new System.Drawing.Point(364, 25);
+            this.btn_buscador.Name = "btn_buscador";
+            this.btn_buscador.Size = new System.Drawing.Size(115, 37);
+            this.btn_buscador.TabIndex = 30;
+            this.btn_buscador.Text = "BUSCAR";
+            this.btn_buscador.UseVisualStyleBackColor = true;
+            this.btn_buscador.Click += new System.EventHandler(this.btn_buscador_Click);
             // 
             // panelContenedorGrupos
             // 
@@ -464,46 +507,29 @@ namespace Colegio5
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btn_buscador
+            // btn_talleres
             // 
-            this.btn_buscador.FlatAppearance.BorderSize = 2;
-            this.btn_buscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buscador.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscador.ForeColor = System.Drawing.Color.White;
-            this.btn_buscador.Location = new System.Drawing.Point(364, 25);
-            this.btn_buscador.Name = "btn_buscador";
-            this.btn_buscador.Size = new System.Drawing.Size(115, 37);
-            this.btn_buscador.TabIndex = 30;
-            this.btn_buscador.Text = "BUSCAR";
-            this.btn_buscador.UseVisualStyleBackColor = true;
-            this.btn_buscador.Click += new System.EventHandler(this.btn_buscador_Click);
-            // 
-            // txt_busc
-            // 
-            this.txt_busc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txt_busc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txt_busc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
-            this.txt_busc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_busc.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_busc.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txt_busc.Location = new System.Drawing.Point(55, 27);
-            this.txt_busc.Name = "txt_busc";
-            this.txt_busc.Size = new System.Drawing.Size(303, 31);
-            this.txt_busc.TabIndex = 31;
-            this.txt_busc.Text = "Ingrese su busqueda";
-            this.txt_busc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_busc.Enter += new System.EventHandler(this.txt_busc_Enter);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
-            this.pictureBox1.Image = global::Colegio5.Properties.Resources.lupa;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
+            this.btn_talleres.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_talleres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.btn_talleres.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_talleres.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_talleres.FlatAppearance.BorderSize = 0;
+            this.btn_talleres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_talleres.Font = new System.Drawing.Font("Montserrat SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_talleres.ForeColor = System.Drawing.Color.White;
+            this.btn_talleres.Image = ((System.Drawing.Image)(resources.GetObject("btn_talleres.Image")));
+            this.btn_talleres.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_talleres.Location = new System.Drawing.Point(0, 390);
+            this.btn_talleres.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_talleres.Name = "btn_talleres";
+            this.btn_talleres.Size = new System.Drawing.Size(73, 87);
+            this.btn_talleres.TabIndex = 10;
+            this.btn_talleres.Text = "Talleres";
+            this.btn_talleres.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_talleres.UseVisualStyleBackColor = false;
+            this.btn_talleres.Click += new System.EventHandler(this.btn_talleres_Click);
+            this.btn_talleres.MouseEnter += new System.EventHandler(this.btn_talleres_MouseEnter);
+            this.btn_talleres.MouseLeave += new System.EventHandler(this.btn_talleres_MouseLeave);
             // 
             // Inicio
             // 
@@ -526,10 +552,10 @@ namespace Colegio5
             this.panelTop.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelContenedorGrupos.ResumeLayout(false);
             this.panelContenedorGrupos.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -565,6 +591,7 @@ namespace Colegio5
         private System.Windows.Forms.Button btn_buscador;
         private System.Windows.Forms.TextBox txt_busc;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_talleres;
     }
 }
 

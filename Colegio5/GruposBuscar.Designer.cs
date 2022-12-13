@@ -32,15 +32,17 @@ namespace Colegio5
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.listV_Grupos = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NOMBRE = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DOCENTE = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CARACTERIZACIÓN = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Alumnos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.Ciclo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Alta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Turno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -80,52 +82,49 @@ namespace Colegio5
             this.listV_Grupos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.listV_Grupos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listV_Grupos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
             this.NOMBRE,
             this.DOCENTE,
             this.CARACTERIZACIÓN,
-            this.columnHeader5});
+            this.Alumnos,
+            this.Ciclo,
+            this.Alta,
+            this.Turno});
             this.listV_Grupos.Font = new System.Drawing.Font("Montserrat SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listV_Grupos.ForeColor = System.Drawing.Color.White;
             this.listV_Grupos.FullRowSelect = true;
             this.listV_Grupos.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listV_Grupos.HideSelection = false;
-            this.listV_Grupos.Location = new System.Drawing.Point(22, 43);
+            this.listV_Grupos.Location = new System.Drawing.Point(29, 45);
             this.listV_Grupos.Name = "listV_Grupos";
-            this.listV_Grupos.Size = new System.Drawing.Size(883, 418);
+            this.listV_Grupos.Size = new System.Drawing.Size(866, 418);
             this.listV_Grupos.TabIndex = 6;
             this.listV_Grupos.UseCompatibleStateImageBehavior = false;
             this.listV_Grupos.View = System.Windows.Forms.View.Details;
             this.listV_Grupos.Click += new System.EventHandler(this.listV_Grupos_Click);
             // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 45;
-            // 
             // NOMBRE
             // 
             this.NOMBRE.Text = "NOMBRE";
             this.NOMBRE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.NOMBRE.Width = 177;
+            this.NOMBRE.Width = 104;
             // 
             // DOCENTE
             // 
             this.DOCENTE.Text = "DOCENTE";
             this.DOCENTE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.DOCENTE.Width = 182;
+            this.DOCENTE.Width = 163;
             // 
             // CARACTERIZACIÓN
             // 
             this.CARACTERIZACIÓN.Text = "CARACTERIZACIÓN";
             this.CARACTERIZACIÓN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.CARACTERIZACIÓN.Width = 214;
+            this.CARACTERIZACIÓN.Width = 166;
             // 
-            // columnHeader5
+            // Alumnos
             // 
-            this.columnHeader5.Text = "CANTIDAD DE ALUMNOS";
-            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader5.Width = 249;
+            this.Alumnos.Text = "ALUMNOS";
+            this.Alumnos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Alumnos.Width = 159;
             // 
             // panel3
             // 
@@ -172,6 +171,21 @@ namespace Colegio5
             this.label2.TabIndex = 5;
             this.label2.Text = "Buscar por ID";
             // 
+            // Ciclo
+            // 
+            this.Ciclo.Text = "CICLO";
+            this.Ciclo.Width = 96;
+            // 
+            // Alta
+            // 
+            this.Alta.Text = "ALTA";
+            this.Alta.Width = 99;
+            // 
+            // Turno
+            // 
+            this.Turno.Text = "TURNO";
+            this.Turno.Width = 152;
+            // 
             // GruposBuscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,10 +214,12 @@ namespace Colegio5
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.ListView listV_Grupos;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader NOMBRE;
         private System.Windows.Forms.ColumnHeader DOCENTE;
         private System.Windows.Forms.ColumnHeader CARACTERIZACIÓN;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader Alumnos;
+        private System.Windows.Forms.ColumnHeader Ciclo;
+        private System.Windows.Forms.ColumnHeader Alta;
+        private System.Windows.Forms.ColumnHeader Turno;
     }
 }

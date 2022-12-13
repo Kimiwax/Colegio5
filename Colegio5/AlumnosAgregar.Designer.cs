@@ -65,6 +65,8 @@ namespace Colegio5
             this.label4 = new System.Windows.Forms.Label();
             this.btn_cerrarVentana1 = new System.Windows.Forms.Button();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txt_pension = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
@@ -136,6 +138,8 @@ namespace Colegio5
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.panel1.Controls.Add(this.txt_pension);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.txt_Especificacion);
             this.panel1.Controls.Add(this.label16);
@@ -464,7 +468,7 @@ namespace Colegio5
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(558, 501);
+            this.button2.Location = new System.Drawing.Point(560, 552);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(215, 70);
             this.button2.TabIndex = 32;
@@ -527,6 +531,29 @@ namespace Colegio5
             this.errorIcono.ContainerControl = this;
             this.errorIcono.Icon = ((System.Drawing.Icon)(resources.GetObject("errorIcono.Icon")));
             // 
+            // txt_pension
+            // 
+            this.txt_pension.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.txt_pension.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_pension.Font = new System.Drawing.Font("Poppins", 11F);
+            this.txt_pension.ForeColor = System.Drawing.Color.White;
+            this.txt_pension.Location = new System.Drawing.Point(508, 481);
+            this.txt_pension.Name = "txt_pension";
+            this.txt_pension.Size = new System.Drawing.Size(334, 29);
+            this.txt_pension.TabIndex = 70;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(520, 456);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(92, 22);
+            this.label6.TabIndex = 69;
+            this.label6.Text = "PENSIÓN:";
+            // 
             // AlumnosAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -585,5 +612,7 @@ namespace Colegio5
         private System.Windows.Forms.TextBox txt_Especificacion;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txt_pension;
+        private System.Windows.Forms.Label label6;
     }
 }

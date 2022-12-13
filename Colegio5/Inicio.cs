@@ -250,5 +250,26 @@ namespace Colegio5
         {
             txt_busc.Text = "";
         }
+
+        private void btn_talleres_Click(object sender, EventArgs e)
+        {
+            panelContenedor.Controls.Clear();
+            Metodos.AbrirFormHijo(new Talleres(), this.panelContenedor);
+
+
+            lbl_topPanel.Text = "TALLERES";
+            panelTop.BackColor = Color.FromArgb(192, 104, 168);
+        }
+
+        private void btn_talleres_MouseEnter(object sender, EventArgs e)
+        {
+            btn_talleres.BackColor = Color.FromArgb(192, 104, 168);
+            
+        }
+
+        private void btn_talleres_MouseLeave(object sender, EventArgs e)
+        {
+            btn_talleres.BackColor = Color.FromArgb(33, 39, 52);
+        }
     }
 }

@@ -19,6 +19,13 @@ namespace Colegio5
         public DocentesModificar(int Dni, string nom, string ape)
         {
             InitializeComponent();
+            if (Variables.user2)
+            {
+                tP_darDeBaja.Enabled = false;
+                tP_modDocente.Enabled = false;
+                tabControl1.TabPages.Remove(tP_darDeBaja);
+                tabControl1.TabPages.Remove(tP_modDocente);
+            }
             Variables.RecibirDniDocente = Dni;
             Variables.RecibirNomDocente = nom;
             Variables.RecibirApeDocente = ape;

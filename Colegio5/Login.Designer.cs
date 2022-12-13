@@ -130,11 +130,11 @@ namespace Colegio5
             this.lbl_usuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_usuario.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_usuario.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_usuario.ForeColor = System.Drawing.Color.White;
-            this.lbl_usuario.Location = new System.Drawing.Point(422, 222);
+            this.lbl_usuario.Location = new System.Drawing.Point(408, 222);
             this.lbl_usuario.Name = "lbl_usuario";
-            this.lbl_usuario.Size = new System.Drawing.Size(137, 39);
+            this.lbl_usuario.Size = new System.Drawing.Size(165, 39);
             this.lbl_usuario.TabIndex = 4;
             this.lbl_usuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -164,7 +164,6 @@ namespace Colegio5
             this.txt_contraseña.Text = "INGRESE SU CONTRASEÑA";
             this.txt_contraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_contraseña.Enter += new System.EventHandler(this.txt_contraseña_Enter);
-            this.txt_contraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_contraseña_KeyPress);
             this.txt_contraseña.Leave += new System.EventHandler(this.txt_contraseña_Leave);
             // 
             // btn_ingresar
@@ -192,7 +191,7 @@ namespace Colegio5
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(30)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Transparent;

@@ -20,6 +20,15 @@ namespace Colegio5
         public AlumnoModificar(int dni, string nom, string ape)
         {
             InitializeComponent();
+            if (Variables.user2)
+            {
+                tP_modAlumno.Enabled = false;
+                tP_agre.Enabled = false;
+                tP_darDeBaja.Enabled = false;
+                tabControl1.TabPages.Remove(tP_modAlumno);
+                tabControl1.TabPages.Remove(tP_agre);
+                tabControl1.TabPages.Remove(tP_darDeBaja);
+            }
             Variables.RecibirDniAlumno = dni;
             Variables.RecibirNomAlumno = nom;
             Variables.RecibirApeAlumno = ape;

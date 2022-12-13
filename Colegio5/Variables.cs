@@ -39,11 +39,22 @@ namespace ClaseVariables
         public static string seleccCud = "";
         public static string selecParentesco = "";
         public static string selecSedeInclusion = "";
+        public static string selecCiclo = "";
+        public static string selecNivel = "";
 
         public static string selecLocalidad2 = "";
         public static string selecParentesco2 = "";
         public static string DNIAlumno = "";
         public static string guardarDNI = "";
+
+        public static int guardarDniDocente = 0;
+        public static int guardarAlumnGrupo = 0;
+
+        public static List<int> GuardarDocumentos = new List<int>();
+        public static List<string> GuardarNomApeAlumnos = new List<string>();
+
+        public static string codigoGrupo = "";
+        public static string nomApeDocente = "";
 
         public static bool fechaDeNacIncorrecta = false;
 
@@ -57,7 +68,7 @@ namespace ClaseVariables
     public class VariablesNoEstaticas
     {
        
-        public string contraseñaUser1 = "5012022";
-        public string contraseñaUser2 = "2022501";
+        public string contraseñaUser1 = "admin";
+        public string contraseñaUser2 = "guess";
     }
 }

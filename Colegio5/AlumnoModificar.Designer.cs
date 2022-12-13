@@ -178,6 +178,10 @@ namespace Colegio5
             this.label1 = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
             this.btn_cerrarVentana = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_especificacion = new System.Windows.Forms.TextBox();
+            this.txt_cud = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tP_VerAlumno.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -222,6 +226,10 @@ namespace Colegio5
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.panel3.Controls.Add(this.txt_cud);
+            this.panel3.Controls.Add(this.label45);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.txt_especificacion);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.txt_domicilioA);
             this.panel3.Controls.Add(this.label28);
@@ -267,7 +275,7 @@ namespace Colegio5
             this.txt_domicilioA.Enabled = false;
             this.txt_domicilioA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_domicilioA.ForeColor = System.Drawing.Color.Silver;
-            this.txt_domicilioA.Location = new System.Drawing.Point(532, 341);
+            this.txt_domicilioA.Location = new System.Drawing.Point(532, 401);
             this.txt_domicilioA.Name = "txt_domicilioA";
             this.txt_domicilioA.Size = new System.Drawing.Size(382, 27);
             this.txt_domicilioA.TabIndex = 81;
@@ -292,7 +300,7 @@ namespace Colegio5
             this.txt_servicioA.Enabled = false;
             this.txt_servicioA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_servicioA.ForeColor = System.Drawing.Color.Silver;
-            this.txt_servicioA.Location = new System.Drawing.Point(532, 428);
+            this.txt_servicioA.Location = new System.Drawing.Point(532, 488);
             this.txt_servicioA.Name = "txt_servicioA";
             this.txt_servicioA.Size = new System.Drawing.Size(382, 27);
             this.txt_servicioA.TabIndex = 82;
@@ -329,7 +337,7 @@ namespace Colegio5
             this.txt_localidadA.Enabled = false;
             this.txt_localidadA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_localidadA.ForeColor = System.Drawing.Color.Silver;
-            this.txt_localidadA.Location = new System.Drawing.Point(532, 243);
+            this.txt_localidadA.Location = new System.Drawing.Point(532, 303);
             this.txt_localidadA.Name = "txt_localidadA";
             this.txt_localidadA.Size = new System.Drawing.Size(382, 27);
             this.txt_localidadA.TabIndex = 80;
@@ -354,7 +362,7 @@ namespace Colegio5
             this.txt_pensionA.Enabled = false;
             this.txt_pensionA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_pensionA.ForeColor = System.Drawing.Color.Silver;
-            this.txt_pensionA.Location = new System.Drawing.Point(532, 144);
+            this.txt_pensionA.Location = new System.Drawing.Point(532, 204);
             this.txt_pensionA.Name = "txt_pensionA";
             this.txt_pensionA.Size = new System.Drawing.Size(382, 27);
             this.txt_pensionA.TabIndex = 79;
@@ -404,7 +412,7 @@ namespace Colegio5
             this.txt_ingresoA.Enabled = false;
             this.txt_ingresoA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ingresoA.ForeColor = System.Drawing.Color.Silver;
-            this.txt_ingresoA.Location = new System.Drawing.Point(532, 513);
+            this.txt_ingresoA.Location = new System.Drawing.Point(532, 573);
             this.txt_ingresoA.Name = "txt_ingresoA";
             this.txt_ingresoA.Size = new System.Drawing.Size(382, 27);
             this.txt_ingresoA.TabIndex = 77;
@@ -441,7 +449,7 @@ namespace Colegio5
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(541, 105);
+            this.label20.Location = new System.Drawing.Point(541, 165);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(120, 29);
             this.label20.TabIndex = 66;
@@ -466,7 +474,7 @@ namespace Colegio5
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(541, 204);
+            this.label19.Location = new System.Drawing.Point(541, 264);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(151, 29);
             this.label19.TabIndex = 67;
@@ -491,7 +499,7 @@ namespace Colegio5
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(541, 301);
+            this.label18.Location = new System.Drawing.Point(541, 361);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(141, 29);
             this.label18.TabIndex = 68;
@@ -516,7 +524,7 @@ namespace Colegio5
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(541, 473);
+            this.label17.Location = new System.Drawing.Point(541, 533);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(276, 29);
             this.label17.TabIndex = 69;
@@ -541,7 +549,7 @@ namespace Colegio5
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(541, 388);
+            this.label16.Location = new System.Drawing.Point(541, 448);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(173, 29);
             this.label16.TabIndex = 70;
@@ -2000,6 +2008,56 @@ namespace Colegio5
             this.btn_cerrarVentana.UseVisualStyleBackColor = true;
             this.btn_cerrarVentana.Click += new System.EventHandler(this.btn_cerrarVentana_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(38, 543);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(205, 29);
+            this.label11.TabIndex = 84;
+            this.label11.Text = "ESPECIFICACIÓN:";
+            // 
+            // txt_especificacion
+            // 
+            this.txt_especificacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.txt_especificacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_especificacion.Enabled = false;
+            this.txt_especificacion.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_especificacion.ForeColor = System.Drawing.Color.Silver;
+            this.txt_especificacion.Location = new System.Drawing.Point(27, 576);
+            this.txt_especificacion.Name = "txt_especificacion";
+            this.txt_especificacion.Size = new System.Drawing.Size(382, 27);
+            this.txt_especificacion.TabIndex = 85;
+            this.txt_especificacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_cud
+            // 
+            this.txt_cud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.txt_cud.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cud.Enabled = false;
+            this.txt_cud.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cud.ForeColor = System.Drawing.Color.Silver;
+            this.txt_cud.Location = new System.Drawing.Point(532, 136);
+            this.txt_cud.Name = "txt_cud";
+            this.txt_cud.Size = new System.Drawing.Size(382, 27);
+            this.txt_cud.TabIndex = 87;
+            this.txt_cud.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.BackColor = System.Drawing.Color.Transparent;
+            this.label45.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.White;
+            this.label45.Location = new System.Drawing.Point(541, 96);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(68, 29);
+            this.label45.TabIndex = 86;
+            this.label45.Text = "CUD:";
+            // 
             // AlumnoModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2182,5 +2240,9 @@ namespace Colegio5
         private System.Windows.Forms.TextBox txt_dniBaja;
         private System.Windows.Forms.TextBox txt_apeBaja;
         private System.Windows.Forms.TextBox txt_nomBaja;
+        private System.Windows.Forms.TextBox txt_cud;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txt_especificacion;
     }
 }

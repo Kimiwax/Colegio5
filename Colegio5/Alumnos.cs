@@ -19,6 +19,11 @@ namespace Colegio5
         public Alumnos()
         {
             InitializeComponent();
+            if (Variables.user2)
+            {
+                button2.Enabled = false;
+                button2.Visible = false;
+            }
 
   
         }

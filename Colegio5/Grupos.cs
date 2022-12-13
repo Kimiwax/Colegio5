@@ -17,6 +17,11 @@ namespace Colegio5
         public Grupos()
         {
             InitializeComponent();
+            if (Variables.user2)
+            {
+                btn_crearGrupo.Enabled = false;
+                btn_crearGrupo.Visible = false;
+            }
         }
 
   

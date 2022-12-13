@@ -31,7 +31,7 @@ namespace Colegio5
         {
             this.panelTop = new System.Windows.Forms.Panel();
             this.btn_buscar = new System.Windows.Forms.Button();
-            this.btn_crearGrupo = new System.Windows.Forms.Button();
+            this.btn_crearTaller = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
@@ -42,7 +42,7 @@ namespace Colegio5
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(30)))));
             this.panelTop.Controls.Add(this.btn_buscar);
-            this.panelTop.Controls.Add(this.btn_crearGrupo);
+            this.panelTop.Controls.Add(this.btn_crearTaller);
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(950, 48);
@@ -61,18 +61,18 @@ namespace Colegio5
             this.btn_buscar.Text = "VER";
             this.btn_buscar.UseVisualStyleBackColor = true;
             // 
-            // btn_crearGrupo
+            // btn_crearTaller
             // 
-            this.btn_crearGrupo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_crearGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_crearGrupo.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_crearGrupo.ForeColor = System.Drawing.Color.White;
-            this.btn_crearGrupo.Location = new System.Drawing.Point(327, 3);
-            this.btn_crearGrupo.Name = "btn_crearGrupo";
-            this.btn_crearGrupo.Size = new System.Drawing.Size(130, 37);
-            this.btn_crearGrupo.TabIndex = 26;
-            this.btn_crearGrupo.Text = "CREAR";
-            this.btn_crearGrupo.UseVisualStyleBackColor = true;
+            this.btn_crearTaller.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_crearTaller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_crearTaller.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_crearTaller.ForeColor = System.Drawing.Color.White;
+            this.btn_crearTaller.Location = new System.Drawing.Point(327, 3);
+            this.btn_crearTaller.Name = "btn_crearTaller";
+            this.btn_crearTaller.Size = new System.Drawing.Size(130, 37);
+            this.btn_crearTaller.TabIndex = 26;
+            this.btn_crearTaller.Text = "CREAR";
+            this.btn_crearTaller.UseVisualStyleBackColor = true;
             // 
             // panelPrincipal
             // 
@@ -103,7 +103,7 @@ namespace Colegio5
 
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Button btn_buscar;
-        private System.Windows.Forms.Button btn_crearGrupo;
+        private System.Windows.Forms.Button btn_crearTaller;
         private System.Windows.Forms.Panel panelPrincipal;
     }
 }

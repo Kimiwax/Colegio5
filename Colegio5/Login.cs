@@ -52,6 +52,7 @@ namespace Colegio5
             lbl_usuario.Text = lbl_admin.Text;
             Variables.user2 = false;
             Variables.user1 = true;
+            
         }
 
         private void pictureBox_Invitado_Click(object sender, EventArgs e)
@@ -64,9 +65,24 @@ namespace Colegio5
 
         private void btn_ingresar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inicio f1 = new Inicio();
-            f1.Show();
+            
+            if (Variables.user1 && txt_contraseña.Text == "admin")
+            {
+                this.Hide();
+                Inicio f1 = new Inicio();
+                f1.Show();
+            }
+            else if (Variables.user2 && txt_contraseña.Text == "guess")
+            {
+                this.Hide();
+                Inicio f1 = new Inicio();
+                f1.Show();
+            }
+            else
+            {
+                MessageBox.Show("Contraseña incorrecta");
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -104,10 +120,10 @@ namespace Colegio5
                 txt_contraseña.ForeColor = Color.DimGray;
             }
         }
-
+        /*
         private void txt_contraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
             MetodosColeg.Metodos.ValidarNumeros(e);
-        }
+        }*/
     }
 }

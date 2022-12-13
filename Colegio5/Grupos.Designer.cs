@@ -60,13 +60,13 @@ namespace Colegio5
             // 
             // btn_buscar
             // 
-            this.btn_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_buscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_buscar.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_buscar.ForeColor = System.Drawing.Color.White;
-            this.btn_buscar.Location = new System.Drawing.Point(483, 3);
+            this.btn_buscar.Location = new System.Drawing.Point(489, 14);
             this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(130, 37);
+            this.btn_buscar.Size = new System.Drawing.Size(130, 34);
             this.btn_buscar.TabIndex = 27;
             this.btn_buscar.Text = "VER";
             this.btn_buscar.UseVisualStyleBackColor = true;
@@ -74,13 +74,13 @@ namespace Colegio5
             // 
             // btn_crearGrupo
             // 
-            this.btn_crearGrupo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_crearGrupo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_crearGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_crearGrupo.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_crearGrupo.ForeColor = System.Drawing.Color.White;
-            this.btn_crearGrupo.Location = new System.Drawing.Point(327, 3);
+            this.btn_crearGrupo.Location = new System.Drawing.Point(340, 14);
             this.btn_crearGrupo.Name = "btn_crearGrupo";
-            this.btn_crearGrupo.Size = new System.Drawing.Size(130, 37);
+            this.btn_crearGrupo.Size = new System.Drawing.Size(130, 34);
             this.btn_crearGrupo.TabIndex = 26;
             this.btn_crearGrupo.Text = "CREAR";
             this.btn_crearGrupo.UseVisualStyleBackColor = true;
