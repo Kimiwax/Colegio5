@@ -45,16 +45,16 @@ namespace Colegio5
             this.panelTop.Controls.Add(this.btn_crearTaller);
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(950, 48);
+            this.panelTop.Size = new System.Drawing.Size(950, 73);
             this.panelTop.TabIndex = 7;
             // 
             // btn_buscar
             // 
-            this.btn_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_buscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_buscar.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_buscar.ForeColor = System.Drawing.Color.White;
-            this.btn_buscar.Location = new System.Drawing.Point(483, 3);
+            this.btn_buscar.Location = new System.Drawing.Point(483, 15);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(130, 37);
             this.btn_buscar.TabIndex = 27;
@@ -63,11 +63,11 @@ namespace Colegio5
             // 
             // btn_crearTaller
             // 
-            this.btn_crearTaller.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_crearTaller.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_crearTaller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_crearTaller.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_crearTaller.ForeColor = System.Drawing.Color.White;
-            this.btn_crearTaller.Location = new System.Drawing.Point(327, 3);
+            this.btn_crearTaller.Location = new System.Drawing.Point(327, 15);
             this.btn_crearTaller.Name = "btn_crearTaller";
             this.btn_crearTaller.Size = new System.Drawing.Size(130, 37);
             this.btn_crearTaller.TabIndex = 26;
@@ -77,9 +77,9 @@ namespace Colegio5
             // panelPrincipal
             // 
             this.panelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(30)))));
-            this.panelPrincipal.Location = new System.Drawing.Point(1, 46);
+            this.panelPrincipal.Location = new System.Drawing.Point(1, 70);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(948, 580);
+            this.panelPrincipal.Size = new System.Drawing.Size(948, 556);
             this.panelPrincipal.TabIndex = 8;
             // 
             // Talleres

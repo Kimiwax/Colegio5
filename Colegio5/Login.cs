@@ -78,6 +78,14 @@ namespace Colegio5
                 Inicio f1 = new Inicio();
                 f1.Show();
             }
+            else if (Variables.user1 == false && Variables.user2 == false)
+            {
+                MessageBox.Show("No hay ningun usuario seleccionado");
+            }
+            else if (txt_contraseña.Text == "")
+            {
+                MessageBox.Show("Se debe ingresar una contraseña");
+            }
             else
             {
                 MessageBox.Show("Contraseña incorrecta");
@@ -104,26 +112,10 @@ namespace Colegio5
             base.WndProc(ref m);
         }
 
-        private void txt_contraseña_Enter(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
-            if(txt_contraseña.Text == "INGRESE SU CONTRASEÑA")
-            {
-                txt_contraseña.Text = "";
-                txt_contraseña.ForeColor = Color.LightGray;
-            } 
+           
         }
 
-        private void txt_contraseña_Leave(object sender, EventArgs e)
-        {
-            if(txt_contraseña.Text == ""){
-                txt_contraseña.Text = "INGRESE SU CONTRASEÑA";
-                txt_contraseña.ForeColor = Color.DimGray;
-            }
-        }
-        /*
-        private void txt_contraseña_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            MetodosColeg.Metodos.ValidarNumeros(e);
-        }*/
     }
 }

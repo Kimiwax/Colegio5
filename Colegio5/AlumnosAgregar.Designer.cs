@@ -37,6 +37,8 @@ namespace Colegio5
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_pension = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_Especificacion = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -65,8 +67,6 @@ namespace Colegio5
             this.label4 = new System.Windows.Forms.Label();
             this.btn_cerrarVentana1 = new System.Windows.Forms.Button();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txt_pension = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
@@ -174,6 +174,29 @@ namespace Colegio5
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(878, 646);
             this.panel1.TabIndex = 23;
+            // 
+            // txt_pension
+            // 
+            this.txt_pension.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.txt_pension.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_pension.Font = new System.Drawing.Font("Poppins", 11F);
+            this.txt_pension.ForeColor = System.Drawing.Color.White;
+            this.txt_pension.Location = new System.Drawing.Point(508, 481);
+            this.txt_pension.Name = "txt_pension";
+            this.txt_pension.Size = new System.Drawing.Size(334, 29);
+            this.txt_pension.TabIndex = 70;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(520, 456);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(92, 22);
+            this.label6.TabIndex = 69;
+            this.label6.Text = "PENSIÓN:";
             // 
             // panel2
             // 
@@ -311,22 +334,22 @@ namespace Colegio5
             // cmb_localidadAlumno
             // 
             this.cmb_localidadAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
-            this.cmb_localidadAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_localidadAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmb_localidadAlumno.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Bold);
             this.cmb_localidadAlumno.ForeColor = System.Drawing.Color.White;
             this.cmb_localidadAlumno.FormattingEnabled = true;
             this.cmb_localidadAlumno.Items.AddRange(new object[] {
             "Alejandro Korn",
-            "Longchamps",
             "Burzaco",
             "Doomselar",
-            "Guernica",
             "Glew",
+            "Guernica",
+            "Longchamps",
             "San Vicente"});
             this.cmb_localidadAlumno.Location = new System.Drawing.Point(508, 184);
             this.cmb_localidadAlumno.Name = "cmb_localidadAlumno";
             this.cmb_localidadAlumno.Size = new System.Drawing.Size(334, 31);
+            this.cmb_localidadAlumno.Sorted = true;
             this.cmb_localidadAlumno.TabIndex = 57;
             this.cmb_localidadAlumno.SelectedIndexChanged += new System.EventHandler(this.selecciona_localidad);
             // 
@@ -530,29 +553,6 @@ namespace Colegio5
             // 
             this.errorIcono.ContainerControl = this;
             this.errorIcono.Icon = ((System.Drawing.Icon)(resources.GetObject("errorIcono.Icon")));
-            // 
-            // txt_pension
-            // 
-            this.txt_pension.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
-            this.txt_pension.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_pension.Font = new System.Drawing.Font("Poppins", 11F);
-            this.txt_pension.ForeColor = System.Drawing.Color.White;
-            this.txt_pension.Location = new System.Drawing.Point(508, 481);
-            this.txt_pension.Name = "txt_pension";
-            this.txt_pension.Size = new System.Drawing.Size(334, 29);
-            this.txt_pension.TabIndex = 70;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(520, 456);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 22);
-            this.label6.TabIndex = 69;
-            this.label6.Text = "PENSIÓN:";
             // 
             // AlumnosAgregar
             // 

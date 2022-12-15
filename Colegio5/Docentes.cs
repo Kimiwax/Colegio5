@@ -141,5 +141,65 @@ namespace Colegio5
                 CargarGrilla();
             }
         }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            if (txt_buscar.Text != "")
+            {
+                dgv_Docentes.DataSource = null;
+                dgv_Docentes.Rows.Clear();
+
+                Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
+                Variables.ConexionConBD.Open();
+
+                string consulta2 = "SELECT Alumno.DNIAlumno, Persona.Nombre, Persona.Apellido, Caracterizacion.Especificacion, Localidad.NomLocalidad, Persona.Direccion" +
+                                   " FROM Caracterizacion INNER JOIN((Localidad INNER JOIN(Persona INNER JOIN Alumno ON Persona.DNI = Alumno.DNIAlumno) ON Localidad.CP = Persona.CodigoPostal) INNER JOIN AlumnoCaracterizaciones ON Alumno.DNIAlumno = AlumnoCaracterizaciones.dniAlumno) ON Caracterizacion.CodCaracterizacion = AlumnoCaracterizaciones.CodigoCaracterizaciones" +
+                                   " WHERE Docente.DNIDocente = " + txt_buscar.Text + ";";
+
+             
+
+                Variables.Orden = new OleDbCommand(consulta2, Variables.ConexionConBD);
+                Variables.Lector = Variables.Orden.ExecuteReader();
+
+
+
+                while (Variables.Lector.Read())
+                {
+                    dgv_Docentes.Rows.Add();
+                    dgv_Docentes[0, dgv_Docentes.Rows.Count - 1].Value = Variables.Lector["DNIAlumno"];
+                    dgv_Docentes[1, dgv_Docentes.Rows.Count - 1].Value = Variables.Lector["Nombre"];
+                    dgv_Docentes[2, dgv_Docentes.Rows.Count - 1].Value = Variables.Lector["Apellido"];
+                    dgv_Docentes[3, dgv_Docentes.Rows.Count - 1].Value = Variables.Lector["Especificacion"];
+                    dgv_Docentes[4, dgv_Docentes.Rows.Count - 1].Value = Variables.Lector["NomLocalidad"];
+                    dgv_Docentes[5, dgv_Docentes.Rows.Count - 1].Value = Variables.Lector["Direccion"];
+                }
+                dgv_Docentes.ClearSelection();
+                Variables.Lector.Close();
+                Variables.ConexionConBD.Close();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.ValidarNumeros(e);
+        }
+
+        private void txt_buscar_Enter(object sender, EventArgs e)
+        {
+            txt_buscar.Text = "";
+        }
+
+        private void txt_buscar_Leave(object sender, EventArgs e)
+        {
+            if (txt_buscar.Text == "")
+            {
+                dgv_Docentes.Rows.Clear();
+                CargarGrilla();
+            }
+        }
     }
 }

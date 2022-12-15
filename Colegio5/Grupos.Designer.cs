@@ -49,13 +49,14 @@ namespace Colegio5
             // 
             // panelTop
             // 
+            this.panelTop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(24)))), ((int)(((byte)(30)))));
             this.panelTop.Controls.Add(this.btn_buscar);
             this.panelTop.Controls.Add(this.btn_crearGrupo);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(950, 48);
+            this.panelTop.Size = new System.Drawing.Size(950, 56);
             this.panelTop.TabIndex = 1;
             // 
             // btn_buscar
@@ -64,7 +65,7 @@ namespace Colegio5
             this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_buscar.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_buscar.ForeColor = System.Drawing.Color.White;
-            this.btn_buscar.Location = new System.Drawing.Point(489, 14);
+            this.btn_buscar.Location = new System.Drawing.Point(489, 18);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(130, 34);
             this.btn_buscar.TabIndex = 27;
@@ -78,7 +79,7 @@ namespace Colegio5
             this.btn_crearGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_crearGrupo.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_crearGrupo.ForeColor = System.Drawing.Color.White;
-            this.btn_crearGrupo.Location = new System.Drawing.Point(340, 14);
+            this.btn_crearGrupo.Location = new System.Drawing.Point(340, 18);
             this.btn_crearGrupo.Name = "btn_crearGrupo";
             this.btn_crearGrupo.Size = new System.Drawing.Size(130, 34);
             this.btn_crearGrupo.TabIndex = 26;

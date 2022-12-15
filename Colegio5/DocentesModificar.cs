@@ -146,30 +146,43 @@ namespace Colegio5
 
         private void btn_ModificarDocente_Click(object sender, EventArgs e)
         {
-            Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
-            Variables.ConexionConBD.Open();
+            if (cmb_CaracterizacionModDoc.SelectedIndex == 0)
+            {
+                MessageBox.Show("Se debe seleccionar una caracterización", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (cmb_localidadD.SelectedIndex == 0)
+            {
+                MessageBox.Show("Se debe seleccionar una localidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
+                Variables.ConexionConBD.Open();
 
-            string FechaNacimientoNuevaDocente = dtp_FechaNacModDoc2.Value.ToString("dd/MM/yyyy");
+                string FechaNacimientoNuevaDocente = dtp_FechaNacModDoc2.Value.ToString("dd/MM/yyyy");
 
-            string modificarPersona = "UPDATE Persona set Nombre='" + txt_nombreModDoc2.Text + "', Apellido='" + txt_apellidoModDoc2.Text + "', FechaNac='" + FechaNacimientoNuevaDocente + "', Sexo='" + cmb_sexoModDoc2.Text + "', Direccion ='" + txt_direccionModDoc2.Text + "', CodigoPostal =" + Variables.selecLocalidad3 + " WHERE Persona.DNI =" + Variables.RecibirDniDocente + "; ";
+                string modificarPersona = "UPDATE Persona set Nombre='" + txt_nombreModDoc2.Text + "', Apellido='" + txt_apellidoModDoc2.Text + "', FechaNac='" + FechaNacimientoNuevaDocente + "', Sexo='" + cmb_sexoModDoc2.Text + "', Direccion ='" + txt_direccionModDoc2.Text + "', CodigoPostal =" + Variables.selecLocalidad3 + " WHERE Persona.DNI =" + Variables.RecibirDniDocente + "; ";
 
-            Variables.Orden = new OleDbCommand(modificarPersona, Variables.ConexionConBD);
-            Variables.Lector = Variables.Orden.ExecuteReader();
+                Variables.Orden = new OleDbCommand(modificarPersona, Variables.ConexionConBD);
+                Variables.Lector = Variables.Orden.ExecuteReader();
 
-            string modificarDocente = "UPDATE Docente set Legajo =" + txt_legajoModDoc2.Text + ", Mail ='" + txt_emailModDoc2.Text + "', CodCaracterizacion =" + Variables.selecCaracterizacion2 + " WHERE Docente.DNIDocente =" + Variables.RecibirDniDocente + "; ";
+                string modificarDocente = "UPDATE Docente set Legajo =" + txt_legajoModDoc2.Text + ", Mail ='" + txt_emailModDoc2.Text + "', CodCaracterizacion =" + Variables.selecCaracterizacion2 + " WHERE Docente.DNIDocente =" + Variables.RecibirDniDocente + "; ";
 
-            Variables.Orden = new OleDbCommand(modificarDocente, Variables.ConexionConBD);
-            Variables.Lector = Variables.Orden.ExecuteReader();
+                Variables.Orden = new OleDbCommand(modificarDocente, Variables.ConexionConBD);
+                Variables.Lector = Variables.Orden.ExecuteReader();
 
-            string modificarTelefono = "UPDATE Telefono set NumTel =" + txt_telefonoModDoc2.Text + " WHERE  Telefono.DniPersona =" + Variables.RecibirDniDocente + "; ";
+                string modificarTelefono = "UPDATE Telefono set NumTel =" + txt_telefonoModDoc2.Text + " WHERE  Telefono.DniPersona =" + Variables.RecibirDniDocente + "; ";
 
-            Variables.Orden = new OleDbCommand(modificarTelefono, Variables.ConexionConBD);
-            Variables.Lector = Variables.Orden.ExecuteReader();
+                Variables.Orden = new OleDbCommand(modificarTelefono, Variables.ConexionConBD);
+                Variables.Lector = Variables.Orden.ExecuteReader();
 
-            Variables.ConexionConBD.Close();
+                Variables.ConexionConBD.Close();
 
-            MessageBox.Show("Todo exitoso");
-            this.Close();
+                MessageBox.Show("Todo exitoso");
+                this.Close();
+            }
+
+            
         }
 
         private void cmb_localidadD_SelectedIndexChanged(object sender, EventArgs e)

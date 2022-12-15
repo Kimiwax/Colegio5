@@ -29,12 +29,16 @@ namespace Colegio5
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlumnoModificar));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tP_VerAlumno = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txt_cud = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_especificacion = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txt_domicilioA = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
@@ -178,10 +182,6 @@ namespace Colegio5
             this.label1 = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
             this.btn_cerrarVentana = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txt_especificacion = new System.Windows.Forms.TextBox();
-            this.txt_cud = new System.Windows.Forms.TextBox();
-            this.label45 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tP_VerAlumno.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -259,6 +259,58 @@ namespace Colegio5
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(945, 606);
             this.panel3.TabIndex = 84;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // txt_cud
+            // 
+            this.txt_cud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.txt_cud.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cud.Enabled = false;
+            this.txt_cud.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cud.ForeColor = System.Drawing.Color.Silver;
+            this.txt_cud.Location = new System.Drawing.Point(532, 136);
+            this.txt_cud.Name = "txt_cud";
+            this.txt_cud.Size = new System.Drawing.Size(382, 27);
+            this.txt_cud.TabIndex = 87;
+            this.txt_cud.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_cud.TextChanged += new System.EventHandler(this.txt_cud_TextChanged);
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.BackColor = System.Drawing.Color.Transparent;
+            this.label45.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.White;
+            this.label45.Location = new System.Drawing.Point(541, 96);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(68, 29);
+            this.label45.TabIndex = 86;
+            this.label45.Text = "CUD:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(38, 517);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(205, 29);
+            this.label11.TabIndex = 84;
+            this.label11.Text = "ESPECIFICACIÓN:";
+            // 
+            // txt_especificacion
+            // 
+            this.txt_especificacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.txt_especificacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_especificacion.Enabled = false;
+            this.txt_especificacion.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_especificacion.ForeColor = System.Drawing.Color.Silver;
+            this.txt_especificacion.Location = new System.Drawing.Point(27, 550);
+            this.txt_especificacion.Name = "txt_especificacion";
+            this.txt_especificacion.Size = new System.Drawing.Size(382, 27);
+            this.txt_especificacion.TabIndex = 85;
+            this.txt_especificacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel4
             // 
@@ -275,7 +327,7 @@ namespace Colegio5
             this.txt_domicilioA.Enabled = false;
             this.txt_domicilioA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_domicilioA.ForeColor = System.Drawing.Color.Silver;
-            this.txt_domicilioA.Location = new System.Drawing.Point(532, 401);
+            this.txt_domicilioA.Location = new System.Drawing.Point(532, 392);
             this.txt_domicilioA.Name = "txt_domicilioA";
             this.txt_domicilioA.Size = new System.Drawing.Size(382, 27);
             this.txt_domicilioA.TabIndex = 81;
@@ -287,7 +339,7 @@ namespace Colegio5
             this.label28.BackColor = System.Drawing.Color.Transparent;
             this.label28.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(38, 204);
+            this.label28.Location = new System.Drawing.Point(38, 182);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(281, 29);
             this.label28.TabIndex = 61;
@@ -300,7 +352,7 @@ namespace Colegio5
             this.txt_servicioA.Enabled = false;
             this.txt_servicioA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_servicioA.ForeColor = System.Drawing.Color.Silver;
-            this.txt_servicioA.Location = new System.Drawing.Point(532, 488);
+            this.txt_servicioA.Location = new System.Drawing.Point(531, 474);
             this.txt_servicioA.Name = "txt_servicioA";
             this.txt_servicioA.Size = new System.Drawing.Size(382, 27);
             this.txt_servicioA.TabIndex = 82;
@@ -324,7 +376,7 @@ namespace Colegio5
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(38, 105);
+            this.label26.Location = new System.Drawing.Point(38, 96);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(132, 29);
             this.label26.TabIndex = 60;
@@ -337,7 +389,7 @@ namespace Colegio5
             this.txt_localidadA.Enabled = false;
             this.txt_localidadA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_localidadA.ForeColor = System.Drawing.Color.Silver;
-            this.txt_localidadA.Location = new System.Drawing.Point(532, 303);
+            this.txt_localidadA.Location = new System.Drawing.Point(532, 304);
             this.txt_localidadA.Name = "txt_localidadA";
             this.txt_localidadA.Size = new System.Drawing.Size(382, 27);
             this.txt_localidadA.TabIndex = 80;
@@ -349,7 +401,7 @@ namespace Colegio5
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(38, 301);
+            this.label25.Location = new System.Drawing.Point(38, 264);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(78, 29);
             this.label25.TabIndex = 62;
@@ -362,7 +414,7 @@ namespace Colegio5
             this.txt_pensionA.Enabled = false;
             this.txt_pensionA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_pensionA.ForeColor = System.Drawing.Color.Silver;
-            this.txt_pensionA.Location = new System.Drawing.Point(532, 204);
+            this.txt_pensionA.Location = new System.Drawing.Point(532, 221);
             this.txt_pensionA.Name = "txt_pensionA";
             this.txt_pensionA.Size = new System.Drawing.Size(382, 27);
             this.txt_pensionA.TabIndex = 79;
@@ -374,7 +426,7 @@ namespace Colegio5
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(38, 388);
+            this.label24.Location = new System.Drawing.Point(38, 352);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(60, 29);
             this.label24.TabIndex = 63;
@@ -399,7 +451,7 @@ namespace Colegio5
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(38, 473);
+            this.label23.Location = new System.Drawing.Point(38, 435);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(232, 29);
             this.label23.TabIndex = 64;
@@ -412,7 +464,7 @@ namespace Colegio5
             this.txt_ingresoA.Enabled = false;
             this.txt_ingresoA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ingresoA.ForeColor = System.Drawing.Color.Silver;
-            this.txt_ingresoA.Location = new System.Drawing.Point(532, 573);
+            this.txt_ingresoA.Location = new System.Drawing.Point(532, 550);
             this.txt_ingresoA.Name = "txt_ingresoA";
             this.txt_ingresoA.Size = new System.Drawing.Size(382, 27);
             this.txt_ingresoA.TabIndex = 77;
@@ -437,7 +489,7 @@ namespace Colegio5
             this.txt_caracterizacionA.Enabled = false;
             this.txt_caracterizacionA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_caracterizacionA.ForeColor = System.Drawing.Color.Silver;
-            this.txt_caracterizacionA.Location = new System.Drawing.Point(27, 512);
+            this.txt_caracterizacionA.Location = new System.Drawing.Point(27, 474);
             this.txt_caracterizacionA.Name = "txt_caracterizacionA";
             this.txt_caracterizacionA.Size = new System.Drawing.Size(382, 27);
             this.txt_caracterizacionA.TabIndex = 76;
@@ -449,7 +501,7 @@ namespace Colegio5
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(541, 165);
+            this.label20.Location = new System.Drawing.Point(541, 182);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(120, 29);
             this.label20.TabIndex = 66;
@@ -462,7 +514,7 @@ namespace Colegio5
             this.txt_dniA.Enabled = false;
             this.txt_dniA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_dniA.ForeColor = System.Drawing.Color.Silver;
-            this.txt_dniA.Location = new System.Drawing.Point(27, 428);
+            this.txt_dniA.Location = new System.Drawing.Point(27, 392);
             this.txt_dniA.Name = "txt_dniA";
             this.txt_dniA.Size = new System.Drawing.Size(382, 27);
             this.txt_dniA.TabIndex = 75;
@@ -487,7 +539,7 @@ namespace Colegio5
             this.txt_sexoA.Enabled = false;
             this.txt_sexoA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_sexoA.ForeColor = System.Drawing.Color.Silver;
-            this.txt_sexoA.Location = new System.Drawing.Point(27, 341);
+            this.txt_sexoA.Location = new System.Drawing.Point(27, 304);
             this.txt_sexoA.Name = "txt_sexoA";
             this.txt_sexoA.Size = new System.Drawing.Size(382, 27);
             this.txt_sexoA.TabIndex = 74;
@@ -499,7 +551,7 @@ namespace Colegio5
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(541, 361);
+            this.label18.Location = new System.Drawing.Point(541, 352);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(141, 29);
             this.label18.TabIndex = 68;
@@ -512,7 +564,7 @@ namespace Colegio5
             this.txt_fecnacA.Enabled = false;
             this.txt_fecnacA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_fecnacA.ForeColor = System.Drawing.Color.Silver;
-            this.txt_fecnacA.Location = new System.Drawing.Point(27, 243);
+            this.txt_fecnacA.Location = new System.Drawing.Point(27, 221);
             this.txt_fecnacA.Name = "txt_fecnacA";
             this.txt_fecnacA.Size = new System.Drawing.Size(382, 27);
             this.txt_fecnacA.TabIndex = 73;
@@ -524,7 +576,7 @@ namespace Colegio5
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(541, 533);
+            this.label17.Location = new System.Drawing.Point(541, 517);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(276, 29);
             this.label17.TabIndex = 69;
@@ -537,7 +589,7 @@ namespace Colegio5
             this.txt_apellidoA.Enabled = false;
             this.txt_apellidoA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_apellidoA.ForeColor = System.Drawing.Color.Silver;
-            this.txt_apellidoA.Location = new System.Drawing.Point(27, 144);
+            this.txt_apellidoA.Location = new System.Drawing.Point(27, 135);
             this.txt_apellidoA.Name = "txt_apellidoA";
             this.txt_apellidoA.Size = new System.Drawing.Size(382, 27);
             this.txt_apellidoA.TabIndex = 72;
@@ -549,7 +601,7 @@ namespace Colegio5
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(541, 448);
+            this.label16.Location = new System.Drawing.Point(540, 435);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(173, 29);
             this.label16.TabIndex = 70;
@@ -573,14 +625,14 @@ namespace Colegio5
             this.dgv_Alumnos.AllowUserToAddRows = false;
             this.dgv_Alumnos.AllowUserToDeleteRows = false;
             this.dgv_Alumnos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Alumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Alumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgv_Alumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Alumnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreA,
@@ -731,14 +783,14 @@ namespace Colegio5
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreTutor,
@@ -1706,7 +1758,7 @@ namespace Colegio5
             // 
             // tP_agre
             // 
-            this.tP_agre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(29)))), ((int)(((byte)(67)))));
+            this.tP_agre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.tP_agre.Controls.Add(this.panel2);
             this.tP_agre.Location = new System.Drawing.Point(4, 32);
             this.tP_agre.Name = "tP_agre";
@@ -1915,7 +1967,6 @@ namespace Colegio5
             // btn_habilitarAlumno
             // 
             this.btn_habilitarAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(159)))), ((int)(((byte)(61)))));
-            this.btn_habilitarAlumno.Enabled = false;
             this.btn_habilitarAlumno.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(81)))), ((int)(((byte)(40)))));
             this.btn_habilitarAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_habilitarAlumno.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1951,7 +2002,7 @@ namespace Colegio5
             this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.label15.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(24, 122);
+            this.label15.Location = new System.Drawing.Point(51, 121);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(886, 77);
             this.label15.TabIndex = 36;
@@ -2007,56 +2058,6 @@ namespace Colegio5
             this.btn_cerrarVentana.TabIndex = 25;
             this.btn_cerrarVentana.UseVisualStyleBackColor = true;
             this.btn_cerrarVentana.Click += new System.EventHandler(this.btn_cerrarVentana_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(38, 543);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(205, 29);
-            this.label11.TabIndex = 84;
-            this.label11.Text = "ESPECIFICACIÓN:";
-            // 
-            // txt_especificacion
-            // 
-            this.txt_especificacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
-            this.txt_especificacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_especificacion.Enabled = false;
-            this.txt_especificacion.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_especificacion.ForeColor = System.Drawing.Color.Silver;
-            this.txt_especificacion.Location = new System.Drawing.Point(27, 576);
-            this.txt_especificacion.Name = "txt_especificacion";
-            this.txt_especificacion.Size = new System.Drawing.Size(382, 27);
-            this.txt_especificacion.TabIndex = 85;
-            this.txt_especificacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt_cud
-            // 
-            this.txt_cud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
-            this.txt_cud.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cud.Enabled = false;
-            this.txt_cud.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cud.ForeColor = System.Drawing.Color.Silver;
-            this.txt_cud.Location = new System.Drawing.Point(532, 136);
-            this.txt_cud.Name = "txt_cud";
-            this.txt_cud.Size = new System.Drawing.Size(382, 27);
-            this.txt_cud.TabIndex = 87;
-            this.txt_cud.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.BackColor = System.Drawing.Color.Transparent;
-            this.label45.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.White;
-            this.label45.Location = new System.Drawing.Point(541, 96);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(68, 29);
-            this.label45.TabIndex = 86;
-            this.label45.Text = "CUD:";
             // 
             // AlumnoModificar
             // 

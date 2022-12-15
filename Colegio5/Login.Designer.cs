@@ -161,10 +161,7 @@ namespace Colegio5
             this.txt_contraseña.PasswordChar = '*';
             this.txt_contraseña.Size = new System.Drawing.Size(214, 30);
             this.txt_contraseña.TabIndex = 6;
-            this.txt_contraseña.Text = "INGRESE SU CONTRASEÑA";
             this.txt_contraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_contraseña.Enter += new System.EventHandler(this.txt_contraseña_Enter);
-            this.txt_contraseña.Leave += new System.EventHandler(this.txt_contraseña_Leave);
             // 
             // btn_ingresar
             // 
@@ -231,6 +228,7 @@ namespace Colegio5
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Invitado)).EndInit();

@@ -12,6 +12,7 @@ using ClaseVariables;
 using System.Reflection;
 using System.Data.OleDb;
 using MetodosColeg;
+using System.IO;
 
 namespace Colegio5
 {
@@ -50,73 +51,88 @@ namespace Colegio5
 
         private void btn_crearDoc_Click(object sender, EventArgs e)
         {
-            object ObjMiss = System.Reflection.Missing.Value;
+            DialogResult res = MessageBox.Show("¿Está seguro de que quiere guardar este documento?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            Word.Application ObjWord = new Word.Application();
+            if (res == DialogResult.Yes)
+            {
+                Metodos.CrearDirectorio();
+                object ObjMiss = System.Reflection.Missing.Value;
 
-            string ruta = Application.StartupPath + @"\ModInformeDeAlumno.docx";
-            object parametro = ruta;
+                Word.Application ObjWord = new Word.Application();
 
-            object nomA = "nomape";
-            object doc = "docente";
-            object docA = "dni";
-            object dia = "dia";
-            object mes = "mes";
-            object anio = "anio";
-            object texto = "texto";
+                string ruta = Application.StartupPath + @"\ModInformeDeAlumno.docx";
+                string ruta2 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\InformesDeAlumnos";
+                object parametro = ruta;
+
+                object nomA = "nomape";
+                object doc = "docente";
+                object docA = "dni";
+                object dia = "dia";
+                object mes = "mes";
+                object anio = "anio";
+                object texto = "texto";
 
 
 
-            Word.Document ObjDoc = ObjWord.Documents.Open(ref parametro,
-            ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss,
-            ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss,
-            ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss);
+                Word.Document ObjDoc = ObjWord.Documents.Open(ref parametro,
+                ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss,
+                ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss,
+                ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss);
 
-            DateTime fechaActual = DateTime.Today;
+                DateTime fechaActual = DateTime.Today;
 
-            Word.Range DIA = ObjDoc.Bookmarks.get_Item(ref dia).Range;
-            DIA.Text = fechaActual.Day.ToString();
+                Word.Range DIA = ObjDoc.Bookmarks.get_Item(ref dia).Range;
+                DIA.Text = fechaActual.Day.ToString();
 
-            Word.Range MES = ObjDoc.Bookmarks.get_Item(ref mes).Range;
+                Word.Range MES = ObjDoc.Bookmarks.get_Item(ref mes).Range;
 
-            System.Globalization.DateTimeFormatInfo dtinfo =
-            new System.Globalization.CultureInfo("es-ES", false).DateTimeFormat;
-            MES.Text = dtinfo.GetMonthName(fechaActual.Month);
+                System.Globalization.DateTimeFormatInfo dtinfo =
+                new System.Globalization.CultureInfo("es-ES", false).DateTimeFormat;
+                MES.Text = dtinfo.GetMonthName(fechaActual.Month);
 
-            Word.Range ANIO = ObjDoc.Bookmarks.get_Item(ref anio).Range;
+                Word.Range ANIO = ObjDoc.Bookmarks.get_Item(ref anio).Range;
 
-            ANIO.Text = fechaActual.Year.ToString();
-            Word.Range NOMAPE = ObjDoc.Bookmarks.get_Item(ref nomA).Range;
-            NOMAPE.Text = txt_nomape.Text;
+                ANIO.Text = fechaActual.Year.ToString();
+                Word.Range NOMAPE = ObjDoc.Bookmarks.get_Item(ref nomA).Range;
+                NOMAPE.Text = txt_nomape.Text;
 
-            Word.Range DNI = ObjDoc.Bookmarks.get_Item(ref docA).Range;
-            DNI.Text = txt_dni.Text;
+                Word.Range DNI = ObjDoc.Bookmarks.get_Item(ref docA).Range;
+                DNI.Text = txt_dni.Text;
 
-            Word.Range DOCENTE = ObjDoc.Bookmarks.get_Item(ref doc).Range;
-            DOCENTE.Text = txt_docente.Text;
+                Word.Range DOCENTE = ObjDoc.Bookmarks.get_Item(ref doc).Range;
+                DOCENTE.Text = txt_docente.Text;
 
-            Word.Range TEXTO = ObjDoc.Bookmarks.get_Item(ref texto).Range;
-            TEXTO.Text = txt_informe.Text;
+                Word.Range TEXTO = ObjDoc.Bookmarks.get_Item(ref texto).Range;
+                TEXTO.Text = txt_informe.Text;
 
-            object rango1 = DIA;
-            object rango2 = MES;
-            object rango3 = ANIO;
-            object rango4 = NOMAPE;
-            object rango5 = DNI;
-            object rango6 = DOCENTE;
-            object rango7 = TEXTO;
+                object rango1 = DIA;
+                object rango2 = MES;
+                object rango3 = ANIO;
+                object rango4 = NOMAPE;
+                object rango5 = DNI;
+                object rango6 = DOCENTE;
+                object rango7 = TEXTO;
 
-            ObjDoc.Bookmarks.Add("dia", ref rango1);
-            ObjDoc.Bookmarks.Add("mes", ref rango2);
-            ObjDoc.Bookmarks.Add("anio", ref rango3);
-            ObjDoc.Bookmarks.Add("nomape", ref rango4);
-            ObjDoc.Bookmarks.Add("dni", ref rango5);
-            ObjDoc.Bookmarks.Add("docente", ref rango6);
-            ObjDoc.Bookmarks.Add("texto", ref rango7);
+                ObjDoc.Bookmarks.Add("dia", ref rango1);
+                ObjDoc.Bookmarks.Add("mes", ref rango2);
+                ObjDoc.Bookmarks.Add("anio", ref rango3);
+                ObjDoc.Bookmarks.Add("nomape", ref rango4);
+                ObjDoc.Bookmarks.Add("dni", ref rango5);
+                ObjDoc.Bookmarks.Add("docente", ref rango6);
+                ObjDoc.Bookmarks.Add("texto", ref rango7);
 
-            ObjWord.Visible = true;
-            this.Close();
+                ObjWord.Visible = true;
+
+                this.Close();
+
+
+                ObjDoc.SaveAs(ruta2 + "\\" + txt_nomape.Text + DIA.Text + "-" + fechaActual.Month + "-" + ANIO.Text + ".docx",
+                ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss,
+                ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss,
+                ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss, ref ObjMiss);
+            }
         }
+            
 
         private void carga_cmbCaracterizacion()
         {
@@ -159,7 +175,7 @@ namespace Colegio5
         private void AlumnoModificar_Load(object sender, EventArgs e)
         {
             Metodos.ConectaDB();
-
+            
             string ConsultaAlumno = "SELECT Persona.Nombre, Persona.Apellido, Persona.FechaNac, Persona.Sexo, Persona.DNI, Caracterizacion.Especificacion, Alumno.FechaIng, Alumno.ObraSocial, Alumno.CUD, Localidad.NomLocalidad, Persona.Direccion, SedIncDom.Detalle" +
                                     " FROM Caracterizacion INNER JOIN((SedIncDom INNER JOIN(Localidad INNER JOIN(Persona INNER JOIN Alumno ON Persona.DNI = Alumno.DNIAlumno) ON Localidad.CP = Persona.CodigoPostal) ON SedIncDom.CodSedIncDom = Alumno.CodigoSedIncDom) INNER JOIN AlumnoCaracterizaciones ON Alumno.DNIAlumno = AlumnoCaracterizaciones.dniAlumno) ON Caracterizacion.CodCaracterizacion = AlumnoCaracterizaciones.CodigoCaracterizaciones" +
                                     " WHERE Persona.DNI = " + Variables.RecibirDniAlumno + ";";
@@ -230,28 +246,44 @@ namespace Colegio5
 
         private void btn_ModificarAlumno_Click(object sender, EventArgs e)
         {
-            Metodos.ConectaDB();
+            if(cmb_sedeinclusionAMod.SelectedIndex == 0)
+            {
+                MessageBox.Show("Se debe seleccionar un tipo de servicio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(cmb_caracterizacionAMod.SelectedIndex == 0)
+            {
+                MessageBox.Show("Se debe seleccionar un tipo de caracterización", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(cmb_localidadAMod.SelectedIndex == 0)
+            {
+                MessageBox.Show("Se debe seleccionar una localidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Metodos.ConectaDB();
 
-            string FechaNacimientoNuevaAlumno = dtp_fechadenacAMod.Value.ToString("dd/MM/yyyy");
-            string FechaIngresoNuevaAlumno = dtp_fechaIngresoAMod.Value.ToString("dd/MM/yyyy");
+                string FechaNacimientoNuevaAlumno = dtp_fechadenacAMod.Value.ToString("dd/MM/yyyy");
+                string FechaIngresoNuevaAlumno = dtp_fechaIngresoAMod.Value.ToString("dd/MM/yyyy");
 
-            string modificarPersona = "UPDATE Persona set Nombre='" + txt_nombreAMod.Text + "', Apellido='" + txt_apellidoAMod.Text + "', FechaNac='" + FechaNacimientoNuevaAlumno + "', Sexo='" + cmb_sexoAMod.Text + "', Direccion ='" + txt_domicilioAMod.Text + "', CodigoPostal =" + Variables.selecLocalidad4 + " WHERE Persona.DNI =" + Variables.RecibirDniAlumno + "; ";
-            Variables.Orden = new OleDbCommand(modificarPersona, Variables.ConexionConBD);
-            Variables.Orden.ExecuteNonQuery();
+                string modificarPersona = "UPDATE Persona set Nombre='" + txt_nombreAMod.Text + "', Apellido='" + txt_apellidoAMod.Text + "', FechaNac='" + FechaNacimientoNuevaAlumno + "', Sexo='" + cmb_sexoAMod.Text + "', Direccion ='" + txt_domicilioAMod.Text + "', CodigoPostal =" + Variables.selecLocalidad4 + " WHERE Persona.DNI =" + Variables.RecibirDniAlumno + "; ";
+                Variables.Orden = new OleDbCommand(modificarPersona, Variables.ConexionConBD);
+                Variables.Orden.ExecuteNonQuery();
 
-            string ModificarAlumno = "UPDATE Alumno set FechaIng='" + FechaIngresoNuevaAlumno + "', CUD='" + cmb_cudAMod.Text + "', CodigoSedIncDom=" + Variables.selecSedeInclusion + ", ObraSocial='" + txt_obrasocialAMod.Text + "' WHERE Alumno.DNIAlumno = " + Variables.RecibirDniAlumno + "; ";
-            Variables.Orden = new OleDbCommand(ModificarAlumno, Variables.ConexionConBD);
-            Variables.Orden.ExecuteNonQuery();
+                string ModificarAlumno = "UPDATE Alumno set FechaIng='" + FechaIngresoNuevaAlumno + "', CUD='" + cmb_cudAMod.Text + "', CodigoSedIncDom=" + Variables.selecSedeInclusion + ", ObraSocial='" + txt_obrasocialAMod.Text + "' WHERE Alumno.DNIAlumno = " + Variables.RecibirDniAlumno + "; ";
+                Variables.Orden = new OleDbCommand(ModificarAlumno, Variables.ConexionConBD);
+                Variables.Orden.ExecuteNonQuery();
 
-            string ModificarAlumCarac = "UPDATE AlumnoCaracterizaciones set CodigoCaracterizaciones=" + Variables.selecSedeInclusion + " WHERE  AlumnoCaracterizaciones.dniAlumno =" + Variables.RecibirDniDocente + "; ";
+                string ModificarAlumCarac = "UPDATE AlumnoCaracterizaciones set CodigoCaracterizaciones=" + Variables.selecSedeInclusion + " WHERE  AlumnoCaracterizaciones.dniAlumno =" + Variables.RecibirDniDocente + "; ";
 
-            Variables.Orden = new OleDbCommand(ModificarAlumCarac, Variables.ConexionConBD);
-            Variables.Orden.ExecuteNonQuery();
+                Variables.Orden = new OleDbCommand(ModificarAlumCarac, Variables.ConexionConBD);
+                Variables.Orden.ExecuteNonQuery();
 
-            Metodos.CerrarDB2();
+                Metodos.CerrarDB2();
 
-            MessageBox.Show("Se actualizaron correctamente los registros");
-            this.Close();
+                MessageBox.Show("Se actualizaron correctamente los registros");
+                this.Close();
+            }
+            
         }
 
         private void cmb_localidadAMod_SelectedIndexChanged(object sender, EventArgs e)
@@ -301,6 +333,16 @@ namespace Colegio5
 
             
             this.Close();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txt_cud_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

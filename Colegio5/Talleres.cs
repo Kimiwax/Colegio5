@@ -21,6 +21,7 @@ namespace Colegio5
             {
                 btn_crearTaller.Enabled = false;
                 btn_crearTaller.Visible = false;
+                btn_buscar.Location = new Point (406, 14);
             }
         }
     }

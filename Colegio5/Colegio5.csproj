@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -63,6 +65,11 @@
     </Compile>
     <Compile Include="Docentes.Designer.cs">
       <DependentUpon>Docentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Escuela501DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Escuela501DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Talleres.cs">
       <SubType>Form</SubType>
@@ -204,6 +211,17 @@
     <EmbeddedResource Include="TalleresAgregar.resx">
       <DependentUpon>TalleresAgregar.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Escuela501DataSet.xsc">
+      <DependentUpon>Escuela501DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Escuela501DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Escuela501DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Escuela501DataSet.xss">
+      <DependentUpon>Escuela501DataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\DataSources\AgregarAdultoACargo.datasource" />
     <None Include="Properties\DataSources\AgregarDocente.datasource" />
     <None Include="Properties\DataSources\AgregarDocentes.datasource" />

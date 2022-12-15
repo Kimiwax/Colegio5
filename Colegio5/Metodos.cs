@@ -7,11 +7,21 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using ClaseVariables;
 using System.Data.OleDb;
+using System.IO;
 
 namespace MetodosColeg
 {
     public class Metodos
     {
+        public static void CrearDirectorio()
+        {
+            
+            string rutaCarpeta = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "InformesDeAlumnos");
+           
+            if (!Directory.Exists(rutaCarpeta)){
+                Directory.CreateDirectory(rutaCarpeta);
+            }
+        }
 
         public static void ConectaDB()
         {

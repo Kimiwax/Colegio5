@@ -97,7 +97,7 @@ namespace Colegio5
                 errorIcono.SetError(txt_dniA, "Ingrese DNI del alumno ");
                 noError = false;
             }
-            else if (cmb_caracterizacionNA.SelectedIndex == -1)
+            else if (cmb_caracterizacionNA.SelectedIndex == 0)
             {
                 errorIcono.Clear();
                 errorIcono.SetError(cmb_caracterizacionNA, "Seleccione CARACTERIZACIÓN del alumno ");
@@ -122,7 +122,7 @@ namespace Colegio5
                 errorIcono.SetError(cmb_cudA, "Seleccione si el alumno tiene CUD ");
                 noError = false;
             }
-            else if (cmb_localidadAlumno.SelectedIndex == -1)
+            else if (cmb_localidadAlumno.SelectedIndex == 0)
             {
                 errorIcono.Clear();
                 errorIcono.SetError(cmb_localidadAlumno, "Ingrese LOCALIDAD del alumno ");
