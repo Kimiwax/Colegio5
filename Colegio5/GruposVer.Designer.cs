@@ -392,6 +392,7 @@ namespace Colegio5
             this.btn_modificarGrupo.TabIndex = 34;
             this.btn_modificarGrupo.Text = "MODIFICAR GRUPO";
             this.btn_modificarGrupo.UseVisualStyleBackColor = false;
+            this.btn_modificarGrupo.Click += new System.EventHandler(this.btn_modificarGrupo_Click);
             // 
             // label5
             // 

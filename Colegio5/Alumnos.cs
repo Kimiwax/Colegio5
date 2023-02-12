@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using ClaseVariables;
 using MetodosColeg;
+using System.Drawing.Printing;
+using System.Drawing;
 
 
 
@@ -109,9 +111,6 @@ namespace Colegio5
 
             }
 
-
-
-
         }
 
         private void dgv_alumnos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -205,11 +204,24 @@ namespace Colegio5
             {
                 panelContenedorCaracterizaciones.Enabled = true;
                 panelContenedorCaracterizaciones.Visible = true;
+
+                panelContenedorServicio.Enabled = false;
+                panelContenedorServicio.Visible = false;
+            }
+            else if (cmb_filtros.Text == "Servicios")
+            {
+                panelContenedorServicio.Enabled = true;
+                panelContenedorServicio.Visible = true;
+
+                panelContenedorCaracterizaciones.Enabled = false;
+                panelContenedorCaracterizaciones.Visible = false;
             }
             else if (cmb_filtros.Text == "Todos")
             {
                 panelContenedorCaracterizaciones.Enabled = false;
                 panelContenedorCaracterizaciones.Visible = false;
+                panelContenedorServicio.Enabled = false;
+                panelContenedorServicio.Visible = false;
                 rb_caracterizacion2.Checked = false;
                 rb_caracterizacion3.Checked = false;
                 rb_caracterizacion4.Checked = false;
@@ -217,6 +229,10 @@ namespace Colegio5
                 rb_caracterizacion6.Checked = false;
                 rb_caracterizacion9.Checked = false;
                 Cargar_Grilla();
+            }
+            else if (cmb_filtros.Text == "Servicio")
+            {
+
             }
             
         }
@@ -456,6 +472,128 @@ namespace Colegio5
                 dgv_alumnos.Rows.Clear();
                 Cargar_Grilla();
             }
+        }
+
+        private void cmb_filtros_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rb_sede_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cmb_filtros.Text == "Servicios" && rb_sede.Checked == true)
+            {
+                dgv_alumnos.DataSource = null;
+                dgv_alumnos.Rows.Clear();
+
+                Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
+                Variables.ConexionConBD.Open();
+
+                string consulta2 = "SELECT Alumno.DNIAlumno, Persona.Nombre, Persona.Apellido, Caracterizacion.Especificacion, Localidad.NomLocalidad, Persona.Direccion" +
+                                       " FROM Caracterizacion INNER JOIN((Localidad INNER JOIN(Persona INNER JOIN Alumno ON Persona.DNI = Alumno.DNIAlumno) ON Localidad.CP = Persona.CodigoPostal) INNER JOIN AlumnoCaracterizaciones ON Alumno.DNIAlumno = AlumnoCaracterizaciones.dniAlumno) ON Caracterizacion.CodCaracterizacion = AlumnoCaracterizaciones.CodigoCaracterizaciones" +
+                                       " WHERE  Alumno.CodigoSedIncDom = " + 2 + ";";
+
+
+
+                Variables.Orden = new OleDbCommand(consulta2, Variables.ConexionConBD);
+                Variables.Lector = Variables.Orden.ExecuteReader();
+
+                while (Variables.Lector.Read())
+                {
+                    dgv_alumnos.Rows.Add();
+                    dgv_alumnos[0, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["DNIAlumno"];
+                    dgv_alumnos[1, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Nombre"];
+                    dgv_alumnos[2, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Apellido"];
+                    dgv_alumnos[3, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Especificacion"];
+                    dgv_alumnos[4, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["NomLocalidad"];
+                    dgv_alumnos[5, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Direccion"];
+                }
+                dgv_alumnos.ClearSelection();
+
+                Variables.Lector.Close();
+                Variables.ConexionConBD.Close();
+            }
+        }
+
+        private void rb_inc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cmb_filtros.Text == "Servicios" && rb_inc.Checked == true)
+            {
+                dgv_alumnos.DataSource = null;
+                dgv_alumnos.Rows.Clear();
+
+                Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
+                Variables.ConexionConBD.Open();
+
+                string consulta2 = "SELECT Alumno.DNIAlumno, Persona.Nombre, Persona.Apellido, Caracterizacion.Especificacion, Localidad.NomLocalidad, Persona.Direccion" +
+                                       " FROM Caracterizacion INNER JOIN((Localidad INNER JOIN(Persona INNER JOIN Alumno ON Persona.DNI = Alumno.DNIAlumno) ON Localidad.CP = Persona.CodigoPostal) INNER JOIN AlumnoCaracterizaciones ON Alumno.DNIAlumno = AlumnoCaracterizaciones.dniAlumno) ON Caracterizacion.CodCaracterizacion = AlumnoCaracterizaciones.CodigoCaracterizaciones" +
+                                       " WHERE  Alumno.CodigoSedIncDom = " + 3 + ";";
+
+
+
+                Variables.Orden = new OleDbCommand(consulta2, Variables.ConexionConBD);
+                Variables.Lector = Variables.Orden.ExecuteReader();
+
+                while (Variables.Lector.Read())
+                {
+                    dgv_alumnos.Rows.Add();
+                    dgv_alumnos[0, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["DNIAlumno"];
+                    dgv_alumnos[1, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Nombre"];
+                    dgv_alumnos[2, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Apellido"];
+                    dgv_alumnos[3, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Especificacion"];
+                    dgv_alumnos[4, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["NomLocalidad"];
+                    dgv_alumnos[5, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Direccion"];
+                }
+                dgv_alumnos.ClearSelection();
+
+                Variables.Lector.Close();
+                Variables.ConexionConBD.Close();
+            }
+        }
+
+        private void btn_imprimir_Click(object sender, EventArgs e)
+        {
+            PrintDocument doc = new PrintDocument();
+            doc.DefaultPageSettings.Landscape = true;
+            doc.PrinterSettings.PrinterName = "Microsoft Print to PDF";
+
+            PrintPreviewDialog ppd = new PrintPreviewDialog { Document = doc };
+            ((Form)ppd).WindowState = FormWindowState.Maximized;
+
+            doc.PrintPage += delegate (object ev, PrintPageEventArgs ep)
+            {
+                const int dgvAlto = 35;
+                int left = ep.MarginBounds.Left, top = ep.MarginBounds.Top;
+
+                foreach (DataGridViewColumn col in dgv_alumnos.Columns)
+                {
+                    ep.Graphics.DrawString(col.HeaderText, new Font("Montserrat", 10, FontStyle.Bold), Brushes.DeepSkyBlue, left, top);
+                    left += col.Width;
+
+                    if(col.Index < dgv_alumnos.ColumnCount - 1)
+                    {
+                        ep.Graphics.DrawLine(Pens.Gray, left - 5, top, left - 5, top + 43 + (dgv_alumnos.RowCount - 1) * dgvAlto);
+                    }
+                }
+                left = ep.MarginBounds.Left;
+                ep.Graphics.FillRectangle(Brushes.Black, left, top + 40, ep.MarginBounds.Right - left, 3);
+                top += 43;
+
+                foreach(DataGridViewRow row in dgv_alumnos.Rows)
+                {
+                    if (row.Index == dgv_alumnos.RowCount - 1) break;
+                    left = ep.MarginBounds.Left;
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                       ep.Graphics.DrawString(Convert.ToString(cell.Value), new Font("Montserrat", 8), Brushes.Black, left, top + 3);
+                        left += cell.OwningColumn.Width;
+                    }
+                    top += dgvAlto;
+                    ep.Graphics.DrawLine(Pens.Gray, ep.MarginBounds.Left, top, ep.MarginBounds.Right, top);
+                }
+            };
+            ppd.ShowDialog();
+            
         }
     }
 }

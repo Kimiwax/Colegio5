@@ -149,9 +149,9 @@ namespace Colegio5
             {
                 errorIcono.Clear();
                 if (cmb_sedeinclusionA.SelectedItem.ToString() == "Sede")
-                { valorSedInc = 1; }
-                else
                 { valorSedInc = 2; }
+                else
+                { valorSedInc = 3; }
 
                 Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
                 Variables.ConexionConBD.Open();
@@ -160,7 +160,8 @@ namespace Colegio5
                 string FechaingresoA = dtp_fechaIngresoA.Value.ToString("dd/MM/yyyy");
 
                 string insertPersona = "INSERT INTO Persona (DNI, Nombre, Apellido, FechaNac, Sexo, Direccion, CodigoPostal) Values (" + txt_dniA.Text + ", '" + txt_nombreA.Text + "','" + txt_apellidoA.Text + "','" + FechaNacimientoA + "','" + cmb_sexoA.Text + "','" + txt_domicilioA.Text + "'," + Variables.selecLocalidad + ");";
-                string insertAlumno = "INSERT INTO Alumno (DNIAlumno, ObraSocial, CUD, FechaIng, CodigoSedIncDom, Legajo, Especificacion, Habilitado) Values (" + txt_dniA.Text + ",'" + txt_obrasocialA.Text + "','" + Variables.seleccCud + "','" + FechaingresoA + "'," + valorSedInc + "," + txt_LegajoA.Text + ",'" + txt_Especificacion.Text + "'," + 1 + ");";
+               // string insertAlumno = "INSERT INTO Alumno (DNIAlumno, ObraSocial, CUD, FechaIng, CodigoSedIncDom, Legajo, Especificacion, Habilitado) Values (" + txt_dniA.Text + ",'" + txt_obrasocialA.Text + "','" + Variables.seleccCud + "','" + FechaingresoA + "'," + valorSedInc + "," + txt_LegajoA.Text + ",'" + txt_Especificacion.Text + "'," + 1 + ");";
+                string insertAlumno = "INSERT INTO Alumno (DNIAlumno, ObraSocial, CUD, FechaIng, CodigoSedIncDom, Legajo, EspecificacionA, Habilitado, Pension, Grupo) Values (" + txt_dniA.Text + ",'" + txt_obrasocialA.Text + "','" + Variables.seleccCud + "','" + FechaingresoA + "'," + valorSedInc + "," + txt_LegajoA.Text + ",'" + txt_Especificacion.Text + "'," + 1 + ",'" + txt_pension.Text + "'," + 0 + ");";
                 string insertAlumnoCaracterizacion = "INSERT INTO AlumnoCaracterizaciones (dniAlumno, CodigoCaracterizaciones) Values (" + txt_dniA.Text + ", " + Variables.selecCaracterizacion + ");";
 
                 Variables.guardarDNI = txt_dniA.Text;

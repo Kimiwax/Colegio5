@@ -80,7 +80,8 @@ namespace Colegio5
 
 
                 string insertPersona = "INSERT INTO Persona (DNI, Nombre, Apellido, FechaNac, Sexo, Direccion, CodigoPostal) Values (" + txt_dniD.Text + ", '" + txt_nombreD.Text + "','" + txt_apellidoD.Text + "','" + FechaNacimientoD + "','" + cmb_sexoD.Text + "','" + txt_direccionD.Text + "'," + Variables.selecLocalidad + ");";
-                string insertDocente = "INSERT INTO Docente (DNIDocente, Legajo, Mail, CodCaracterizacion, Habilitado) Values (" + txt_dniD.Text + ",'" + txt_legajoD.Text + "','" + txt_emailD.Text + "'," + Variables.selecCaracterizacion + "," + 1 + ");";
+               // string insertDocente = "INSERT INTO Docente (DNIDocente, Legajo, Mail, CodCaracterizacion, Habilitado) Values (" + txt_dniD.Text + ",'" + txt_legajoD.Text + "','" + txt_emailD.Text + "'," + Variables.selecCaracterizacion + "," + 1 + ");";
+                string insertDocente = "INSERT INTO Docente (DNIDocente, Legajo, Mail, CodCaracterizacion, Habilitado, Grupo) Values (" + txt_dniD.Text + ",'" + txt_legajoD.Text + "','" + txt_emailD.Text + "'," + Variables.selecCaracterizacion + "," + 1 + "," + 1 + ");";
                 string insertTelefono = "INSERT INTO Telefono(DniPersona, NumTel) values (" + txt_dniD.Text + "," + txt_telefonoD.Text + ");";
 
                 Variables.Orden = new OleDbCommand(insertPersona, Variables.ConexionConBD);
