@@ -11,7 +11,8 @@ using System.Data.OleDb;
 using ClaseVariables;
 using MetodosColeg;
 using System.Drawing.Printing;
-using System.Drawing;
+using DGVPrinterHelper;
+
 
 
 
@@ -234,10 +235,10 @@ namespace Colegio5
             {
 
             }
-            
+
         }
 
-        
+
 
         private void rb_caracterizacion2_CheckedChanged(object sender, EventArgs e)
         {
@@ -467,7 +468,7 @@ namespace Colegio5
 
         private void txt_buscarDni_Leave(object sender, EventArgs e)
         {
-            if(txt_buscarDni.Text == "")
+            if (txt_buscarDni.Text == "")
             {
                 dgv_alumnos.Rows.Clear();
                 Cargar_Grilla();
@@ -553,47 +554,97 @@ namespace Colegio5
 
         private void btn_imprimir_Click(object sender, EventArgs e)
         {
-            PrintDocument doc = new PrintDocument();
-            doc.DefaultPageSettings.Landscape = true;
-            doc.PrinterSettings.PrinterName = "Microsoft Print to PDF";
+          
 
-            PrintPreviewDialog ppd = new PrintPreviewDialog { Document = doc };
-            ((Form)ppd).WindowState = FormWindowState.Maximized;
-
-            doc.PrintPage += delegate (object ev, PrintPageEventArgs ep)
+            if (rb_sede.Checked)
             {
-                const int dgvAlto = 35;
-                int left = ep.MarginBounds.Left, top = ep.MarginBounds.Top;
+                DGVPrinter printer = new DGVPrinter();
+                printer.Title = "Alumnos en Sede";
+                printer.SubTitle = DateTime.Now.Date.ToString("MM/dd/yyyy").ToString();
+                printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+                printer.PageNumbers = true;
+                printer.PageNumberInHeader = false;
+                printer.PageSettings.Landscape = true;
+                printer.PorportionalColumns = true;
+                printer.HeaderCellAlignment = StringAlignment.Near;
+                printer.Footer = "SaxtonHale";
+                printer.FooterSpacing = 15;
+                dgv_alumnos.DefaultCellStyle.BackColor = Color.White;
+                dgv_alumnos.ForeColor = Color.Black;
+                dgv_alumnos.Visible = false;
+                printer.PrintDataGridView(dgv_alumnos);
+                dgv_alumnos.DefaultCellStyle.BackColor = Color.FromArgb(33, 39, 52);
+                dgv_alumnos.ForeColor = Color.White;
+                dgv_alumnos.Visible = true;
+            }
+            else if(rb_inc.Checked){
+                DGVPrinter printer = new DGVPrinter();
+                printer.Title = "Alumnos en Inclusión";
+                printer.SubTitle = DateTime.Now.Date.ToString("MM/dd/yyyy").ToString();
+                printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+                printer.PageNumbers = true;
+                printer.PageNumberInHeader = false;
+                printer.PageSettings.Landscape = true;
+                printer.PorportionalColumns = true;
+                printer.HeaderCellAlignment = StringAlignment.Near;
+                printer.Footer = "SaxtonHale";
+                printer.FooterSpacing = 15;
+                dgv_alumnos.DefaultCellStyle.BackColor = Color.White;
+                dgv_alumnos.ForeColor = Color.Black;
+                dgv_alumnos.Visible = false;
+                printer.PrintDataGridView(dgv_alumnos);
+                dgv_alumnos.DefaultCellStyle.BackColor = Color.FromArgb(33, 39, 52);
+                dgv_alumnos.ForeColor = Color.White;
+                dgv_alumnos.Visible = true;
+            }
+            else if (rb_caracterizacion2.Checked)
+            {
+                DGVPrinter printer = new DGVPrinter();
+                printer.Title = "Alumnos Sordos Hipoacusicos";
+                printer.SubTitle = DateTime.Now.Date.ToString("MM/dd/yyyy").ToString();
+                printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+                printer.PageNumbers = true;
+                printer.PageNumberInHeader = false;
+                printer.PageSettings.Landscape = true;
+                printer.PorportionalColumns = true;
+                printer.HeaderCellAlignment = StringAlignment.Near;
+                printer.Footer = "SaxtonHale";
+                printer.FooterSpacing = 15;
+                dgv_alumnos.DefaultCellStyle.BackColor = Color.White;
+                dgv_alumnos.ForeColor = Color.Black;
+                dgv_alumnos.Visible = false;
+                printer.PrintDataGridView(dgv_alumnos);
+                dgv_alumnos.DefaultCellStyle.BackColor = Color.FromArgb(33, 39, 52);
+                dgv_alumnos.ForeColor = Color.White;
+                dgv_alumnos.Visible = true;
+            }
+            else
+            {
+                DGVPrinter printer = new DGVPrinter();
+                printer.Title = "Todos los Alumnos";
+                printer.SubTitle = DateTime.Now.Date.ToString("MM/dd/yyyy").ToString();
+                printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+                printer.PageNumbers = true;
+                printer.PageNumberInHeader = false;
+                printer.PageSettings.Landscape = true;
+                printer.PorportionalColumns = true;
+                printer.HeaderCellAlignment = StringAlignment.Near;
+                printer.Footer = "SaxtonHale";
+                printer.FooterSpacing = 15;
+                dgv_alumnos.DefaultCellStyle.BackColor = Color.White;
+                dgv_alumnos.ForeColor = Color.Black;
+                dgv_alumnos.Visible = false;
+                printer.PrintDataGridView(dgv_alumnos);
+                dgv_alumnos.DefaultCellStyle.BackColor = Color.FromArgb(33, 39, 52);
+                dgv_alumnos.ForeColor = Color.White;
+                dgv_alumnos.Visible = true;
+            }
 
-                foreach (DataGridViewColumn col in dgv_alumnos.Columns)
-                {
-                    ep.Graphics.DrawString(col.HeaderText, new Font("Montserrat", 10, FontStyle.Bold), Brushes.DeepSkyBlue, left, top);
-                    left += col.Width;
+        }
 
-                    if(col.Index < dgv_alumnos.ColumnCount - 1)
-                    {
-                        ep.Graphics.DrawLine(Pens.Gray, left - 5, top, left - 5, top + 43 + (dgv_alumnos.RowCount - 1) * dgvAlto);
-                    }
-                }
-                left = ep.MarginBounds.Left;
-                ep.Graphics.FillRectangle(Brushes.Black, left, top + 40, ep.MarginBounds.Right - left, 3);
-                top += 43;
+        private void printDocument1_BeginPrint(object sender, PrintEventArgs e)
+        {
 
-                foreach(DataGridViewRow row in dgv_alumnos.Rows)
-                {
-                    if (row.Index == dgv_alumnos.RowCount - 1) break;
-                    left = ep.MarginBounds.Left;
-                    foreach (DataGridViewCell cell in row.Cells)
-                    {
-                       ep.Graphics.DrawString(Convert.ToString(cell.Value), new Font("Montserrat", 8), Brushes.Black, left, top + 3);
-                        left += cell.OwningColumn.Width;
-                    }
-                    top += dgvAlto;
-                    ep.Graphics.DrawLine(Pens.Gray, ep.MarginBounds.Left, top, ep.MarginBounds.Right, top);
-                }
-            };
-            ppd.ShowDialog();
-            
         }
     }
 }

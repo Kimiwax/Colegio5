@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ClaseVariables;
 using MetodosColeg;
 using System.Data.OleDb;
+using DGVPrinterHelper;
 
 
 namespace Colegio5
@@ -200,6 +201,28 @@ namespace Colegio5
                 dgv_Docentes.Rows.Clear();
                 CargarGrilla();
             }
+        }
+
+        private void btn_imprimir_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "Docentes";
+            printer.SubTitle = DateTime.Now.Date.ToString("MM/dd/yyyy").ToString();
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PageSettings.Landscape = true;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "SaxtonHale";
+            printer.FooterSpacing = 15;
+            dgv_Docentes.DefaultCellStyle.BackColor = Color.White;
+            dgv_Docentes.ForeColor = Color.Black;
+            dgv_Docentes.Visible = false;
+            printer.PrintDataGridView(dgv_Docentes);
+            dgv_Docentes.DefaultCellStyle.BackColor = Color.FromArgb(33, 39, 52);
+            dgv_Docentes.ForeColor = Color.White;
+            dgv_Docentes.Visible = true;
         }
     }
 }

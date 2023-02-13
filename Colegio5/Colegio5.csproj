@@ -54,6 +54,7 @@
     <Compile Include="AlumnoAgregarAdulto.Designer.cs">
       <DependentUpon>AlumnoAgregarAdulto.cs</DependentUpon>
     </Compile>
+    <Compile Include="DGVPrinter.cs" />
     <Compile Include="DocenteAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +71,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Escuela501DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrupoModificar.Designer.cs">
+      <DependentUpon>GrupoModificar.cs</DependentUpon>
     </Compile>
     <Compile Include="Talleres.cs">
       <SubType>Form</SubType>
@@ -167,6 +174,7 @@
     <EmbeddedResource Include="Docentes.resx">
       <DependentUpon>Docentes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Talleres.resx">
       <DependentUpon>Talleres.cs</DependentUpon>
     </EmbeddedResource>
