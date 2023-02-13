@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using ClaseVariables;
 using MetodosColeg;
+using System.Drawing.Printing;
+using DGVPrinterHelper;
+
 
 
 
@@ -109,9 +112,6 @@ namespace Colegio5
 
             }
 
-
-
-
         }
 
         private void dgv_alumnos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -205,11 +205,24 @@ namespace Colegio5
             {
                 panelContenedorCaracterizaciones.Enabled = true;
                 panelContenedorCaracterizaciones.Visible = true;
+
+                panelContenedorServicio.Enabled = false;
+                panelContenedorServicio.Visible = false;
+            }
+            else if (cmb_filtros.Text == "Servicios")
+            {
+                panelContenedorServicio.Enabled = true;
+                panelContenedorServicio.Visible = true;
+
+                panelContenedorCaracterizaciones.Enabled = false;
+                panelContenedorCaracterizaciones.Visible = false;
             }
             else if (cmb_filtros.Text == "Todos")
             {
                 panelContenedorCaracterizaciones.Enabled = false;
                 panelContenedorCaracterizaciones.Visible = false;
+                panelContenedorServicio.Enabled = false;
+                panelContenedorServicio.Visible = false;
                 rb_caracterizacion2.Checked = false;
                 rb_caracterizacion3.Checked = false;
                 rb_caracterizacion4.Checked = false;
@@ -218,10 +231,14 @@ namespace Colegio5
                 rb_caracterizacion9.Checked = false;
                 Cargar_Grilla();
             }
-            
+            else if (cmb_filtros.Text == "Servicio")
+            {
+
+            }
+
         }
 
-        
+
 
         private void rb_caracterizacion2_CheckedChanged(object sender, EventArgs e)
         {
@@ -451,11 +468,183 @@ namespace Colegio5
 
         private void txt_buscarDni_Leave(object sender, EventArgs e)
         {
-            if(txt_buscarDni.Text == "")
+            if (txt_buscarDni.Text == "")
             {
                 dgv_alumnos.Rows.Clear();
                 Cargar_Grilla();
             }
+        }
+
+        private void cmb_filtros_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rb_sede_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cmb_filtros.Text == "Servicios" && rb_sede.Checked == true)
+            {
+                dgv_alumnos.DataSource = null;
+                dgv_alumnos.Rows.Clear();
+
+                Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
+                Variables.ConexionConBD.Open();
+
+                string consulta2 = "SELECT Alumno.DNIAlumno, Persona.Nombre, Persona.Apellido, Caracterizacion.Especificacion, Localidad.NomLocalidad, Persona.Direccion" +
+                                       " FROM Caracterizacion INNER JOIN((Localidad INNER JOIN(Persona INNER JOIN Alumno ON Persona.DNI = Alumno.DNIAlumno) ON Localidad.CP = Persona.CodigoPostal) INNER JOIN AlumnoCaracterizaciones ON Alumno.DNIAlumno = AlumnoCaracterizaciones.dniAlumno) ON Caracterizacion.CodCaracterizacion = AlumnoCaracterizaciones.CodigoCaracterizaciones" +
+                                       " WHERE  Alumno.CodigoSedIncDom = " + 2 + ";";
+
+
+
+                Variables.Orden = new OleDbCommand(consulta2, Variables.ConexionConBD);
+                Variables.Lector = Variables.Orden.ExecuteReader();
+
+                while (Variables.Lector.Read())
+                {
+                    dgv_alumnos.Rows.Add();
+                    dgv_alumnos[0, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["DNIAlumno"];
+                    dgv_alumnos[1, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Nombre"];
+                    dgv_alumnos[2, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Apellido"];
+                    dgv_alumnos[3, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Especificacion"];
+                    dgv_alumnos[4, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["NomLocalidad"];
+                    dgv_alumnos[5, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Direccion"];
+                }
+                dgv_alumnos.ClearSelection();
+
+                Variables.Lector.Close();
+                Variables.ConexionConBD.Close();
+            }
+        }
+
+        private void rb_inc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cmb_filtros.Text == "Servicios" && rb_inc.Checked == true)
+            {
+                dgv_alumnos.DataSource = null;
+                dgv_alumnos.Rows.Clear();
+
+                Variables.ConexionConBD = new OleDbConnection(Variables.strConexion);
+                Variables.ConexionConBD.Open();
+
+                string consulta2 = "SELECT Alumno.DNIAlumno, Persona.Nombre, Persona.Apellido, Caracterizacion.Especificacion, Localidad.NomLocalidad, Persona.Direccion" +
+                                       " FROM Caracterizacion INNER JOIN((Localidad INNER JOIN(Persona INNER JOIN Alumno ON Persona.DNI = Alumno.DNIAlumno) ON Localidad.CP = Persona.CodigoPostal) INNER JOIN AlumnoCaracterizaciones ON Alumno.DNIAlumno = AlumnoCaracterizaciones.dniAlumno) ON Caracterizacion.CodCaracterizacion = AlumnoCaracterizaciones.CodigoCaracterizaciones" +
+                                       " WHERE  Alumno.CodigoSedIncDom = " + 3 + ";";
+
+
+
+                Variables.Orden = new OleDbCommand(consulta2, Variables.ConexionConBD);
+                Variables.Lector = Variables.Orden.ExecuteReader();
+
+                while (Variables.Lector.Read())
+                {
+                    dgv_alumnos.Rows.Add();
+                    dgv_alumnos[0, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["DNIAlumno"];
+                    dgv_alumnos[1, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Nombre"];
+                    dgv_alumnos[2, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Apellido"];
+                    dgv_alumnos[3, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Especificacion"];
+                    dgv_alumnos[4, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["NomLocalidad"];
+                    dgv_alumnos[5, dgv_alumnos.Rows.Count - 1].Value = Variables.Lector["Direccion"];
+                }
+                dgv_alumnos.ClearSelection();
+
+                Variables.Lector.Close();
+                Variables.ConexionConBD.Close();
+            }
+        }
+
+        private void btn_imprimir_Click(object sender, EventArgs e)
+        {
+          
+
+            if (rb_sede.Checked)
+            {
+                DGVPrinter printer = new DGVPrinter();
+                printer.Title = "Alumnos en Sede";
+                printer.SubTitle = DateTime.Now.Date.ToString("MM/dd/yyyy").ToString();
+                printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+                printer.PageNumbers = true;
+                printer.PageNumberInHeader = false;
+                printer.PageSettings.Landscape = true;
+                printer.PorportionalColumns = true;
+                printer.HeaderCellAlignment = StringAlignment.Near;
+                printer.Footer = "SaxtonHale";
+                printer.FooterSpacing = 15;
+                dgv_alumnos.DefaultCellStyle.BackColor = Color.White;
+                dgv_alumnos.ForeColor = Color.Black;
+                dgv_alumnos.Visible = false;
+                printer.PrintDataGridView(dgv_alumnos);
+                dgv_alumnos.DefaultCellStyle.BackColor = Color.FromArgb(33, 39, 52);
+                dgv_alumnos.ForeColor = Color.White;
+                dgv_alumnos.Visible = true;
+            }
+            else if(rb_inc.Checked){
+                DGVPrinter printer = new DGVPrinter();
+                printer.Title = "Alumnos en Inclusión";
+                printer.SubTitle = DateTime.Now.Date.ToString("MM/dd/yyyy").ToString();
+                printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+                printer.PageNumbers = true;
+                printer.PageNumberInHeader = false;
+                printer.PageSettings.Landscape = true;
+                printer.PorportionalColumns = true;
+                printer.HeaderCellAlignment = StringAlignment.Near;
+                printer.Footer = "SaxtonHale";
+                printer.FooterSpacing = 15;
+                dgv_alumnos.DefaultCellStyle.BackColor = Color.White;
+                dgv_alumnos.ForeColor = Color.Black;
+                dgv_alumnos.Visible = false;
+                printer.PrintDataGridView(dgv_alumnos);
+                dgv_alumnos.DefaultCellStyle.BackColor = Color.FromArgb(33, 39, 52);
+                dgv_alumnos.ForeColor = Color.White;
+                dgv_alumnos.Visible = true;
+            }
+            else if (rb_caracterizacion2.Checked)
+            {
+                DGVPrinter printer = new DGVPrinter();
+                printer.Title = "Alumnos Sordos Hipoacusicos";
+                printer.SubTitle = DateTime.Now.Date.ToString("MM/dd/yyyy").ToString();
+                printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+                printer.PageNumbers = true;
+                printer.PageNumberInHeader = false;
+                printer.PageSettings.Landscape = true;
+                printer.PorportionalColumns = true;
+                printer.HeaderCellAlignment = StringAlignment.Near;
+                printer.Footer = "SaxtonHale";
+                printer.FooterSpacing = 15;
+                dgv_alumnos.DefaultCellStyle.BackColor = Color.White;
+                dgv_alumnos.ForeColor = Color.Black;
+                dgv_alumnos.Visible = false;
+                printer.PrintDataGridView(dgv_alumnos);
+                dgv_alumnos.DefaultCellStyle.BackColor = Color.FromArgb(33, 39, 52);
+                dgv_alumnos.ForeColor = Color.White;
+                dgv_alumnos.Visible = true;
+            }
+            else
+            {
+                DGVPrinter printer = new DGVPrinter();
+                printer.Title = "Todos los Alumnos";
+                printer.SubTitle = DateTime.Now.Date.ToString("MM/dd/yyyy").ToString();
+                printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+                printer.PageNumbers = true;
+                printer.PageNumberInHeader = false;
+                printer.PageSettings.Landscape = true;
+                printer.PorportionalColumns = true;
+                printer.HeaderCellAlignment = StringAlignment.Near;
+                printer.Footer = "SaxtonHale";
+                printer.FooterSpacing = 15;
+                dgv_alumnos.DefaultCellStyle.BackColor = Color.White;
+                dgv_alumnos.ForeColor = Color.Black;
+                dgv_alumnos.Visible = false;
+                printer.PrintDataGridView(dgv_alumnos);
+                dgv_alumnos.DefaultCellStyle.BackColor = Color.FromArgb(33, 39, 52);
+                dgv_alumnos.ForeColor = Color.White;
+                dgv_alumnos.Visible = true;
+            }
+
+        }
+
+        private void printDocument1_BeginPrint(object sender, PrintEventArgs e)
+        {
+
         }
     }
 }

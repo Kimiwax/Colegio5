@@ -45,5 +45,10 @@ namespace Colegio5
         {
             this.Close();
         }
+
+        private void btn_modificarGrupo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
