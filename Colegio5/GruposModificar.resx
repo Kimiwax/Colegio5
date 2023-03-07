@@ -117,56 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="user1Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\user1Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_lright.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfnAg4GEDQycT+fAAAC
+        NUlEQVRYR8WXy04UQRSGJyYiS1a4louBjboQ2GLCk0DgFQyJCyMkKgRmxLcgPoRCGG5CwktoogTZCkj7
+        /VXnhJ4wE7p7uocv+TNddepcurqmuqvWjiRJnqB36AD9QkWR7yFaQkMWvjMMeohW0V9UNoq5hvosXSsY
+        BtBX5FwjzcBn9Aa9zin5yHcf/UPONzRgaSN06M5lcPbQCzN3DbGeo10FNrbQzUzQ0NQ4X9AjM5WGYlps
+        p+6GYXQZumKVpSd3FNtyiCs0qs73oRmZtLGVQY4JpPUlPqpDfxPRtDGVQ66dmDI5UuMsXicbZq8ccjVi
+        yuSPGj4db82eC/z0XAetmQnlUkK4VsMpWsAJ0iJesK47US4U6KoAfB6gn8E7zmSmIhhXTgECvyl0HiLE
+        HW/WTB1hTHkFCHxzFYE9XwHYxtDMHVpEvqD1O2/ut8CWvQD6p5EHzoN8pixMC/TnKuAVur8CBLZx1G7a
+        06rmEWQB30mUXoRzZmoL9vIKwC9XcsGYcgrARxvRj+Adp/1eNiJtxXq3F96KfeEULaAfPbZmJpRLCSG8
+        jPx1/MnslUOultfx93jd0w+S7ZgyOVbjQ7wO9OKT7CXyx76ijhHUy4/SphKBFu5TN6yHrkiVn+WbSmA0
+        zBSMfUiHBUcz8czMXaNYyO9caA20HtHo0NEsfTrSrqYT0gbSOiki+epmFMu5fTRzMGgmdEqq4nB6geqo
+        /eE0DYOGkI7U+ov+RkU5RUdoGQ1b+BS12n/fO2gLWcFoAgAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="cerrarVentanaIcono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\cerrarVentanaIcono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alumnosIcono1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\alumnosIcono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cerrarSesionIcono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\cerrarSesionIcono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alumno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\alumno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user2Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\user2Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alumnosIcono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\alumnosIcono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user2Icono1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\user2Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user1Icono1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\user1Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="addIcono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\addIcono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\lupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="grupoIcono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\grupoIcono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user1Icono2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\user1Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IntentoLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\IntentoLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alumnosIcono2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\alumnosIcono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="alumnoIcono32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\alumnoIcono32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow-left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\arrow-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btn_cerrarVentana.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5goUCgYNvH7UuwAAAlNJREFU
+        SEutlktSFEEURVtEBwLq0DBoZjpwjLoGCWUh+GELgroIxA0Yfib+hoa/LWDgAgSdgYwETc+peplW0dUd
+        jeGNOEHmfS8zq15mZdMbpZTSHNyGN/AF9gLbesbmIn18OQgewT5kHcBX2Ip2ljnm9mP4aJG4CLugtmEF
+        5mEiUsyZgMuwCt9AOWYxUrpFwh34BT7hXZiK0FCRMw33YoxjlyPUFgGf3IQduBb22HJMjHWO9ptgzIKv
+        6FMcefIsx8YczvV3T+i4SWolrH8Wc7gvaj0bnhhX9XQM1BzvApyKbhHeCbgU3SI898SN93T1NTzLajVy
+        ivDOgokbcC7sPMl7UF2LuOnqpp3XdTvNR7wl/Cd1uF4EmpN/hJORWoR3pYqm9NKOX6UlOh7xlvAtxTNQ
+        LvKhblaTz0RaS/iT4Jybdn7AVsQ6RdxFnkPWJ+icPIu4H+luXmA7/E4Rn4K3kLUJ5yPcKeJu9I4Nk32d
+        yYi1hD8DlkNZnlyuz1A2vil8S+QHV5Vo6CbjWZpcc/+6mN5TDeQiXUf7ahVN6YWdW3V76DH1en4Hpea0
+        XeQx+OYXwy7Cy8d0yY4fmmfdTZmOnCK803Asui3hn4lmEZ5vaf1/Qn1d0FgHNfAWRxVz3K+nSmthVeb/
+        uuwWIN/Is2HXwmhe1wthjy3HxFjnuBF2WwSaPzhu1MCeHBY51vwBOE66f3CySLgOPon6DtbUY1e+E9vh
+        ObE5yjHdT35YJLonD6H5o/8bvNI9bbazzFmDds3HEYP6sASvwI/Ka0Vs6xkb8d9Er/cH0rfK/3kjJd0A
+        AAAASUVORK5CYII=
+</value>
   </data>
 </root>

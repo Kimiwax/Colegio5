@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Colegio5
 {
-    public partial class GruposVer : Form
+    public partial class GruposModificar : Form
     {
-        public GruposVer()
+        public GruposModificar()
         {
             InitializeComponent();
             ListViewItem lvitem = new ListViewItem("34435434");
@@ -51,12 +51,16 @@ namespace Colegio5
 
         }
 
-        private void GruposVer_Load(object sender, EventArgs e)
+        private void label24_Click(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'Escuela501DataSet.Alumno' Puede moverla o quitarla según sea necesario.
-            this.AlumnoTableAdapter.Fill(this.Escuela501DataSet.Alumno);
-            /*
-            this.reportViewer1.RefreshReport*/
+
         }
+
+        private void btn_right_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

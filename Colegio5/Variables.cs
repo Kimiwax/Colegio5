@@ -46,6 +46,7 @@ namespace ClaseVariables
         public static string selecParentesco2 = "";
         public static string DNIAlumno = "";
         public static string guardarDNI = "";
+        public static string obtenerCodigo = "";
 
         public static int guardarDniDocente = 0;
         public static int guardarAlumnGrupo = 0;
